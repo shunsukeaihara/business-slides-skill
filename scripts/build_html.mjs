@@ -26,7 +26,7 @@ if(helper!==path.join(path.dirname(out),'slide-layout.js'))await fs.copyFile(hel
 const safeColor=c=>{if(!/^#[0-9a-f]{6}$/i.test(c))throw Error('Use six-digit hex colors');return c;};
 Object.entries(C).forEach(([k,v])=>Array.isArray(v)?v.forEach(safeColor):safeColor(v));
 const font=[master.fonts.latin,master.fonts.japanese,...master.fonts.fallback].map(s=>'"'+s.replaceAll('"','')+'"').join(',');
-let html='';const HX=L.marginX,MAXW=W-2*HX,G=L.gap;let X=HX,BW=MAXW;
+let html='';const HX=profile.marginX??L.marginX,MAXW=W-2*HX,G=L.gap;let X=HX,BW=MAXW;
 function text(s,x,y,w,h,cls='body',align='left',extra=''){return `<p class="${cls}" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;text-align:${align};${extra}">${escape(s).replaceAll('\n','<br>')}</p>`;}
 function box(s,x,y,w,h,{fill='var(--surface)',align='center',bold=true,border=false,color='var(--text)',paddingX=L.boxPaddingX,paddingY=L.boxPaddingY}={}){return `<div class="box" data-slide-native="box" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;padding:${paddingY}px ${paddingX}px;background:${fill};${border?'border:1px solid var(--accent);':''}"><p style="color:${color};text-align:${align};font-weight:${bold?600:400}">${escape(s).replaceAll('\n','<br>')}</p></div>`;}
 function list(items,x,y,w,h){return `<div class="list" data-slide-native="list" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px"><ul>${items.map(s=>`<li>${escape(s)}</li>`).join('')}</ul></div>`;}

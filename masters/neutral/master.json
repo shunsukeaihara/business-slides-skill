@@ -4,11 +4,13 @@
   "profiles": {
     "13:9": {
       "width": 1040,
-      "height": 720
+      "height": 720,
+      "marginX": 32.4
     },
     "16:9": {
       "width": 1280,
-      "height": 720
+      "height": 720,
+      "marginX": 34.8
     }
   },
   "colors": {
@@ -47,7 +49,7 @@
     "footer": 10
   },
   "layout": {
-    "marginX": 22,
+    "marginX": 32.4,
     "titleY": 26,
     "titleHeight": 48,
     "ruleY": 76,
