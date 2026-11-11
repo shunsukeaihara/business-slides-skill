@@ -55,7 +55,15 @@ def main():
     pr=sp.find('p:spPr',NS)
     for child in list(pr):pr.remove(child)
     xf=sub(pr,'a:xfrm');sub(xf,'a:off',x=x,y=y);sub(xf,'a:ext',cx=w,cy=h)
-    sub(sub(pr,'a:prstGeom',prst=box.get('geometry','rect')),'a:avLst')
+    geometry=box.get('geometry','rect')
+    if geometry in ['down-chevron','down-pentagon']:
+     g=sub(pr,'a:custGeom');sub(g,'a:avLst');sub(g,'a:gdLst');sub(g,'a:ahLst');sub(g,'a:cxnLst');sub(g,'a:rect',l='0',t='0',r='r',b='b')
+     tip=round(box['tip']/box['h']*100000)
+     pts=[(0,0)]+([(50000,tip)] if geometry=='down-chevron' else [])+[(100000,0),(100000,100000-tip),(50000,100000),(0,100000-tip)]
+     path=sub(sub(g,'a:pathLst'),'a:path',w=100000,h=100000)
+     for j,(px,py) in enumerate(pts):sub(sub(path,'a:moveTo' if j==0 else 'a:lnTo'),'a:pt',x=px,y=py)
+     sub(path,'a:close')
+    else:sub(sub(pr,'a:prstGeom',prst=geometry),'a:avLst')
     if box['fill']:sub(sub(pr,'a:solidFill'),'a:srgbClr',val=box['fill'])
     else:sub(pr,'a:noFill')
     ln=sub(pr,'a:ln',w=emu(box.get('borderWidth',0)))

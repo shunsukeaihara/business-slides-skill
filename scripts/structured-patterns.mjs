@@ -12,6 +12,29 @@ export function structured(s,Y,a){
   const rw=BW*.18,cw=(BW-rw-4*16)/4,xx=X+rw+16;h+=head(s.rowHeading,X,Y+55,rw);
   s.groups.forEach((v,i)=>h+=head(v,xx+i*2*(cw+16),Y,2*cw+16));s.columns.forEach((v,i)=>h+=text(v,xx+i*(cw+16),Y+62,cw,38,'dense','center'));
   const rh=(H-120)/s.rows.length;s.rows.forEach((r,i)=>{const yy=Y+120+i*rh;h+=box(r.label,X,yy,rw,rh-12);r.cells.forEach((v,j)=>h+=box(v,xx+j*(cw+16),yy,cw,rh-12,transparent));h+=line(xx,yy+rh-6,edge,yy+rh-6);});
+ }else if(s.pattern==='vertical-steps'){
+  if(!Array.isArray(s.steps)||s.steps.length<2||s.steps.length>4)throw Error('vertical-steps requires 2–4 steps');
+  const dw=Math.min(BW,960),left=X+(BW-dw)/2,nw=48,dx=left+nw+24,cw=dw-nw-24,gap=18,rh=(H-gap*(s.steps.length-1))/s.steps.length;
+  s.steps.forEach((r,i)=>{const yy=Y+i*(rh+gap);
+   if(i<s.steps.length-1)h+=line(left+nw/2,yy+48,left+nw/2,yy+rh+gap,'var(--line)',2);
+   h+=box(String(i+1).padStart(2,'0'),left,yy,nw,48,{paddingX:2,paddingY:2});
+   h+=text(r.label,dx,yy,cw,36,'heading')+list(r.tasks,dx,yy+43,cw,rh-43);
+  });
+ }else if(s.pattern==='vertical-arrow-steps'){
+  if(!Array.isArray(s.steps)||s.steps.length<2||s.steps.length>4)throw Error('vertical-steps requires 2–4 steps');
+  const three=s.columnsMode==='three',notched=s.arrowStyle==='chevron';
+  const dw=Math.min(BW,1080),left=X+(BW-dw)/2,aw=three?140:250,hw=three?190:0,gap=24;
+  const hx=left+aw+gap,dx=three?hx+hw+gap:hx,cw=left+dw-dx;
+  h+=head(three?'ステップ':'工程',left,Y,aw);
+  if(three)h+=head('見出し',hx,Y,hw);
+  h+=head('主な作業',dx,Y,cw);
+  const rowgap=12,rh=(H-65-rowgap*(s.steps.length-1))/s.steps.length;
+  s.steps.forEach((r,i)=>{const yy=Y+65+i*(rh+rowgap),tip=16;
+   const polygon=notched?`polygon(0 0,50% ${tip}px,100% 0,100% calc(100% - ${tip}px),50% 100%,0 calc(100% - ${tip}px))`:`polygon(0 0,100% 0,100% calc(100% - ${tip}px),50% 100%,0 calc(100% - ${tip}px))`;
+   h+=box(three?r.short:r.label,left,yy,aw,rh,{paddingX:10,paddingY:22}).replace('class="box"',`class="box" data-slide-shape="${notched?'down-chevron':'down-pentagon'}" data-tip="${tip}"`).replace('padding:',`clip-path:${polygon};padding:`);
+   if(three)h+=box(r.label,hx,yy,hw,rh,{fill:'transparent',paddingX:6});
+   h+=list(r.tasks,dx,yy+18,cw,rh-24);
+  });
  }else if(s.pattern==='vertical-process'){
   const widths=[.19,.44,.37].map(v=>v*(BW-2*G)),xs=[X,X+widths[0]+G,X+widths[0]+G+widths[1]+G];s.columns.forEach((v,i)=>h+=head(v,xs[i],Y,widths[i]));
   const rh=(H-70)/s.steps.length;s.steps.forEach((r,i)=>{const yy=Y+70+i*rh;h+=box(r.label,X,yy,widths[0],rh-26)+list(r.tasks,xs[1],yy+8,widths[1],rh-20)+box(r.output,xs[2],yy,widths[2],rh-26,{...transparent,border:true});if(i<s.steps.length-1)h+=triangle(X+widths[0]*.27,yy+rh-21,widths[0]*.46,10);});

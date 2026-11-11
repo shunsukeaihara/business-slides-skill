@@ -38,7 +38,7 @@ description: 会社別マスタと汎用レイアウトを分離し、コンサ�
 - `masters/neutral/`：汎用の設定・仕様・仮ロゴ。会社別マスタは独立したフォルダで追加する。
 - `assets/pattern-examples.json`：会社に依存しない例示内容。実データとして使わない。
 - `scripts/build_html.mjs`：例示データまたは自分のデータとマスタを組み合わせてHTML生成。
-- `assets/layout-gallery.html`／`layout-gallery-wide.html`：同じ69ページを13:9／16:9で再配置した見本。
+- `assets/layout-gallery.html`／`layout-gallery-wide.html`：同じ74ページを13:9／16:9で再配置した見本。
 - `assets/layout-gallery-basic.html`：基本構成の補助見本。L16の数字だけのグリッドは含めない。
 - `assets/slide-base.html`／`slide-base-wide.html`：表紙と比較ページの制作の土台。生成済み見本の固定色を正として編集せず、マスタとデータから作る。
 - `assets/slide-layout.js`、`scripts/inspect_html.mjs`：両比率の画像・幾何・編集構造情報を取得。

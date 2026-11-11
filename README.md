@@ -2,7 +2,7 @@
 
 **[dom-to-pptx](https://github.com/atharva9167j/dom-to-pptx) を利用し、HTMLで設計したスライドを編集可能なPowerPoint（.pptx）へ変換するスキルです。**
 
-本スキルは構成・デザイン・会社別マスタ・検証手順を提供し、PowerPointへの変換は `dom-to-pptx` が担います。69種類の構成見本を収録し、13:9・16:9に対応します。
+本スキルは構成・デザイン・会社別マスタ・検証手順を提供し、PowerPointへの変換は `dom-to-pptx` が担います。74種類の構成見本を収録し、13:9・16:9に対応します。
 
 [インタラクティブ・ギャラリー](https://shunsukeaihara.github.io/business-slides-skill/)
 
