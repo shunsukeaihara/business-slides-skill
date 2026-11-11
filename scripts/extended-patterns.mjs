@@ -17,10 +17,16 @@ export function extended(s,Y,a){
   const cs=columns(2,125);cs.forEach((c,i)=>h+=head(s.columns[i],c.x,Y,c.w));
   s.rows.forEach((r,i)=>{const yy=Y+80+i*125;h+=box(r.label,X,yy,125,100);r.cells.forEach((v,j)=>h+=text(v,cs[j].x,yy+13,cs[j].w,85,'dense'));});
  }else if(s.pattern==='issue-tree'){
-  const rw=BW*.24,mw=BW*.27,rx=X+rw+65,lx=rx+mw+65,lw=W-X-lx,rh=140;
-  h+=box(s.root,X,Y+180,rw,100,{border:true,fill:'transparent'});
-  h+=line(X+rw,Y+230,rx-28,Y+230)+line(rx-28,Y+65,rx-28,Y+345);
-  s.branches.forEach((v,i)=>{const yy=Y+15+i*rh;h+=line(rx-28,yy+50,rx,yy+50)+box(v.label,rx,yy,mw,100)+line(rx+mw,yy+50,lx-12,yy+50)+list(v.items,lx,yy+12,lw,100);});
+  // Center the diagram's intrinsic footprint, not an empty full-width text area.
+  const desired=s.diagramColumns||[220,240,220],gap=52;
+  if(desired.length!==3||desired.some(v=>!Number.isFinite(v)||v<=0))throw Error('diagramColumns must contain three positive widths');
+  const scale=Math.min(1,BW/(desired.reduce((a,b)=>a+b,0)+gap*2));
+  const [rw,mw,lw]=desired.map(v=>v*scale),cg=gap*scale,dw=rw+mw+lw+cg*2;
+  const left=X+(BW-dw)/2,rx=left+rw+cg,lx=rx+mw+cg,rh=140;
+  const first=Y+65,last=first+(s.branches.length-1)*rh,cy=(first+last)/2;
+  h+=box(s.root,left,cy-50,rw,100,{border:true,fill:'transparent'});
+  h+=line(left+rw,cy,rx-cg/2,cy)+line(rx-cg/2,first,rx-cg/2,last);
+  s.branches.forEach((v,i)=>{const yy=Y+15+i*rh;h+=line(rx-cg/2,yy+50,rx,yy+50)+box(v.label,rx,yy,mw,100)+line(rx+mw,yy+50,lx-12,yy+50)+list(v.items,lx,yy+12,lw,100);});
  }else if(s.pattern==='hierarchy'){
   const cs=columns(s.groups.length),rw=BW*.34,rx=X+(BW-rw)/2;
   h+=box(s.root,rx,Y,rw,65,{fill:'transparent',border:true})+line(W/2,Y+65,W/2,Y+105);
