@@ -28,6 +28,22 @@ PowerPointを作成する場合は、次の両方を利用します。
 
 制作の流れは **内容の整理 → HTML生成 → 画像確認 → dom-to-pptxで変換 → PPTXの画像・編集構造確認** です。具体的な変換コマンドと補正手順は[制作手順](references/production.md)を参照してください。
 
+## インストール用ZIP
+
+**[business-slides.zip をダウンロード](https://shunsukeaihara.github.io/business-slides-skill/business-slides.zip)**
+
+`main`の更新・手動実行時にGitHub Actionsで生成し、ギャラリーと同時に公開します。ZIPの最上位は`business-slides/`で、その直下に`SKILL.md`があります。Git履歴、CI設定、会社固有のマスタは含めません。
+
+Claudeの「Customize → Skills → ＋ → Create skill → Upload a skill」から、このZIPを登録できます。Claude Codeでは解凍した`business-slides`フォルダを`~/.claude/skills/`に配置します。PPTX生成には別途`dom-to-pptx-skill`と変換環境が必要で、ZIP登録だけで依存環境が導入されるわけではありません。
+
+Actionsの実行結果にも`business-slides-package`として保存します。こちらはGitHubのartifact用ZIPの中に配布用ZIPが入るため、スキル登録には中の`business-slides.zip`を使用してください。
+
+ローカルで同じパッケージを作成する場合：
+
+```sh
+python3 scripts/package_skill.py --out output/business-slides.zip
+```
+
 ## 使い方
 
 このフォルダをスキルとして配置し、`SKILL.md` を参照してください。PowerPointへの変換には、別途 `dom-to-pptx-skill` と対応する実行環境が必要です。変換エンジン本体はこのリポジトリには含みません。

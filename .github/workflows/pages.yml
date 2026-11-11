@@ -20,6 +20,13 @@ jobs:
         run: node scripts/build_gallery.mjs --data assets/pattern-examples.json --out assets/gallery.html
       - name: Build public site
         run: node scripts/build_pages.mjs
+      - name: Package installable skill ZIP
+        run: python3 scripts/package_skill.py --out _site/business-slides.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: business-slides-package
+          path: _site/business-slides.zip
+          retention-days: 30
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
