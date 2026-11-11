@@ -1,0 +1,4 @@
+interface:
+  display_name: "Business Slides"
+  short_description: "会社別マスタと豊富な構成例でHTML・PowerPointを制作する"
+  default_prompt: "$business-slides を使って、渡した内容から指定した会社別マスタと内容に合う構成でPowerPointを作成してください。"

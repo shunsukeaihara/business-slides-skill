@@ -1,0 +1,2673 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Business Slides — Layout Gallery</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f1f2f4;color:#111;font-family:Arial,'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif}header{background:white;padding:32px 4vw 24px;border-bottom:1px solid #d3d6dc}h1{font-size:30px;margin:0 0 14px}header p{margin:8px 0;line-height:1.8;max-width:1000px}.controls{position:sticky;top:0;z-index:1;background:#fff;padding:16px 4vw;display:flex;gap:14px;flex-wrap:wrap;border-bottom:1px solid #d3d6dc;align-items:center}input,select,button{font:inherit;background:white;border:1px solid #b7bdc7;padding:10px 12px;border-radius:0}input{min-width:260px;flex:1}button{cursor:pointer}a{color:#294285}#count{font-size:14px;white-space:nowrap}.grid{max-width:1800px;margin:auto;padding:28px 4vw;display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:26px}article{scroll-margin-top:100px;background:white;border:1px solid #d3d6dc;min-width:0}article[hidden]{display:none}.preview{display:block;border-bottom:1px solid #e4e7ed}.preview img{display:block;width:100%;height:auto}.caption{padding:20px}.meta{font-size:12px;color:#657080}h2{font-size:19px;line-height:1.5;margin:12px 0}p{font-size:15px;line-height:1.8}summary{font-size:13px;cursor:pointer;color:#294285}pre{max-height:300px;overflow:auto;font-size:12px;white-space:pre-wrap;word-break:break-word;background:#f1f2f4;padding:14px}.copy{font-size:12px}footer{padding:24px 4vw;font-size:13px;color:#666}.empty{padding:30px;display:none}
+</style><header><h1>Business Slides — レイアウト・チャート集</h1><p>伝えたい情報の関係から構成を選ぶ、69の見本。会社別マスタと本文レイアウトは独立しており、この見本には汎用マスタを適用しています。</p><p>本文は「標準幅＝最大幅の88%」「ワイド＝最大幅」の2種類。どちらも横中央に配置します。画像をクリックすると原寸のHTML見本を開きます。数値・内容はすべて例示です。</p></header><div class="controls"><input id="search" type="search" placeholder="用途・構成・パターン名を検索" aria-label="検索"><select id="category" aria-label="用途"><option value="">すべての用途</option><option>表紙</option><option>比較・判断</option><option>構造・関係</option><option>工程・時間</option><option>データ・チャート</option><option>複合・分析構成</option><option>階層・判断・実行</option><option>カラム・入れ子</option><option>見出しの包含関係</option></select><select id="ratio" aria-label="画面比率"><option value="standard">13:9</option><option value="wide">16:9</option></select><span id="count"></span></div><main class="grid"><article id="G01" data-category="表紙" data-search="本文レイアウト・チャート集 表紙。会社別マスタのロゴ・配置・書体を適用する。 cover 表紙"><a class="preview" href="layout-gallery.html#slide-1" data-index="1" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-1.webp" alt="本文レイアウト・チャート集" width="520" height="360"></a><div class="caption"><div class="meta">G01 · 表紙 · ワイド</div><h2>本文レイアウト・チャート集</h2><p>表紙。会社別マスタのロゴ・配置・書体を適用する。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;cover&quot;,
+  &quot;title&quot;: &quot;本文レイアウト・チャート集&quot;,
+  &quot;subtitle&quot;: &quot;情報の関係から構成を選ぶ\nマスタと画面比率を切り替えて利用&quot;,
+  &quot;category&quot;: &quot;表紙&quot;,
+  &quot;use&quot;: &quot;表紙。会社別マスタのロゴ・配置・書体を適用する。&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G01&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G02" data-category="比較・判断" data-search="同じ条件で選択肢を比較する 共通の観点で選択肢の特徴や制約を並べる。 compare 比較・判断"><a class="preview" href="layout-gallery.html#slide-2" data-index="2" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-2.webp" alt="同じ条件で選択肢を比較する" width="520" height="360"></a><div class="caption"><div class="meta">G02 · 比較・判断 · ワイド</div><h2>同じ条件で選択肢を比較する</h2><p>共通の観点で選択肢の特徴や制約を並べる。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;compare&quot;,
+  &quot;title&quot;: &quot;同じ条件で選択肢を比較する&quot;,
+  &quot;columns&quot;: [
+    {
+      &quot;label&quot;: &quot;選択肢A&quot;,
+      &quot;summary&quot;: &quot;現在の仕組みを活かし、変更する範囲を絞る。&quot;,
+      &quot;items&quot;: [
+        &quot;短期間で着手できる&quot;,
+        &quot;対象外となる範囲を確認する&quot;,
+        &quot;既存の制約が残る&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;選択肢B&quot;,
+      &quot;summary&quot;: &quot;共通の仕組みを整え、対象範囲を広げる。&quot;,
+      &quot;items&quot;: [
+        &quot;複数の用途に対応できる&quot;,
+        &quot;移行に必要な準備を確認する&quot;,
+        &quot;初期の作業が増える&quot;
+      ]
+    }
+  ],
+  &quot;category&quot;: &quot;比較・判断&quot;,
+  &quot;use&quot;: &quot;共通の観点で選択肢の特徴や制約を並べる。&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G02&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G03" data-category="比較・判断" data-search="根拠と判断を同じ行で対応させる 事実・解釈・判断を区別し、同じ行で対応づける。 evidence 比較・判断"><a class="preview" href="layout-gallery.html#slide-3" data-index="3" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-3.webp" alt="根拠と判断を同じ行で対応させる" width="520" height="360"></a><div class="caption"><div class="meta">G03 · 比較・判断 · ワイド</div><h2>根拠と判断を同じ行で対応させる</h2><p>事実・解釈・判断を区別し、同じ行で対応づける。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;evidence&quot;,
+  &quot;title&quot;: &quot;根拠と判断を同じ行で対応させる&quot;,
+  &quot;columns&quot;: [
+    &quot;観察された事実&quot;,
+    &quot;読み取り&quot;,
+    &quot;判断・対応&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;処理時間&quot;,
+      &quot;cells&quot;: [
+        &quot;複数の手順で同じ情報を入力している。&quot;,
+        &quot;重複入力が負担の一因と考えられる。&quot;,
+        &quot;共通化の対象を確認。&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;品質&quot;,
+      &quot;cells&quot;: [
+        &quot;担当によって確認方法が異なる。&quot;,
+        &quot;確認基準が共有されていない。&quot;,
+        &quot;共通の確認項目を整理。&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;継続性&quot;,
+      &quot;cells&quot;: [
+        &quot;一部の作業は特定の人しか扱えない。&quot;,
+        &quot;不在時に作業が止まる可能性がある。&quot;,
+        &quot;引き継ぎに必要な情報を整える。&quot;
+      ]
+    }
+  ],
+  &quot;category&quot;: &quot;比較・判断&quot;,
+  &quot;use&quot;: &quot;事実・解釈・判断を区別し、同じ行で対応づける。&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G03&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G04" data-category="構造・関係" data-search="全体の位置を保ちながら詳細を示す 全体のどこを説明しているかを保ちながら掘り下げる。 focus 構造・関係"><a class="preview" href="layout-gallery.html#slide-4" data-index="4" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-4.webp" alt="全体の位置を保ちながら詳細を示す" width="520" height="360"></a><div class="caption"><div class="meta">G04 · 構造・関係 · ワイド</div><h2>全体の位置を保ちながら詳細を示す</h2><p>全体のどこを説明しているかを保ちながら掘り下げる。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;focus&quot;,
+  &quot;title&quot;: &quot;全体の位置を保ちながら詳細を示す&quot;,
+  &quot;items&quot;: [
+    &quot;背景の把握&quot;,
+    &quot;比較・検証&quot;,
+    &quot;判断・実行&quot;
+  ],
+  &quot;selected&quot;: 1,
+  &quot;detailTitle&quot;: &quot;比較・検証で確かめること&quot;,
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;比較条件を揃える&quot;,
+      &quot;body&quot;: &quot;対象・期間・評価尺度を揃えて、条件の違いによる差を切り分ける。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;例外を確かめる&quot;,
+      &quot;body&quot;: &quot;平均だけでなく、対象ごとの違いや例外が生じる条件を確認する。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;判断に必要な根拠を残す&quot;,
+      &quot;body&quot;: &quot;結論に至った理由と、まだ確認できていない点を区別して記録する。&quot;
+    }
+  ],
+  &quot;category&quot;: &quot;構造・関係&quot;,
+  &quot;use&quot;: &quot;全体のどこを説明しているかを保ちながら掘り下げる。&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G04&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G05" data-category="構造・関係" data-search="指標を構成する要因と前提を分ける 数量を構成する因子と、その前提条件を説明する。 driver 構造・関係"><a class="preview" href="layout-gallery.html#slide-5" data-index="5" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-5.webp" alt="指標を構成する要因と前提を分ける" width="520" height="360"></a><div class="caption"><div class="meta">G05 · 構造・関係 · ワイド</div><h2>指標を構成する要因と前提を分ける</h2><p>数量を構成する因子と、その前提条件を説明する。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;driver&quot;,
+  &quot;title&quot;: &quot;指標を構成する要因と前提を分ける&quot;,
+  &quot;total&quot;: &quot;全体量\n600件&quot;,
+  &quot;operator&quot;: &quot;×&quot;,
+  &quot;factors&quot;: [
+    {
+      &quot;label&quot;: &quot;対象数\n120組&quot;,
+      &quot;evidence&quot;: &quot;対象の定義を揃え、重複する対象を除く。集計時点も統一する。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;平均回数\n5回／組&quot;,
+      &quot;evidence&quot;: &quot;同じ期間の回数を使う。例外やばらつきは別途確認する。&quot;
+    }
+  ],
+  &quot;note&quot;: &quot;数値は例示。120組 × 5回／組 ＝ 600件。&quot;,
+  &quot;category&quot;: &quot;構造・関係&quot;,
+  &quot;use&quot;: &quot;数量を構成する因子と、その前提条件を説明する。&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G05&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G06" data-category="工程・時間" data-search="候補数と選別基準を段階ごとに示す 候補が絞られる過程と、除外基準を示す。 funnel 工程・時間"><a class="preview" href="layout-gallery.html#slide-6" data-index="6" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-6.webp" alt="候補数と選別基準を段階ごとに示す" width="520" height="360"></a><div class="caption"><div class="meta">G06 · 工程・時間 · ワイド</div><h2>候補数と選別基準を段階ごとに示す</h2><p>候補が絞られる過程と、除外基準を示す。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;funnel&quot;,
+  &quot;title&quot;: &quot;候補数と選別基準を段階ごとに示す&quot;,
+  &quot;stages&quot;: [
+    {
+      &quot;label&quot;: &quot;候補を集める&quot;,
+      &quot;count&quot;: &quot;120件&quot;,
+      &quot;criteria&quot;: [
+        &quot;対象の定義を揃える&quot;,
+        &quot;重複を除いて整理する&quot;
+      ],
+      &quot;excluded&quot;: &quot;対象外の情報は、集計前に区別する。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;条件で絞る&quot;,
+      &quot;count&quot;: &quot;40件&quot;,
+      &quot;criteria&quot;: [
+        &quot;必要な条件を満たす&quot;,
+        &quot;比較に必要な情報がある&quot;
+      ],
+      &quot;excluded&quot;: &quot;条件に合わない80件を除外する。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;詳細を確認する&quot;,
+      &quot;count&quot;: &quot;12件&quot;,
+      &quot;criteria&quot;: [
+        &quot;根拠を確認できる&quot;,
+        &quot;実施条件を満たす&quot;
+      ],
+      &quot;excluded&quot;: &quot;追加確認により28件を除外する。&quot;
+    }
+  ],
+  &quot;category&quot;: &quot;工程・時間&quot;,
+  &quot;use&quot;: &quot;候補が絞られる過程と、除外基準を示す。&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G06&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G07" data-category="データ・チャート" data-search="条件の違いと結果を共通の尺度で比べる 条件による結果の違いを、共通尺度の小さな図で比較する。 scenario データ・チャート"><a class="preview" href="layout-gallery.html#slide-7" data-index="7" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-7.webp" alt="条件の違いと結果を共通の尺度で比べる" width="520" height="360"></a><div class="caption"><div class="meta">G07 · データ・チャート · ワイド</div><h2>条件の違いと結果を共通の尺度で比べる</h2><p>条件による結果の違いを、共通尺度の小さな図で比較する。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;scenario&quot;,
+  &quot;title&quot;: &quot;条件の違いと結果を共通の尺度で比べる&quot;,
+  &quot;scenarios&quot;: [
+    {
+      &quot;label&quot;: &quot;条件A&quot;,
+      &quot;assumption&quot;: &quot;対象範囲を絞って進める。&quot;,
+      &quot;values&quot;: [
+        30,
+        40,
+        50
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;条件B&quot;,
+      &quot;assumption&quot;: &quot;対象を段階的に広げる。&quot;,
+      &quot;values&quot;: [
+        30,
+        55,
+        75
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;条件C&quot;,
+      &quot;assumption&quot;: &quot;早期に対象を広げる。&quot;,
+      &quot;values&quot;: [
+        30,
+        70,
+        95
+      ]
+    }
+  ],
+  &quot;max&quot;: 100,
+  &quot;periods&quot;: [
+    &quot;1期&quot;,
+    &quot;2期&quot;,
+    &quot;3期&quot;
+  ],
+  &quot;note&quot;: &quot;数量の例示。すべてのグラフは0〜100の共通尺度。&quot;,
+  &quot;category&quot;: &quot;データ・チャート&quot;,
+  &quot;use&quot;: &quot;条件による結果の違いを、共通尺度の小さな図で比較する。&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G07&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G08" data-category="比較・判断" data-search="評価の尺度と根拠をセットで示す 評価軸・尺度・未確認事項を明らかにして比較する。 evaluation 比較・判断"><a class="preview" href="layout-gallery.html#slide-8" data-index="8" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-8.webp" alt="評価の尺度と根拠をセットで示す" width="520" height="360"></a><div class="caption"><div class="meta">G08 · 比較・判断 · ワイド</div><h2>評価の尺度と根拠をセットで示す</h2><p>評価軸・尺度・未確認事項を明らかにして比較する。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;evaluation&quot;,
+  &quot;title&quot;: &quot;評価の尺度と根拠をセットで示す&quot;,
+  &quot;columns&quot;: [
+    &quot;重視度&quot;,
+    &quot;対象A&quot;,
+    &quot;対象B&quot;,
+    &quot;評価の根拠&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;対象範囲&quot;,
+      &quot;cells&quot;: [
+        &quot;高&quot;,
+        &quot;3&quot;,
+        &quot;2&quot;,
+        &quot;条件への適合&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;準備の負担&quot;,
+      &quot;cells&quot;: [
+        &quot;中&quot;,
+        &quot;1&quot;,
+        &quot;3&quot;,
+        &quot;着手前の作業量&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;継続しやすさ&quot;,
+      &quot;cells&quot;: [
+        &quot;高&quot;,
+        &quot;2&quot;,
+        &quot;未確認&quot;,
+        &quot;運営体制の確認&quot;
+      ]
+    }
+  ],
+  &quot;note&quot;: &quot;点数は例示。3＝充足、2＝一部充足、1＝不足。未確認は点数化しない。&quot;,
+  &quot;category&quot;: &quot;比較・判断&quot;,
+  &quot;use&quot;: &quot;評価軸・尺度・未確認事項を明らかにして比較する。&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G08&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G09" data-category="構造・関係" data-search="循環の各段階と関係を明らかにする 一度きりの順序ではなく、反復・フィードバックを示す。 cycle 構造・関係"><a class="preview" href="layout-gallery.html#slide-9" data-index="9" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-9.webp" alt="循環の各段階と関係を明らかにする" width="520" height="360"></a><div class="caption"><div class="meta">G09 · 構造・関係 · 標準幅</div><h2>循環の各段階と関係を明らかにする</h2><p>一度きりの順序ではなく、反復・フィードバックを示す。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;cycle&quot;,
+  &quot;title&quot;: &quot;循環の各段階と関係を明らかにする&quot;,
+  &quot;nodes&quot;: [
+    &quot;状況を把握する&quot;,
+    &quot;改善案を試す&quot;,
+    &quot;結果を確認する&quot;,
+    &quot;方法を更新する&quot;
+  ],
+  &quot;relations&quot;: [
+    &quot;仮説を\n作る&quot;,
+    &quot;試行結果を\n記録する&quot;,
+    &quot;知見を\n反映する&quot;,
+    &quot;次の観察へ\n戻す&quot;
+  ],
+  &quot;category&quot;: &quot;構造・関係&quot;,
+  &quot;use&quot;: &quot;一度きりの順序ではなく、反復・フィードバックを示す。&quot;,
+  &quot;contentWidth&quot;: &quot;standard&quot;,
+  &quot;galleryId&quot;: &quot;G09&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G10" data-category="比較・判断" data-search="対応範囲と未確認の領域を区別する 対応・一部対応・未確認・対象外を混同せず一覧する。 scope 比較・判断"><a class="preview" href="layout-gallery.html#slide-10" data-index="10" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-10.webp" alt="対応範囲と未確認の領域を区別する" width="520" height="360"></a><div class="caption"><div class="meta">G10 · 比較・判断 · ワイド</div><h2>対応範囲と未確認の領域を区別する</h2><p>対応・一部対応・未確認・対象外を混同せず一覧する。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;scope&quot;,
+  &quot;title&quot;: &quot;対応範囲と未確認の領域を区別する&quot;,
+  &quot;columns&quot;: [
+    &quot;領域A&quot;,
+    &quot;領域B&quot;,
+    &quot;領域C&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;収集&quot;,
+      &quot;cells&quot;: [
+        &quot;対応&quot;,
+        &quot;対応&quot;,
+        &quot;一部対応&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;分析&quot;,
+      &quot;cells&quot;: [
+        &quot;対応&quot;,
+        &quot;未確認&quot;,
+        &quot;対象外&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;共有&quot;,
+      &quot;cells&quot;: [
+        &quot;一部対応&quot;,
+        &quot;対応&quot;,
+        &quot;対応&quot;
+      ]
+    }
+  ],
+  &quot;category&quot;: &quot;比較・判断&quot;,
+  &quot;use&quot;: &quot;対応・一部対応・未確認・対象外を混同せず一覧する。&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G10&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G11" data-category="データ・チャート" data-search="代表値とばらつきを一緒に比較する 中心値だけでは見えない観測範囲・ばらつきを示す。 range データ・チャート"><a class="preview" href="layout-gallery.html#slide-11" data-index="11" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-11.webp" alt="代表値とばらつきを一緒に比較する" width="520" height="360"></a><div class="caption"><div class="meta">G11 · データ・チャート · 標準幅</div><h2>代表値とばらつきを一緒に比較する</h2><p>中心値だけでは見えない観測範囲・ばらつきを示す。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;range&quot;,
+  &quot;title&quot;: &quot;代表値とばらつきを一緒に比較する&quot;,
+  &quot;min&quot;: 0,
+  &quot;max&quot;: 100,
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;対象A&quot;,
+      &quot;low&quot;: 15,
+      &quot;value&quot;: 35,
+      &quot;high&quot;: 65
+    },
+    {
+      &quot;label&quot;: &quot;対象B&quot;,
+      &quot;low&quot;: 40,
+      &quot;value&quot;: 60,
+      &quot;high&quot;: 85
+    },
+    {
+      &quot;label&quot;: &quot;対象C&quot;,
+      &quot;low&quot;: 25,
+      &quot;value&quot;: 45,
+      &quot;high&quot;: 55
+    },
+    {
+      &quot;label&quot;: &quot;対象D&quot;,
+      &quot;low&quot;: 10,
+      &quot;value&quot;: 40,
+      &quot;high&quot;: 90
+    }
+  ],
+  &quot;note&quot;: &quot;値は例示。線＝観測範囲、点＝中央値。単位：分。&quot;,
+  &quot;category&quot;: &quot;データ・チャート&quot;,
+  &quot;use&quot;: &quot;中心値だけでは見えない観測範囲・ばらつきを示す。&quot;,
+  &quot;contentWidth&quot;: &quot;standard&quot;,
+  &quot;galleryId&quot;: &quot;G11&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G12" data-category="データ・チャート" data-search="基準からの増減を共通の原点で示す 共通の原点からの増加・減少を比較する。 diverging データ・チャート"><a class="preview" href="layout-gallery.html#slide-12" data-index="12" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-12.webp" alt="基準からの増減を共通の原点で示す" width="520" height="360"></a><div class="caption"><div class="meta">G12 · データ・チャート · 標準幅</div><h2>基準からの増減を共通の原点で示す</h2><p>共通の原点からの増加・減少を比較する。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;diverging&quot;,
+  &quot;title&quot;: &quot;基準からの増減を共通の原点で示す&quot;,
+  &quot;limit&quot;: 40,
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;対象A&quot;,
+      &quot;value&quot;: 30
+    },
+    {
+      &quot;label&quot;: &quot;対象B&quot;,
+      &quot;value&quot;: -20
+    },
+    {
+      &quot;label&quot;: &quot;対象C&quot;,
+      &quot;value&quot;: 10
+    },
+    {
+      &quot;label&quot;: &quot;対象D&quot;,
+      &quot;value&quot;: -30
+    }
+  ],
+  &quot;note&quot;: &quot;値は例示。基準時点との差、単位：件。&quot;,
+  &quot;category&quot;: &quot;データ・チャート&quot;,
+  &quot;use&quot;: &quot;共通の原点からの増加・減少を比較する。&quot;,
+  &quot;contentWidth&quot;: &quot;standard&quot;,
+  &quot;galleryId&quot;: &quot;G12&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G13" data-category="データ・チャート" data-search="全体の規模と内訳を面積で読む 領域の総量と、領域内の構成比を同時に示す。 mekko データ・チャート"><a class="preview" href="layout-gallery.html#slide-13" data-index="13" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-13.webp" alt="全体の規模と内訳を面積で読む" width="520" height="360"></a><div class="caption"><div class="meta">G13 · データ・チャート · ワイド</div><h2>全体の規模と内訳を面積で読む</h2><p>領域の総量と、領域内の構成比を同時に示す。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;mekko&quot;,
+  &quot;title&quot;: &quot;全体の規模と内訳を面積で読む&quot;,
+  &quot;groups&quot;: [
+    {
+      &quot;label&quot;: &quot;領域A&quot;,
+      &quot;total&quot;: 50,
+      &quot;parts&quot;: [
+        {
+          &quot;label&quot;: &quot;区分1&quot;,
+          &quot;value&quot;: 60
+        },
+        {
+          &quot;label&quot;: &quot;区分2&quot;,
+          &quot;value&quot;: 40
+        }
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;領域B&quot;,
+      &quot;total&quot;: 30,
+      &quot;parts&quot;: [
+        {
+          &quot;label&quot;: &quot;区分1&quot;,
+          &quot;value&quot;: 40
+        },
+        {
+          &quot;label&quot;: &quot;区分2&quot;,
+          &quot;value&quot;: 60
+        }
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;領域C&quot;,
+      &quot;total&quot;: 20,
+      &quot;parts&quot;: [
+        {
+          &quot;label&quot;: &quot;区分1&quot;,
+          &quot;value&quot;: 75
+        },
+        {
+          &quot;label&quot;: &quot;区分2&quot;,
+          &quot;value&quot;: 25
+        }
+      ]
+    }
+  ],
+  &quot;note&quot;: &quot;値は例示。幅＝各領域の件数、縦の比率＝領域内の構成比。&quot;,
+  &quot;category&quot;: &quot;データ・チャート&quot;,
+  &quot;use&quot;: &quot;領域の総量と、領域内の構成比を同時に示す。&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G13&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G14" data-category="工程・時間" data-search="作業と成果物を工程ごとに対応させる 工程ごとに作業と成果物を対応させる process 工程・時間"><a class="preview" href="layout-gallery.html#slide-14" data-index="14" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-14.webp" alt="作業と成果物を工程ごとに対応させる" width="520" height="360"></a><div class="caption"><div class="meta">G14 · 工程・時間 · ワイド</div><h2>作業と成果物を工程ごとに対応させる</h2><p>工程ごとに作業と成果物を対応させる</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;process&quot;,
+  &quot;title&quot;: &quot;作業と成果物を工程ごとに対応させる&quot;,
+  &quot;stages&quot;: [
+    {
+      &quot;label&quot;: &quot;状況把握&quot;,
+      &quot;items&quot;: [
+        &quot;現状の手順を確認&quot;,
+        &quot;困りごとを整理&quot;
+      ],
+      &quot;result&quot;: &quot;現状と論点&quot;
+    },
+    {
+      &quot;label&quot;: &quot;比較・検証&quot;,
+      &quot;items&quot;: [
+        &quot;候補を同じ基準で比較&quot;,
+        &quot;仮説を小さく試す&quot;
+      ],
+      &quot;result&quot;: &quot;比較結果と根拠&quot;
+    },
+    {
+      &quot;label&quot;: &quot;実行準備&quot;,
+      &quot;items&quot;: [
+        &quot;範囲と担当を決定&quot;,
+        &quot;実施条件を確認&quot;
+      ],
+      &quot;result&quot;: &quot;実行計画&quot;
+    }
+  ],
+  &quot;category&quot;: &quot;工程・時間&quot;,
+  &quot;use&quot;: &quot;工程ごとに作業と成果物を対応させる&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G14&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G15" data-category="工程・時間" data-search="節目とその時点で決まることを示す 日付と節目を示す。期間の長さにはガントを使う timeline 工程・時間"><a class="preview" href="layout-gallery.html#slide-15" data-index="15" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-15.webp" alt="節目とその時点で決まることを示す" width="520" height="360"></a><div class="caption"><div class="meta">G15 · 工程・時間 · ワイド</div><h2>節目とその時点で決まることを示す</h2><p>日付と節目を示す。期間の長さにはガントを使う</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;timeline&quot;,
+  &quot;title&quot;: &quot;節目とその時点で決まることを示す&quot;,
+  &quot;events&quot;: [
+    {
+      &quot;date&quot;: &quot;4月&quot;,
+      &quot;label&quot;: &quot;調査完了&quot;,
+      &quot;items&quot;: [
+        &quot;対象範囲を確認&quot;,
+        &quot;論点を共有&quot;
+      ]
+    },
+    {
+      &quot;date&quot;: &quot;6月&quot;,
+      &quot;label&quot;: &quot;方針決定&quot;,
+      &quot;items&quot;: [
+        &quot;候補を比較&quot;,
+        &quot;判断理由を記録&quot;
+      ]
+    },
+    {
+      &quot;date&quot;: &quot;9月&quot;,
+      &quot;label&quot;: &quot;試行評価&quot;,
+      &quot;items&quot;: [
+        &quot;結果を検証&quot;,
+        &quot;改善点を整理&quot;
+      ]
+    },
+    {
+      &quot;date&quot;: &quot;12月&quot;,
+      &quot;label&quot;: &quot;展開判断&quot;,
+      &quot;items&quot;: [
+        &quot;実施条件を確認&quot;,
+        &quot;次期計画を決定&quot;
+      ]
+    }
+  ],
+  &quot;category&quot;: &quot;工程・時間&quot;,
+  &quot;use&quot;: &quot;日付と節目を示す。期間の長さにはガントを使う&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G15&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G16" data-category="工程・時間" data-search="項目ごとの実施期間を同じ時間軸で見る 期間と並行実施を示す gantt 工程・時間"><a class="preview" href="layout-gallery.html#slide-16" data-index="16" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-16.webp" alt="項目ごとの実施期間を同じ時間軸で見る" width="520" height="360"></a><div class="caption"><div class="meta">G16 · 工程・時間 · ワイド</div><h2>項目ごとの実施期間を同じ時間軸で見る</h2><p>期間と並行実施を示す</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;gantt&quot;,
+  &quot;title&quot;: &quot;項目ごとの実施期間を同じ時間軸で見る&quot;,
+  &quot;periods&quot;: [
+    &quot;Q1&quot;,
+    &quot;Q2&quot;,
+    &quot;Q3&quot;,
+    &quot;Q4&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;対象A&quot;,
+      &quot;spans&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 1,
+          &quot;label&quot;: &quot;調査・試行&quot;
+        },
+        {
+          &quot;start&quot;: 2,
+          &quot;end&quot;: 3,
+          &quot;label&quot;: &quot;展開&quot;,
+          &quot;secondary&quot;: true
+        }
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;対象B&quot;,
+      &quot;spans&quot;: [
+        {
+          &quot;start&quot;: 1,
+          &quot;end&quot;: 2,
+          &quot;label&quot;: &quot;準備・実施&quot;
+        }
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;対象C&quot;,
+      &quot;spans&quot;: [
+        {
+          &quot;start&quot;: 2,
+          &quot;end&quot;: 3,
+          &quot;label&quot;: &quot;検証・定着&quot;
+        }
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;対象D&quot;,
+      &quot;spans&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 3,
+          &quot;label&quot;: &quot;継続的な確認&quot;,
+          &quot;secondary&quot;: true
+        }
+      ]
+    }
+  ],
+  &quot;category&quot;: &quot;工程・時間&quot;,
+  &quot;use&quot;: &quot;期間と並行実施を示す&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G16&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G17" data-category="工程・時間" data-search="同じ工程に関わる役割を横断して確認する 工程をまたぐ担当・役割の違いを示す swimlane 工程・時間"><a class="preview" href="layout-gallery.html#slide-17" data-index="17" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-17.webp" alt="同じ工程に関わる役割を横断して確認する" width="520" height="360"></a><div class="caption"><div class="meta">G17 · 工程・時間 · ワイド</div><h2>同じ工程に関わる役割を横断して確認する</h2><p>工程をまたぐ担当・役割の違いを示す</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;swimlane&quot;,
+  &quot;title&quot;: &quot;同じ工程に関わる役割を横断して確認する&quot;,
+  &quot;periods&quot;: [
+    &quot;準備&quot;,
+    &quot;検証&quot;,
+    &quot;判断&quot;,
+    &quot;実行&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;役割A&quot;,
+      &quot;spans&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 0,
+          &quot;label&quot;: &quot;条件整理&quot;
+        },
+        {
+          &quot;start&quot;: 2,
+          &quot;end&quot;: 2,
+          &quot;label&quot;: &quot;判断&quot;
+        }
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;役割B&quot;,
+      &quot;spans&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 1,
+          &quot;label&quot;: &quot;分析・比較&quot;,
+          &quot;secondary&quot;: true
+        },
+        {
+          &quot;start&quot;: 3,
+          &quot;end&quot;: 3,
+          &quot;label&quot;: &quot;実行支援&quot;
+        }
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;役割C&quot;,
+      &quot;spans&quot;: [
+        {
+          &quot;start&quot;: 1,
+          &quot;end&quot;: 2,
+          &quot;label&quot;: &quot;確認・調整&quot;
+        },
+        {
+          &quot;start&quot;: 3,
+          &quot;end&quot;: 3,
+          &quot;label&quot;: &quot;運用&quot;,
+          &quot;secondary&quot;: true
+        }
+      ]
+    }
+  ],
+  &quot;category&quot;: &quot;工程・時間&quot;,
+  &quot;use&quot;: &quot;工程をまたぐ担当・役割の違いを示す&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G17&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G18" data-category="比較・判断" data-search="変わる点を同じ観点で対比する 共通の観点で変更前後を比べる beforeafter 比較・判断"><a class="preview" href="layout-gallery.html#slide-18" data-index="18" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-18.webp" alt="変わる点を同じ観点で対比する" width="520" height="360"></a><div class="caption"><div class="meta">G18 · 比較・判断 · ワイド</div><h2>変わる点を同じ観点で対比する</h2><p>共通の観点で変更前後を比べる</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;beforeafter&quot;,
+  &quot;title&quot;: &quot;変わる点を同じ観点で対比する&quot;,
+  &quot;columns&quot;: [
+    &quot;現在&quot;,
+    &quot;目指す状態&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;手順&quot;,
+      &quot;cells&quot;: [
+        &quot;担当ごとに異なる手順で処理する。&quot;,
+        &quot;共通の手順と例外の扱いを分ける。&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;情報&quot;,
+      &quot;cells&quot;: [
+        &quot;必要な情報が複数の場所に分散する。&quot;,
+        &quot;参照先を揃え、更新の責任を決める。&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;確認&quot;,
+      &quot;cells&quot;: [
+        &quot;問題が起きてから個別に確認する。&quot;,
+        &quot;途中で確認し、早期に修正する。&quot;
+      ]
+    }
+  ],
+  &quot;category&quot;: &quot;比較・判断&quot;,
+  &quot;use&quot;: &quot;共通の観点で変更前後を比べる&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G18&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G19" data-category="構造・関係" data-search="論点を分解し、確認する事項までつなげる 論点を分解して検証項目へつなぐ issue-tree 構造・関係"><a class="preview" href="layout-gallery.html#slide-19" data-index="19" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-19.webp" alt="論点を分解し、確認する事項までつなげる" width="520" height="360"></a><div class="caption"><div class="meta">G19 · 構造・関係 · ワイド</div><h2>論点を分解し、確認する事項までつなげる</h2><p>論点を分解して検証項目へつなぐ</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;issue-tree&quot;,
+  &quot;title&quot;: &quot;論点を分解し、確認する事項までつなげる&quot;,
+  &quot;root&quot;: &quot;遅れが生じる\n要因は何か&quot;,
+  &quot;branches&quot;: [
+    {
+      &quot;label&quot;: &quot;作業の集中&quot;,
+      &quot;items&quot;: [
+        &quot;時間帯ごとの件数&quot;,
+        &quot;例外処理の割合&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;確認の停滞&quot;,
+      &quot;items&quot;: [
+        &quot;承認までの時間&quot;,
+        &quot;差し戻しの理由&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;情報の不足&quot;,
+      &quot;items&quot;: [
+        &quot;不足項目の種類&quot;,
+        &quot;追加確認の頻度&quot;
+      ]
+    }
+  ],
+  &quot;category&quot;: &quot;構造・関係&quot;,
+  &quot;use&quot;: &quot;論点を分解して検証項目へつなぐ&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G19&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G20" data-category="構造・関係" data-search="全体方針と具体的な取り組みを階層で示す 全体方針と下位の取り組みを対応させる hierarchy 構造・関係"><a class="preview" href="layout-gallery.html#slide-20" data-index="20" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-20.webp" alt="全体方針と具体的な取り組みを階層で示す" width="520" height="360"></a><div class="caption"><div class="meta">G20 · 構造・関係 · 標準幅</div><h2>全体方針と具体的な取り組みを階層で示す</h2><p>全体方針と下位の取り組みを対応させる</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;hierarchy&quot;,
+  &quot;title&quot;: &quot;全体方針と具体的な取り組みを階層で示す&quot;,
+  &quot;root&quot;: &quot;継続的な改善を実現する&quot;,
+  &quot;groups&quot;: [
+    {
+      &quot;label&quot;: &quot;見えるようにする&quot;,
+      &quot;items&quot;: [
+        &quot;現状の流れを整理&quot;,
+        &quot;判断に必要な情報を揃える&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;実行しやすくする&quot;,
+      &quot;items&quot;: [
+        &quot;担当と役割を明確化&quot;,
+        &quot;共通の手順を整える&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;続けられるようにする&quot;,
+      &quot;items&quot;: [
+        &quot;結果を定期的に確認&quot;,
+        &quot;学びを次の改善に反映&quot;
+      ]
+    }
+  ],
+  &quot;category&quot;: &quot;構造・関係&quot;,
+  &quot;use&quot;: &quot;全体方針と下位の取り組みを対応させる&quot;,
+  &quot;contentWidth&quot;: &quot;standard&quot;,
+  &quot;galleryId&quot;: &quot;G20&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G21" data-category="構造・関係" data-search="中心となる機能と周囲の関係を示す 中心と周辺の関係を示す。順序は表さない hub 構造・関係"><a class="preview" href="layout-gallery.html#slide-21" data-index="21" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-21.webp" alt="中心となる機能と周囲の関係を示す" width="520" height="360"></a><div class="caption"><div class="meta">G21 · 構造・関係 · 標準幅</div><h2>中心となる機能と周囲の関係を示す</h2><p>中心と周辺の関係を示す。順序は表さない</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;hub&quot;,
+  &quot;title&quot;: &quot;中心となる機能と周囲の関係を示す&quot;,
+  &quot;center&quot;: &quot;共通の情報基盤&quot;,
+  &quot;nodes&quot;: [
+    {
+      &quot;label&quot;: &quot;収集&quot;,
+      &quot;relation&quot;: &quot;情報を集める&quot;
+    },
+    {
+      &quot;label&quot;: &quot;分析&quot;,
+      &quot;relation&quot;: &quot;状況を読み取る&quot;
+    },
+    {
+      &quot;label&quot;: &quot;共有&quot;,
+      &quot;relation&quot;: &quot;必要な相手へ伝える&quot;
+    },
+    {
+      &quot;label&quot;: &quot;更新&quot;,
+      &quot;relation&quot;: &quot;結果を反映する&quot;
+    }
+  ],
+  &quot;category&quot;: &quot;構造・関係&quot;,
+  &quot;use&quot;: &quot;中心と周辺の関係を示す。順序は表さない&quot;,
+  &quot;contentWidth&quot;: &quot;standard&quot;,
+  &quot;galleryId&quot;: &quot;G21&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G22" data-category="構造・関係" data-search="役割の異なる層を分けて全体像を示す 役割の異なる層を整理する layers 構造・関係"><a class="preview" href="layout-gallery.html#slide-22" data-index="22" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-22.webp" alt="役割の異なる層を分けて全体像を示す" width="520" height="360"></a><div class="caption"><div class="meta">G22 · 構造・関係 · ワイド</div><h2>役割の異なる層を分けて全体像を示す</h2><p>役割の異なる層を整理する</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;layers&quot;,
+  &quot;title&quot;: &quot;役割の異なる層を分けて全体像を示す&quot;,
+  &quot;layers&quot;: [
+    {
+      &quot;label&quot;: &quot;目的・方針&quot;,
+      &quot;body&quot;: &quot;何を実現するか、何を優先するかを定める。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;ルール・責任&quot;,
+      &quot;body&quot;: &quot;判断の基準と、それぞれの役割を明確にする。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;業務・手順&quot;,
+      &quot;body&quot;: &quot;日々の作業と例外への対応を具体化する。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;情報・仕組み&quot;,
+      &quot;body&quot;: &quot;実行に必要な情報と道具を整える。&quot;
+    }
+  ],
+  &quot;category&quot;: &quot;構造・関係&quot;,
+  &quot;use&quot;: &quot;役割の異なる層を整理する&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G22&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G23" data-category="比較・判断" data-search="条件によって異なる対応を分岐で示す 条件による対応の分岐を示す decision 比較・判断"><a class="preview" href="layout-gallery.html#slide-23" data-index="23" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-23.webp" alt="条件によって異なる対応を分岐で示す" width="520" height="360"></a><div class="caption"><div class="meta">G23 · 比較・判断 · 標準幅</div><h2>条件によって異なる対応を分岐で示す</h2><p>条件による対応の分岐を示す</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;decision&quot;,
+  &quot;title&quot;: &quot;条件によって異なる対応を分岐で示す&quot;,
+  &quot;question&quot;: &quot;共通の条件を\n満たしているか&quot;,
+  &quot;branches&quot;: [
+    {
+      &quot;condition&quot;: &quot;満たしている&quot;,
+      &quot;action&quot;: &quot;共通の手順で進める&quot;,
+      &quot;items&quot;: [
+        &quot;必要な記録を残す&quot;,
+        &quot;結果を定期的に確認する&quot;
+      ]
+    },
+    {
+      &quot;condition&quot;: &quot;満たしていない&quot;,
+      &quot;action&quot;: &quot;例外の条件を確認する&quot;,
+      &quot;items&quot;: [
+        &quot;不足している条件を特定&quot;,
+        &quot;個別対応の範囲を判断&quot;
+      ]
+    }
+  ],
+  &quot;category&quot;: &quot;比較・判断&quot;,
+  &quot;use&quot;: &quot;条件による対応の分岐を示す&quot;,
+  &quot;contentWidth&quot;: &quot;standard&quot;,
+  &quot;galleryId&quot;: &quot;G23&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G24" data-category="比較・判断" data-search="二つの観点で対応方針を整理する 二つの独立した軸で方針を整理する quadrant 比較・判断"><a class="preview" href="layout-gallery.html#slide-24" data-index="24" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-24.webp" alt="二つの観点で対応方針を整理する" width="520" height="360"></a><div class="caption"><div class="meta">G24 · 比較・判断 · ワイド</div><h2>二つの観点で対応方針を整理する</h2><p>二つの独立した軸で方針を整理する</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;quadrant&quot;,
+  &quot;title&quot;: &quot;二つの観点で対応方針を整理する&quot;,
+  &quot;xLabel&quot;: &quot;実施のしやすさ →&quot;,
+  &quot;yLabel&quot;: &quot;効果\n高&quot;,
+  &quot;cells&quot;: [
+    {
+      &quot;label&quot;: &quot;条件を整えて進める&quot;,
+      &quot;body&quot;: &quot;効果は大きいが、\n事前の準備が必要。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;優先して着手する&quot;,
+      &quot;body&quot;: &quot;効果と実現性を\n両立できる。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;必要性を見直す&quot;,
+      &quot;body&quot;: &quot;負担に対する効果を\n再確認する。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;小さく試す&quot;,
+      &quot;body&quot;: &quot;限られた範囲で\n結果を確かめる。&quot;
+    }
+  ],
+  &quot;category&quot;: &quot;比較・判断&quot;,
+  &quot;use&quot;: &quot;二つの独立した軸で方針を整理する&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G24&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G25" data-category="データ・チャート" data-search="対象間の量の違いを長さで比較する 共通単位の量を比較する bars データ・チャート"><a class="preview" href="layout-gallery.html#slide-25" data-index="25" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-25.webp" alt="対象間の量の違いを長さで比較する" width="520" height="360"></a><div class="caption"><div class="meta">G25 · データ・チャート · 標準幅</div><h2>対象間の量の違いを長さで比較する</h2><p>共通単位の量を比較する</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;bars&quot;,
+  &quot;title&quot;: &quot;対象間の量の違いを長さで比較する&quot;,
+  &quot;max&quot;: 100,
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;対象A&quot;,
+      &quot;value&quot;: 82
+    },
+    {
+      &quot;label&quot;: &quot;対象B&quot;,
+      &quot;value&quot;: 65
+    },
+    {
+      &quot;label&quot;: &quot;対象C&quot;,
+      &quot;value&quot;: 48
+    },
+    {
+      &quot;label&quot;: &quot;対象D&quot;,
+      &quot;value&quot;: 30
+    },
+    {
+      &quot;label&quot;: &quot;対象E&quot;,
+      &quot;value&quot;: 18
+    }
+  ],
+  &quot;note&quot;: &quot;数値は例示。単位：件。棒の原点は0。&quot;,
+  &quot;category&quot;: &quot;データ・チャート&quot;,
+  &quot;use&quot;: &quot;共通単位の量を比較する&quot;,
+  &quot;contentWidth&quot;: &quot;standard&quot;,
+  &quot;galleryId&quot;: &quot;G25&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G26" data-category="データ・チャート" data-search="総量を揃えて内訳の違いを比較する 内訳の割合を比較する。総量は比較できない stacked データ・チャート"><a class="preview" href="layout-gallery.html#slide-26" data-index="26" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-26.webp" alt="総量を揃えて内訳の違いを比較する" width="520" height="360"></a><div class="caption"><div class="meta">G26 · データ・チャート · ワイド</div><h2>総量を揃えて内訳の違いを比較する</h2><p>内訳の割合を比較する。総量は比較できない</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;stacked&quot;,
+  &quot;title&quot;: &quot;総量を揃えて内訳の違いを比較する&quot;,
+  &quot;series&quot;: [
+    &quot;区分1&quot;,
+    &quot;区分2&quot;,
+    &quot;区分3&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;対象A&quot;,
+      &quot;values&quot;: [
+        50,
+        30,
+        20
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;対象B&quot;,
+      &quot;values&quot;: [
+        30,
+        45,
+        25
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;対象C&quot;,
+      &quot;values&quot;: [
+        60,
+        25,
+        15
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;対象D&quot;,
+      &quot;values&quot;: [
+        25,
+        35,
+        40
+      ]
+    }
+  ],
+  &quot;note&quot;: &quot;数値は例示。各行の合計は100%。総量の大小は表さない。&quot;,
+  &quot;category&quot;: &quot;データ・チャート&quot;,
+  &quot;use&quot;: &quot;内訳の割合を比較する。総量は比較できない&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G26&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G27" data-category="データ・チャート" data-search="複数系列の変化を同じ尺度で追う 連続する期間の変化を比較する line-chart データ・チャート"><a class="preview" href="layout-gallery.html#slide-27" data-index="27" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-27.webp" alt="複数系列の変化を同じ尺度で追う" width="520" height="360"></a><div class="caption"><div class="meta">G27 · データ・チャート · ワイド</div><h2>複数系列の変化を同じ尺度で追う</h2><p>連続する期間の変化を比較する</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;line-chart&quot;,
+  &quot;title&quot;: &quot;複数系列の変化を同じ尺度で追う&quot;,
+  &quot;max&quot;: 100,
+  &quot;periods&quot;: [
+    &quot;1期&quot;,
+    &quot;2期&quot;,
+    &quot;3期&quot;,
+    &quot;4期&quot;,
+    &quot;5期&quot;
+  ],
+  &quot;series&quot;: [
+    {
+      &quot;label&quot;: &quot;対象A&quot;,
+      &quot;values&quot;: [
+        25,
+        40,
+        35,
+        65,
+        85
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;対象B&quot;,
+      &quot;values&quot;: [
+        20,
+        30,
+        45,
+        50,
+        60
+      ]
+    }
+  ],
+  &quot;note&quot;: &quot;数値は例示。単位：件。同じ期間・同じ集計方法で比較。&quot;,
+  &quot;category&quot;: &quot;データ・チャート&quot;,
+  &quot;use&quot;: &quot;連続する期間の変化を比較する&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G27&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G28" data-category="データ・チャート" data-search="二つの量の関係と例外を確認する 二変数の関係・外れ値を見る scatter データ・チャート"><a class="preview" href="layout-gallery.html#slide-28" data-index="28" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-28.webp" alt="二つの量の関係と例外を確認する" width="520" height="360"></a><div class="caption"><div class="meta">G28 · データ・チャート · ワイド</div><h2>二つの量の関係と例外を確認する</h2><p>二変数の関係・外れ値を見る</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;scatter&quot;,
+  &quot;title&quot;: &quot;二つの量の関係と例外を確認する&quot;,
+  &quot;max&quot;: 100,
+  &quot;xMax&quot;: 100,
+  &quot;xLabel&quot;: &quot;作業量（件）&quot;,
+  &quot;yLabel&quot;: &quot;所要時間（分）&quot;,
+  &quot;points&quot;: [
+    {
+      &quot;label&quot;: &quot;A&quot;,
+      &quot;x&quot;: 12,
+      &quot;y&quot;: 15
+    },
+    {
+      &quot;label&quot;: &quot;B&quot;,
+      &quot;x&quot;: 30,
+      &quot;y&quot;: 35
+    },
+    {
+      &quot;label&quot;: &quot;C&quot;,
+      &quot;x&quot;: 45,
+      &quot;y&quot;: 25
+    },
+    {
+      &quot;label&quot;: &quot;D&quot;,
+      &quot;x&quot;: 55,
+      &quot;y&quot;: 65
+    },
+    {
+      &quot;label&quot;: &quot;E&quot;,
+      &quot;x&quot;: 72,
+      &quot;y&quot;: 55
+    },
+    {
+      &quot;label&quot;: &quot;F&quot;,
+      &quot;x&quot;: 85,
+      &quot;y&quot;: 82
+    }
+  ],
+  &quot;note&quot;: &quot;数値は例示。相関だけで因果関係を判断しない。&quot;,
+  &quot;category&quot;: &quot;データ・チャート&quot;,
+  &quot;use&quot;: &quot;二変数の関係・外れ値を見る&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G28&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G29" data-category="データ・チャート" data-search="二時点の変化と順位の入れ替わりを見る 二時点の変化を追う slope データ・チャート"><a class="preview" href="layout-gallery.html#slide-29" data-index="29" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-29.webp" alt="二時点の変化と順位の入れ替わりを見る" width="520" height="360"></a><div class="caption"><div class="meta">G29 · データ・チャート · 標準幅</div><h2>二時点の変化と順位の入れ替わりを見る</h2><p>二時点の変化を追う</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;slope&quot;,
+  &quot;title&quot;: &quot;二時点の変化と順位の入れ替わりを見る&quot;,
+  &quot;max&quot;: 120,
+  &quot;periods&quot;: [
+    &quot;変更前&quot;,
+    &quot;変更後&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;対象A&quot;,
+      &quot;values&quot;: [
+        85,
+        60
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;対象B&quot;,
+      &quot;values&quot;: [
+        60,
+        90
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;対象C&quot;,
+      &quot;values&quot;: [
+        30,
+        42
+      ]
+    }
+  ],
+  &quot;note&quot;: &quot;数値は例示。単位：件。両時点で同じ尺度を使用。&quot;,
+  &quot;category&quot;: &quot;データ・チャート&quot;,
+  &quot;use&quot;: &quot;二時点の変化を追う&quot;,
+  &quot;contentWidth&quot;: &quot;standard&quot;,
+  &quot;galleryId&quot;: &quot;G29&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G30" data-category="データ・チャート" data-search="開始値から終了値への増減要因を示す 増減要因と最終値をつなぐ waterfall データ・チャート"><a class="preview" href="layout-gallery.html#slide-30" data-index="30" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-30.webp" alt="開始値から終了値への増減要因を示す" width="520" height="360"></a><div class="caption"><div class="meta">G30 · データ・チャート · ワイド</div><h2>開始値から終了値への増減要因を示す</h2><p>増減要因と最終値をつなぐ</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;waterfall&quot;,
+  &quot;title&quot;: &quot;開始値から終了値への増減要因を示す&quot;,
+  &quot;max&quot;: 160,
+  &quot;values&quot;: [
+    {
+      &quot;label&quot;: &quot;開始&quot;,
+      &quot;value&quot;: 100,
+      &quot;total&quot;: true
+    },
+    {
+      &quot;label&quot;: &quot;要因A&quot;,
+      &quot;value&quot;: 35
+    },
+    {
+      &quot;label&quot;: &quot;要因B&quot;,
+      &quot;value&quot;: -20
+    },
+    {
+      &quot;label&quot;: &quot;要因C&quot;,
+      &quot;value&quot;: 15
+    },
+    {
+      &quot;label&quot;: &quot;終了&quot;,
+      &quot;value&quot;: 130,
+      &quot;total&quot;: true
+    }
+  ],
+  &quot;note&quot;: &quot;数値は例示。100 ＋ 35 − 20 ＋ 15 ＝ 130。単位：件。&quot;,
+  &quot;category&quot;: &quot;データ・チャート&quot;,
+  &quot;use&quot;: &quot;増減要因と最終値をつなぐ&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G30&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G31" data-category="データ・チャート" data-search="量の大きい項目と累積比率を確認する 分類の件数と累積比率を見る pareto データ・チャート"><a class="preview" href="layout-gallery.html#slide-31" data-index="31" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-31.webp" alt="量の大きい項目と累積比率を確認する" width="520" height="360"></a><div class="caption"><div class="meta">G31 · データ・チャート · ワイド</div><h2>量の大きい項目と累積比率を確認する</h2><p>分類の件数と累積比率を見る</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;pareto&quot;,
+  &quot;title&quot;: &quot;量の大きい項目と累積比率を確認する&quot;,
+  &quot;max&quot;: 50,
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;分類A&quot;,
+      &quot;value&quot;: 40
+    },
+    {
+      &quot;label&quot;: &quot;分類B&quot;,
+      &quot;value&quot;: 25
+    },
+    {
+      &quot;label&quot;: &quot;分類C&quot;,
+      &quot;value&quot;: 18
+    },
+    {
+      &quot;label&quot;: &quot;分類D&quot;,
+      &quot;value&quot;: 10
+    },
+    {
+      &quot;label&quot;: &quot;分類E&quot;,
+      &quot;value&quot;: 7
+    }
+  ],
+  &quot;note&quot;: &quot;数値は例示。棒＝件数、折れ線＝累積比率。&quot;,
+  &quot;category&quot;: &quot;データ・チャート&quot;,
+  &quot;use&quot;: &quot;分類の件数と累積比率を見る&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G31&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G32" data-category="データ・チャート" data-search="複数の観点にまたがる強弱を一覧する 複数対象・複数観点の強弱を見る heatmap データ・チャート"><a class="preview" href="layout-gallery.html#slide-32" data-index="32" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-32.webp" alt="複数の観点にまたがる強弱を一覧する" width="520" height="360"></a><div class="caption"><div class="meta">G32 · データ・チャート · ワイド</div><h2>複数の観点にまたがる強弱を一覧する</h2><p>複数対象・複数観点の強弱を見る</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;heatmap&quot;,
+  &quot;title&quot;: &quot;複数の観点にまたがる強弱を一覧する&quot;,
+  &quot;columns&quot;: [
+    &quot;観点1&quot;,
+    &quot;観点2&quot;,
+    &quot;観点3&quot;,
+    &quot;観点4&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;対象A&quot;,
+      &quot;values&quot;: [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;対象B&quot;,
+      &quot;values&quot;: [
+        1,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;対象C&quot;,
+      &quot;values&quot;: [
+        2,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;対象D&quot;,
+      &quot;values&quot;: [
+        0,
+        2,
+        1,
+        3
+      ]
+    }
+  ],
+  &quot;note&quot;: &quot;値は例示。0＝該当なし、1＝低、2＝中、3＝高。濃淡と数値を併記。&quot;,
+  &quot;category&quot;: &quot;データ・チャート&quot;,
+  &quot;use&quot;: &quot;複数対象・複数観点の強弱を見る&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;galleryId&quot;: &quot;G32&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G33" data-category="複合・分析構成" data-search="環境変化・対応・期待する成果をつなげる 外部環境や課題が、どの方針・成果につながるかを読む。 strategy-map 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-33" data-index="33" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-33.webp" alt="環境変化・対応・期待する成果をつなげる" width="520" height="360"></a><div class="caption"><div class="meta">G33 · 複合・分析構成 · ワイド</div><h2>環境変化・対応・期待する成果をつなげる</h2><p>外部環境や課題が、どの方針・成果につながるかを読む。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;strategy-map&quot;,
+  &quot;title&quot;: &quot;環境変化・対応・期待する成果をつなげる&quot;,
+  &quot;columns&quot;: [
+    &quot;環境・課題&quot;,
+    &quot;対応方針&quot;,
+    &quot;期待する成果&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;driver&quot;: &quot;依頼の種類が増えている&quot;,
+      &quot;response&quot;: &quot;受付の条件と分類を整える&quot;,
+      &quot;outcome&quot;: &quot;確認の手戻りを減らす&quot;
+    },
+    {
+      &quot;driver&quot;: &quot;対応方法が担当に依存する&quot;,
+      &quot;response&quot;: &quot;共通手順と例外を分ける&quot;,
+      &quot;outcome&quot;: &quot;品質のばらつきを抑える&quot;
+    },
+    {
+      &quot;driver&quot;: &quot;結果が次の判断に使われない&quot;,
+      &quot;response&quot;: &quot;記録と振り返りを定着させる&quot;,
+      &quot;outcome&quot;: &quot;改善の根拠を蓄積する&quot;
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G33&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;外部環境や課題が、どの方針・成果につながるかを読む。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G34" data-category="複合・分析構成" data-search="提供するものと受け取るものを分けて示す 主体間の往路・復路で受け渡すものを区別する。 exchange 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-34" data-index="34" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-34.webp" alt="提供するものと受け取るものを分けて示す" width="520" height="360"></a><div class="caption"><div class="meta">G34 · 複合・分析構成 · 標準幅</div><h2>提供するものと受け取るものを分けて示す</h2><p>主体間の往路・復路で受け渡すものを区別する。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;exchange&quot;,
+  &quot;title&quot;: &quot;提供するものと受け取るものを分けて示す&quot;,
+  &quot;actors&quot;: [
+    &quot;提供者&quot;,
+    &quot;共通サービス&quot;,
+    &quot;利用者&quot;
+  ],
+  &quot;flows&quot;: [
+    {
+      &quot;forward&quot;: &quot;情報・素材を提供&quot;,
+      &quot;backward&quot;: &quot;利用実績を還元&quot;
+    },
+    {
+      &quot;forward&quot;: &quot;整理した情報を提供&quot;,
+      &quot;backward&quot;: &quot;評価・要望を返す&quot;
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G34&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;standard&quot;,
+  &quot;use&quot;: &quot;主体間の往路・復路で受け渡すものを区別する。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G35" data-category="複合・分析構成" data-search="各機能の役割と横断する基盤を整理する 役割・活動・情報と、それらを支える横断基盤を整理する。 operating-model 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-35" data-index="35" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-35.webp" alt="各機能の役割と横断する基盤を整理する" width="520" height="360"></a><div class="caption"><div class="meta">G35 · 複合・分析構成 · ワイド</div><h2>各機能の役割と横断する基盤を整理する</h2><p>役割・活動・情報と、それらを支える横断基盤を整理する。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;operating-model&quot;,
+  &quot;title&quot;: &quot;各機能の役割と横断する基盤を整理する&quot;,
+  &quot;columns&quot;: [
+    &quot;方針を決める&quot;,
+    &quot;実行する&quot;,
+    &quot;結果を確認する&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;活動&quot;,
+      &quot;cells&quot;: [
+        &quot;優先順位を決定&quot;,
+        &quot;手順に沿って実施&quot;,
+        &quot;差分と原因を確認&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;責任&quot;,
+      &quot;cells&quot;: [
+        &quot;判断の根拠を示す&quot;,
+        &quot;記録と例外を残す&quot;,
+        &quot;改善案を提示&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;情報&quot;,
+      &quot;cells&quot;: [
+        &quot;目的・判断条件&quot;,
+        &quot;対象・進捗・実績&quot;,
+        &quot;効果・未解決事項&quot;
+      ]
+    }
+  ],
+  &quot;foundation&quot;: &quot;共通の情報定義・アクセス管理・更新ルール&quot;,
+  &quot;galleryId&quot;: &quot;G35&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;役割・活動・情報と、それらを支える横断基盤を整理する。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G36" data-category="複合・分析構成" data-search="現在地・目標・次の段階への条件を示す 現在と目標の違い、次段階へ移る条件を示す。 maturity 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-36" data-index="36" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-36.webp" alt="現在地・目標・次の段階への条件を示す" width="520" height="360"></a><div class="caption"><div class="meta">G36 · 複合・分析構成 · ワイド</div><h2>現在地・目標・次の段階への条件を示す</h2><p>現在と目標の違い、次段階へ移る条件を示す。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;maturity&quot;,
+  &quot;title&quot;: &quot;現在地・目標・次の段階への条件を示す&quot;,
+  &quot;current&quot;: 0,
+  &quot;target&quot;: 2,
+  &quot;stages&quot;: [
+    {
+      &quot;label&quot;: &quot;個別に対応&quot;,
+      &quot;state&quot;: &quot;担当者の経験で対応する。&quot;,
+      &quot;conditions&quot;: [
+        &quot;現状を可視化&quot;,
+        &quot;共通項目を特定&quot;
+      ],
+      &quot;position&quot;: &quot;現在&quot;
+    },
+    {
+      &quot;label&quot;: &quot;手順を共通化&quot;,
+      &quot;state&quot;: &quot;共通手順と例外を区別する。&quot;,
+      &quot;conditions&quot;: [
+        &quot;結果を記録&quot;,
+        &quot;差分を検証&quot;
+      ],
+      &quot;position&quot;: &quot;中間段階&quot;
+    },
+    {
+      &quot;label&quot;: &quot;継続的に改善&quot;,
+      &quot;state&quot;: &quot;結果を次の判断に活かす。&quot;,
+      &quot;conditions&quot;: [
+        &quot;基準を定期更新&quot;,
+        &quot;変化に合わせて見直す&quot;
+      ],
+      &quot;position&quot;: &quot;目標&quot;
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G36&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;現在と目標の違い、次段階へ移る条件を示す。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G37" data-category="複合・分析構成" data-search="上位の目的と実行を支える要素を対応させる 目的・仕組み・基盤の包含関係と具体的な意味を対応させる。 pyramid-detail 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-37" data-index="37" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-37.webp" alt="上位の目的と実行を支える要素を対応させる" width="520" height="360"></a><div class="caption"><div class="meta">G37 · 複合・分析構成 · 標準幅</div><h2>上位の目的と実行を支える要素を対応させる</h2><p>目的・仕組み・基盤の包含関係と具体的な意味を対応させる。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;pyramid-detail&quot;,
+  &quot;title&quot;: &quot;上位の目的と実行を支える要素を対応させる&quot;,
+  &quot;levels&quot;: [
+    {
+      &quot;label&quot;: &quot;目的&quot;,
+      &quot;heading&quot;: &quot;何を実現するか&quot;,
+      &quot;body&quot;: &quot;判断の基準となる目的を共有する。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;仕組み&quot;,
+      &quot;heading&quot;: &quot;どう動くか&quot;,
+      &quot;body&quot;: &quot;役割・手順・確認方法を整える。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;基盤&quot;,
+      &quot;heading&quot;: &quot;何が支えるか&quot;,
+      &quot;body&quot;: &quot;人材・情報・道具を揃える。&quot;
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G37&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;standard&quot;,
+  &quot;use&quot;: &quot;目的・仕組み・基盤の包含関係と具体的な意味を対応させる。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G38" data-category="複合・分析構成" data-search="位置・規模・分布を同時に比較する 二つの評価軸と対象規模を同時に読む。 portfolio-bubbles 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-38" data-index="38" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-38.webp" alt="位置・規模・分布を同時に比較する" width="520" height="360"></a><div class="caption"><div class="meta">G38 · 複合・分析構成 · 標準幅</div><h2>位置・規模・分布を同時に比較する</h2><p>二つの評価軸と対象規模を同時に読む。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;portfolio-bubbles&quot;,
+  &quot;title&quot;: &quot;位置・規模・分布を同時に比較する&quot;,
+  &quot;xLabel&quot;: &quot;実現性 →&quot;,
+  &quot;yLabel&quot;: &quot;期待効果 ↑&quot;,
+  &quot;points&quot;: [
+    {
+      &quot;label&quot;: &quot;A&quot;,
+      &quot;x&quot;: 25,
+      &quot;y&quot;: 75,
+      &quot;size&quot;: 100
+    },
+    {
+      &quot;label&quot;: &quot;B&quot;,
+      &quot;x&quot;: 65,
+      &quot;y&quot;: 70,
+      &quot;size&quot;: 240
+    },
+    {
+      &quot;label&quot;: &quot;C&quot;,
+      &quot;x&quot;: 42,
+      &quot;y&quot;: 30,
+      &quot;size&quot;: 65
+    },
+    {
+      &quot;label&quot;: &quot;D&quot;,
+      &quot;x&quot;: 78,
+      &quot;y&quot;: 25,
+      &quot;size&quot;: 150
+    }
+  ],
+  &quot;note&quot;: &quot;例示。円の面積＝対象規模、座標＝共通尺度による評価。&quot;,
+  &quot;galleryId&quot;: &quot;G38&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;standard&quot;,
+  &quot;use&quot;: &quot;二つの評価軸と対象規模を同時に読む。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G39" data-category="複合・分析構成" data-search="現在位置から目指す位置への変化を示す 現在の分布だけでなく、目標へ向かう方向を示す。 portfolio-moves 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-39" data-index="39" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-39.webp" alt="現在位置から目指す位置への変化を示す" width="520" height="360"></a><div class="caption"><div class="meta">G39 · 複合・分析構成 · 標準幅</div><h2>現在位置から目指す位置への変化を示す</h2><p>現在の分布だけでなく、目標へ向かう方向を示す。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;portfolio-moves&quot;,
+  &quot;title&quot;: &quot;現在位置から目指す位置への変化を示す&quot;,
+  &quot;xLabel&quot;: &quot;対応範囲 →&quot;,
+  &quot;yLabel&quot;: &quot;成熟度 ↑&quot;,
+  &quot;points&quot;: [
+    {
+      &quot;label&quot;: &quot;A&quot;,
+      &quot;x&quot;: 18,
+      &quot;y&quot;: 35,
+      &quot;to&quot;: [
+        38,
+        70
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;B&quot;,
+      &quot;x&quot;: 55,
+      &quot;y&quot;: 25,
+      &quot;to&quot;: [
+        78,
+        55
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;C&quot;,
+      &quot;x&quot;: 68,
+      &quot;y&quot;: 78,
+      &quot;to&quot;: [
+        88,
+        88
+      ]
+    }
+  ],
+  &quot;note&quot;: &quot;例示。移動線は目標への方向を示し、実績の推移ではない。&quot;,
+  &quot;galleryId&quot;: &quot;G39&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;standard&quot;,
+  &quot;use&quot;: &quot;現在の分布だけでなく、目標へ向かう方向を示す。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G40" data-category="複合・分析構成" data-search="対象の位置づけから対応方針へつなげる 二軸の位置づけを、具体的な対応方針に結び付ける。 portfolio-actions 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-40" data-index="40" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-40.webp" alt="対象の位置づけから対応方針へつなげる" width="520" height="360"></a><div class="caption"><div class="meta">G40 · 複合・分析構成 · ワイド</div><h2>対象の位置づけから対応方針へつなげる</h2><p>二軸の位置づけを、具体的な対応方針に結び付ける。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;portfolio-actions&quot;,
+  &quot;title&quot;: &quot;対象の位置づけから対応方針へつなげる&quot;,
+  &quot;xLabel&quot;: &quot;実現性 →&quot;,
+  &quot;yLabel&quot;: &quot;期待効果 ↑&quot;,
+  &quot;groups&quot;: [
+    {
+      &quot;id&quot;: &quot;A&quot;,
+      &quot;x&quot;: 75,
+      &quot;y&quot;: 75,
+      &quot;action&quot;: &quot;先行実施&quot;,
+      &quot;body&quot;: &quot;効果と実現性が高い領域から着手する。&quot;
+    },
+    {
+      &quot;id&quot;: &quot;B&quot;,
+      &quot;x&quot;: 25,
+      &quot;y&quot;: 70,
+      &quot;action&quot;: &quot;条件整備&quot;,
+      &quot;body&quot;: &quot;障害となる条件を確認し、準備を進める。&quot;
+    },
+    {
+      &quot;id&quot;: &quot;C&quot;,
+      &quot;x&quot;: 65,
+      &quot;y&quot;: 25,
+      &quot;action&quot;: &quot;小規模検証&quot;,
+      &quot;body&quot;: &quot;対象を絞り、実際の効果を確かめる。&quot;
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G40&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;二軸の位置づけを、具体的な対応方針に結び付ける。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G41" data-category="複合・分析構成" data-search="工程全体に対する対応範囲と重点を示す 工程に沿った対応範囲・欠落・重点を横断的に見る。 valuechain 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-41" data-index="41" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-41.webp" alt="工程全体に対する対応範囲と重点を示す" width="520" height="360"></a><div class="caption"><div class="meta">G41 · 複合・分析構成 · ワイド</div><h2>工程全体に対する対応範囲と重点を示す</h2><p>工程に沿った対応範囲・欠落・重点を横断的に見る。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;valuechain&quot;,
+  &quot;title&quot;: &quot;工程全体に対する対応範囲と重点を示す&quot;,
+  &quot;stages&quot;: [
+    &quot;収集&quot;,
+    &quot;整理&quot;,
+    &quot;分析&quot;,
+    &quot;共有&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;機能A&quot;,
+      &quot;cells&quot;: [
+        &quot;対応&quot;,
+        &quot;重点&quot;,
+        &quot;対応&quot;,
+        &quot;対象外&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;機能B&quot;,
+      &quot;cells&quot;: [
+        &quot;対象外&quot;,
+        &quot;対応&quot;,
+        &quot;重点&quot;,
+        &quot;対応&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;機能C&quot;,
+      &quot;cells&quot;: [
+        &quot;対応&quot;,
+        &quot;対応&quot;,
+        &quot;対応&quot;,
+        &quot;重点&quot;
+      ]
+    }
+  ],
+  &quot;note&quot;: &quot;例示。「重点」は改善対象であり、量の大小を意味しない。&quot;,
+  &quot;galleryId&quot;: &quot;G41&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;工程に沿った対応範囲・欠落・重点を横断的に見る。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G42" data-category="複合・分析構成" data-search="全体の中の対象と、その内訳を区別する 全体と部分の分母を区別しながら内訳を拡大する。 part-whole 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-42" data-index="42" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-42.webp" alt="全体の中の対象と、その内訳を区別する" width="520" height="360"></a><div class="caption"><div class="meta">G42 · 複合・分析構成 · ワイド</div><h2>全体の中の対象と、その内訳を区別する</h2><p>全体と部分の分母を区別しながら内訳を拡大する。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;part-whole&quot;,
+  &quot;title&quot;: &quot;全体の中の対象と、その内訳を区別する&quot;,
+  &quot;wholeLabel&quot;: &quot;全体の構成&quot;,
+  &quot;partLabel&quot;: &quot;区分Bの内訳&quot;,
+  &quot;selected&quot;: 1,
+  &quot;whole&quot;: [
+    {
+      &quot;label&quot;: &quot;区分A&quot;,
+      &quot;value&quot;: 40
+    },
+    {
+      &quot;label&quot;: &quot;区分B&quot;,
+      &quot;value&quot;: 60
+    }
+  ],
+  &quot;parts&quot;: [
+    {
+      &quot;label&quot;: &quot;内訳1&quot;,
+      &quot;value&quot;: 45
+    },
+    {
+      &quot;label&quot;: &quot;内訳2&quot;,
+      &quot;value&quot;: 35
+    },
+    {
+      &quot;label&quot;: &quot;内訳3&quot;,
+      &quot;value&quot;: 20
+    }
+  ],
+  &quot;note&quot;: &quot;例示。右図の100%は区分Bを分母とする。全体の比率とは異なる。&quot;,
+  &quot;galleryId&quot;: &quot;G42&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;全体と部分の分母を区別しながら内訳を拡大する。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G43" data-category="複合・分析構成" data-search="対象と指標を揃えて複数の変化を比較する 対象×指標の共通グリッドで推移を比較する。 small-multiples 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-43" data-index="43" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-43.webp" alt="対象と指標を揃えて複数の変化を比較する" width="520" height="360"></a><div class="caption"><div class="meta">G43 · 複合・分析構成 · ワイド</div><h2>対象と指標を揃えて複数の変化を比較する</h2><p>対象×指標の共通グリッドで推移を比較する。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;small-multiples&quot;,
+  &quot;title&quot;: &quot;対象と指標を揃えて複数の変化を比較する&quot;,
+  &quot;columns&quot;: [
+    &quot;対象A&quot;,
+    &quot;対象B&quot;
+  ],
+  &quot;periods&quot;: [
+    &quot;1期&quot;,
+    &quot;2期&quot;,
+    &quot;3期&quot;
+  ],
+  &quot;max&quot;: 100,
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;数量&quot;,
+      &quot;charts&quot;: [
+        [
+          30,
+          45,
+          60
+        ],
+        [
+          45,
+          55,
+          65
+        ]
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;稼働率&quot;,
+      &quot;charts&quot;: [
+        [
+          40,
+          60,
+          75
+        ],
+        [
+          60,
+          65,
+          70
+        ]
+      ]
+    }
+  ],
+  &quot;note&quot;: &quot;例示。数量：件、稼働率：%。同じ行の尺度・期間を統一。&quot;,
+  &quot;galleryId&quot;: &quot;G43&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;対象×指標の共通グリッドで推移を比較する。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G44" data-category="複合・分析構成" data-search="前提別の結果を複数の指標で確かめる 条件が変わると成果と負担がどう変わるかを同時に比較する。 scenario-metrics 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-44" data-index="44" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-44.webp" alt="前提別の結果を複数の指標で確かめる" width="520" height="360"></a><div class="caption"><div class="meta">G44 · 複合・分析構成 · ワイド</div><h2>前提別の結果を複数の指標で確かめる</h2><p>条件が変わると成果と負担がどう変わるかを同時に比較する。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;scenario-metrics&quot;,
+  &quot;title&quot;: &quot;前提別の結果を複数の指標で確かめる&quot;,
+  &quot;scenarios&quot;: [
+    &quot;対象を絞る&quot;,
+    &quot;段階的に広げる&quot;,
+    &quot;早期に広げる&quot;
+  ],
+  &quot;periods&quot;: [
+    &quot;1期&quot;,
+    &quot;2期&quot;,
+    &quot;3期&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;成果量\n（件）&quot;,
+      &quot;max&quot;: 100,
+      &quot;values&quot;: [
+        [
+          25,
+          35,
+          45
+        ],
+        [
+          25,
+          50,
+          70
+        ],
+        [
+          25,
+          65,
+          90
+        ]
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;必要工数\n（人月）&quot;,
+      &quot;max&quot;: 20,
+      &quot;values&quot;: [
+        [
+          5,
+          7,
+          8
+        ],
+        [
+          7,
+          10,
+          12
+        ],
+        [
+          10,
+          14,
+          18
+        ]
+      ]
+    }
+  ],
+  &quot;note&quot;: &quot;数値は仮定による例示。予測値・実績値ではない。&quot;,
+  &quot;galleryId&quot;: &quot;G44&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;条件が変わると成果と負担がどう変わるかを同時に比較する。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G45" data-category="複合・分析構成" data-search="変化の特徴と、その解釈を対応づける グラフ上の注目点と解釈を番号で対応させる。 annotated-trend 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-45" data-index="45" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-45.webp" alt="変化の特徴と、その解釈を対応づける" width="520" height="360"></a><div class="caption"><div class="meta">G45 · 複合・分析構成 · ワイド</div><h2>変化の特徴と、その解釈を対応づける</h2><p>グラフ上の注目点と解釈を番号で対応させる。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;annotated-trend&quot;,
+  &quot;title&quot;: &quot;変化の特徴と、その解釈を対応づける&quot;,
+  &quot;max&quot;: 100,
+  &quot;periods&quot;: [
+    &quot;1期&quot;,
+    &quot;2期&quot;,
+    &quot;3期&quot;,
+    &quot;4期&quot;,
+    &quot;5期&quot;,
+    &quot;6期&quot;
+  ],
+  &quot;values&quot;: [
+    30,
+    35,
+    70,
+    50,
+    55,
+    85
+  ],
+  &quot;callouts&quot;: [
+    {
+      &quot;index&quot;: 2,
+      &quot;label&quot;: &quot;一時的な増加&quot;,
+      &quot;body&quot;: &quot;対象範囲の変更の影響を確認する。&quot;
+    },
+    {
+      &quot;index&quot;: 3,
+      &quot;label&quot;: &quot;増加後の低下&quot;,
+      &quot;body&quot;: &quot;変動が一時的か継続的かを確認する。&quot;
+    },
+    {
+      &quot;index&quot;: 5,
+      &quot;label&quot;: &quot;再び増加&quot;,
+      &quot;body&quot;: &quot;集計条件に変更がないかを確認する。&quot;
+    }
+  ],
+  &quot;note&quot;: &quot;数量の例示（件）。解釈は仮説であり、因果を断定しない。&quot;,
+  &quot;galleryId&quot;: &quot;G45&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;グラフ上の注目点と解釈を番号で対応させる。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G46" data-category="複合・分析構成" data-search="同じ属性に対する二つの回答傾向を比べる 同じ属性について複数の質問結果を同じ行で比較する。 survey-grid 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-46" data-index="46" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-46.webp" alt="同じ属性に対する二つの回答傾向を比べる" width="520" height="360"></a><div class="caption"><div class="meta">G46 · 複合・分析構成 · ワイド</div><h2>同じ属性に対する二つの回答傾向を比べる</h2><p>同じ属性について複数の質問結果を同じ行で比較する。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;survey-grid&quot;,
+  &quot;title&quot;: &quot;同じ属性に対する二つの回答傾向を比べる&quot;,
+  &quot;columns&quot;: [
+    &quot;現在の利用状況&quot;,
+    &quot;今後の利用意向&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;グループA&quot;,
+      &quot;values&quot;: [
+        [
+          45,
+          35,
+          20
+        ],
+        [
+          60,
+          25,
+          15
+        ]
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;グループB&quot;,
+      &quot;values&quot;: [
+        [
+          30,
+          45,
+          25
+        ],
+        [
+          40,
+          35,
+          25
+        ]
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;グループC&quot;,
+      &quot;values&quot;: [
+        [
+          20,
+          40,
+          40
+        ],
+        [
+          30,
+          40,
+          30
+        ]
+      ]
+    }
+  ],
+  &quot;legend&quot;: [
+    &quot;肯定&quot;,
+    &quot;中立&quot;,
+    &quot;否定&quot;
+  ],
+  &quot;note&quot;: &quot;例示。各行の母数は100件。回答カテゴリーと質問文は実調査で明示。&quot;,
+  &quot;galleryId&quot;: &quot;G46&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;同じ属性について複数の質問結果を同じ行で比較する。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G47" data-category="複合・分析構成" data-search="回答の量と、背景にある声を対応させる 定量的な回答傾向と定性的なコメントを同じ行で示す。 chart-quotes 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-47" data-index="47" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-47.webp" alt="回答の量と、背景にある声を対応させる" width="520" height="360"></a><div class="caption"><div class="meta">G47 · 複合・分析構成 · ワイド</div><h2>回答の量と、背景にある声を対応させる</h2><p>定量的な回答傾向と定性的なコメントを同じ行で示す。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;chart-quotes&quot;,
+  &quot;title&quot;: &quot;回答の量と、背景にある声を対応させる&quot;,
+  &quot;max&quot;: 40,
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;情報&quot;,
+      &quot;negative&quot;: 25,
+      &quot;positive&quot;: 15,
+      &quot;quote&quot;: &quot;必要な情報を探すのに時間がかかる。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;手順&quot;,
+      &quot;negative&quot;: 15,
+      &quot;positive&quot;: 30,
+      &quot;quote&quot;: &quot;共通の手順があると迷わず進められる。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;確認&quot;,
+      &quot;negative&quot;: 30,
+      &quot;positive&quot;: 10,
+      &quot;quote&quot;: &quot;どこで確認すべきか分かりにくい。&quot;
+    }
+  ],
+  &quot;note&quot;: &quot;例示。左＝否定、右＝肯定、単位：%。コメントも説明用の創作文。&quot;,
+  &quot;galleryId&quot;: &quot;G47&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;定量的な回答傾向と定性的なコメントを同じ行で示す。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G48" data-category="複合・分析構成" data-search="評価の強弱を同じ尺度で横断的に比べる 評価項目ごとに、対象と比較対象の強弱を追う。 benchmark-profile 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-48" data-index="48" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-48.webp" alt="評価の強弱を同じ尺度で横断的に比べる" width="520" height="360"></a><div class="caption"><div class="meta">G48 · 複合・分析構成 · ワイド</div><h2>評価の強弱を同じ尺度で横断的に比べる</h2><p>評価項目ごとに、対象と比較対象の強弱を追う。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;benchmark-profile&quot;,
+  &quot;title&quot;: &quot;評価の強弱を同じ尺度で横断的に比べる&quot;,
+  &quot;series&quot;: [
+    &quot;対象A&quot;,
+    &quot;比較対象&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;対象範囲&quot;,
+      &quot;values&quot;: [
+        4,
+        3
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;準備の容易さ&quot;,
+      &quot;values&quot;: [
+        2,
+        4
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;継続しやすさ&quot;,
+      &quot;values&quot;: [
+        4,
+        3
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;柔軟性&quot;,
+      &quot;values&quot;: [
+        3,
+        2
+      ]
+    }
+  ],
+  &quot;note&quot;: &quot;例示。1＝低、5＝高。線は同じ系列を追う補助で、連続量ではない。&quot;,
+  &quot;galleryId&quot;: &quot;G48&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;評価項目ごとに、対象と比較対象の強弱を追う。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G49" data-category="複合・分析構成" data-search="二群の差を項目ごとに比較する 項目ごとの二群の差を原点に依存せず直接読む。 paired-dots 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-49" data-index="49" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-49.webp" alt="二群の差を項目ごとに比較する" width="520" height="360"></a><div class="caption"><div class="meta">G49 · 複合・分析構成 · 標準幅</div><h2>二群の差を項目ごとに比較する</h2><p>項目ごとの二群の差を原点に依存せず直接読む。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;paired-dots&quot;,
+  &quot;title&quot;: &quot;二群の差を項目ごとに比較する&quot;,
+  &quot;max&quot;: 100,
+  &quot;series&quot;: [
+    &quot;比較対象&quot;,
+    &quot;対象A&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;項目1&quot;,
+      &quot;values&quot;: [
+        35,
+        60
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;項目2&quot;,
+      &quot;values&quot;: [
+        55,
+        40
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;項目3&quot;,
+      &quot;values&quot;: [
+        30,
+        70
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;項目4&quot;,
+      &quot;values&quot;: [
+        65,
+        75
+      ]
+    }
+  ],
+  &quot;note&quot;: &quot;例示。値：%、右端：差（ポイント）。各点は同じ定義の割合。&quot;,
+  &quot;galleryId&quot;: &quot;G49&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;standard&quot;,
+  &quot;use&quot;: &quot;項目ごとの二群の差を原点に依存せず直接読む。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G50" data-category="複合・分析構成" data-search="対象群の特徴から異なる対応を導く 対象群の特徴・要求・障害から、対応を変える理由を示す。 segment-profiles 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-50" data-index="50" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-50.webp" alt="対象群の特徴から異なる対応を導く" width="520" height="360"></a><div class="caption"><div class="meta">G50 · 複合・分析構成 · ワイド</div><h2>対象群の特徴から異なる対応を導く</h2><p>対象群の特徴・要求・障害から、対応を変える理由を示す。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;segment-profiles&quot;,
+  &quot;title&quot;: &quot;対象群の特徴から異なる対応を導く&quot;,
+  &quot;fields&quot;: [
+    {
+      &quot;label&quot;: &quot;特徴&quot;,
+      &quot;key&quot;: &quot;feature&quot;
+    },
+    {
+      &quot;label&quot;: &quot;重視点&quot;,
+      &quot;key&quot;: &quot;need&quot;
+    },
+    {
+      &quot;label&quot;: &quot;障害&quot;,
+      &quot;key&quot;: &quot;barrier&quot;
+    },
+    {
+      &quot;label&quot;: &quot;対応&quot;,
+      &quot;key&quot;: &quot;response&quot;
+    }
+  ],
+  &quot;segments&quot;: [
+    {
+      &quot;label&quot;: &quot;グループA&quot;,
+      &quot;feature&quot;: &quot;頻繁に利用する&quot;,
+      &quot;need&quot;: &quot;速さと安定性&quot;,
+      &quot;barrier&quot;: &quot;例外処理の多さ&quot;,
+      &quot;response&quot;: &quot;共通手順を整える&quot;
+    },
+    {
+      &quot;label&quot;: &quot;グループB&quot;,
+      &quot;feature&quot;: &quot;必要なときに利用&quot;,
+      &quot;need&quot;: &quot;分かりやすさ&quot;,
+      &quot;barrier&quot;: &quot;使い方が分からない&quot;,
+      &quot;response&quot;: &quot;案内を簡潔にする&quot;
+    },
+    {
+      &quot;label&quot;: &quot;グループC&quot;,
+      &quot;feature&quot;: &quot;ほとんど利用しない&quot;,
+      &quot;need&quot;: &quot;利用する理由&quot;,
+      &quot;barrier&quot;: &quot;効果が見えない&quot;,
+      &quot;response&quot;: &quot;具体的な用途を示す&quot;
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G50&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;対象群の特徴・要求・障害から、対応を変える理由を示す。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G51" data-category="複合・分析構成" data-search="論点ごとに作業・検証方法・成果物を定める 論点に対する作業・検証・出力を一つの行で完結させる。 workplan-deliverables 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-51" data-index="51" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-51.webp" alt="論点ごとに作業・検証方法・成果物を定める" width="520" height="360"></a><div class="caption"><div class="meta">G51 · 複合・分析構成 · ワイド</div><h2>論点ごとに作業・検証方法・成果物を定める</h2><p>論点に対する作業・検証・出力を一つの行で完結させる。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;workplan-deliverables&quot;,
+  &quot;title&quot;: &quot;論点ごとに作業・検証方法・成果物を定める&quot;,
+  &quot;columns&quot;: [
+    &quot;行う作業&quot;,
+    &quot;確かめ方&quot;,
+    &quot;成果物&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;現状&quot;,
+      &quot;tasks&quot;: [
+        &quot;流れを整理&quot;,
+        &quot;例外を抽出&quot;
+      ],
+      &quot;method&quot;: &quot;実績データと現場の説明を照合する。&quot;,
+      &quot;output&quot;: &quot;現状図と論点&quot;
+    },
+    {
+      &quot;label&quot;: &quot;選択肢&quot;,
+      &quot;tasks&quot;: [
+        &quot;候補を比較&quot;,
+        &quot;条件を確認&quot;
+      ],
+      &quot;method&quot;: &quot;共通の評価基準で違いを確認する。&quot;,
+      &quot;output&quot;: &quot;比較表と判断根拠&quot;
+    },
+    {
+      &quot;label&quot;: &quot;実行&quot;,
+      &quot;tasks&quot;: [
+        &quot;担当を調整&quot;,
+        &quot;時期を整理&quot;
+      ],
+      &quot;method&quot;: &quot;必要な条件と体制の実現性を確認する。&quot;,
+      &quot;output&quot;: &quot;実施計画&quot;
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G51&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;論点に対する作業・検証・出力を一つの行で完結させる。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G52" data-category="複合・分析構成" data-search="複数の取り組みと受け渡しの関係を示す 並行する取り組みの間で、何が次の作業へ渡るかを示す。 dependency-map 複合・分析構成"><a class="preview" href="layout-gallery.html#slide-52" data-index="52" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-52.webp" alt="複数の取り組みと受け渡しの関係を示す" width="520" height="360"></a><div class="caption"><div class="meta">G52 · 複合・分析構成 · ワイド</div><h2>複数の取り組みと受け渡しの関係を示す</h2><p>並行する取り組みの間で、何が次の作業へ渡るかを示す。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;dependency-map&quot;,
+  &quot;title&quot;: &quot;複数の取り組みと受け渡しの関係を示す&quot;,
+  &quot;stages&quot;: [
+    &quot;準備&quot;,
+    &quot;検証&quot;,
+    &quot;展開&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;領域A&quot;,
+      &quot;cells&quot;: [
+        &quot;条件整理&quot;,
+        &quot;試行&quot;,
+        &quot;結果共有&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;領域B&quot;,
+      &quot;cells&quot;: [
+        &quot;対象整理&quot;,
+        &quot;対応準備&quot;,
+        &quot;実施&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;領域C&quot;,
+      &quot;cells&quot;: [
+        &quot;現状確認&quot;,
+        &quot;改善案&quot;,
+        &quot;運用へ反映&quot;
+      ]
+    }
+  ],
+  &quot;dependencies&quot;: [
+    {
+      &quot;from&quot;: [
+        0,
+        1
+      ],
+      &quot;to&quot;: [
+        1,
+        2
+      ]
+    },
+    {
+      &quot;from&quot;: [
+        1,
+        2
+      ],
+      &quot;to&quot;: [
+        2,
+        2
+      ]
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G52&quot;,
+  &quot;category&quot;: &quot;複合・分析構成&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;並行する取り組みの間で、何が次の作業へ渡るかを示す。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G53" data-category="階層・判断・実行" data-search="個別の課題を束ね、共通する対応を示す 親子の行見出しと複数行にまたがる共通対応。 grouped-rows 階層・判断・実行"><a class="preview" href="layout-gallery.html#slide-53" data-index="53" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-53.webp" alt="個別の課題を束ね、共通する対応を示す" width="520" height="360"></a><div class="caption"><div class="meta">G53 · 階層・判断・実行 · ワイド</div><h2>個別の課題を束ね、共通する対応を示す</h2><p>親子の行見出しと複数行にまたがる共通対応。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;grouped-rows&quot;,
+  &quot;title&quot;: &quot;個別の課題を束ね、共通する対応を示す&quot;,
+  &quot;columns&quot;: [
+    &quot;領域&quot;,
+    &quot;対象&quot;,
+    &quot;確認した課題&quot;,
+    &quot;対応方針&quot;
+  ],
+  &quot;groups&quot;: [
+    {
+      &quot;label&quot;: &quot;顧客接点&quot;,
+      &quot;start&quot;: 0,
+      &quot;span&quot;: 2
+    },
+    {
+      &quot;label&quot;: &quot;社内業務&quot;,
+      &quot;start&quot;: 2,
+      &quot;span&quot;: 2
+    }
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;受付&quot;,
+      &quot;finding&quot;: &quot;受付経路によって必要情報が異なる&quot;
+    },
+    {
+      &quot;label&quot;: &quot;回答&quot;,
+      &quot;finding&quot;: &quot;引き継ぎ時に確認が重複する&quot;
+    },
+    {
+      &quot;label&quot;: &quot;承認&quot;,
+      &quot;finding&quot;: &quot;案件ごとに判断基準が異なる&quot;
+    },
+    {
+      &quot;label&quot;: &quot;集計&quot;,
+      &quot;finding&quot;: &quot;報告のたびに転記が発生する&quot;
+    }
+  ],
+  &quot;actions&quot;: [
+    {
+      &quot;text&quot;: &quot;受付情報と引き継ぎ方法を共通化する&quot;,
+      &quot;start&quot;: 0,
+      &quot;span&quot;: 2
+    },
+    {
+      &quot;text&quot;: &quot;判断基準を明文化する&quot;,
+      &quot;start&quot;: 2,
+      &quot;span&quot;: 1
+    },
+    {
+      &quot;text&quot;: &quot;元データから集計する&quot;,
+      &quot;start&quot;: 3,
+      &quot;span&quot;: 1
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G53&quot;,
+  &quot;category&quot;: &quot;階層・判断・実行&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;親子の行見出しと複数行にまたがる共通対応。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G54" data-category="階層・判断・実行" data-search="重視する条件と選択肢の適合を分けて比較する 二段の列見出しで異なる比較軸を分離。 nested-columns 階層・判断・実行"><a class="preview" href="layout-gallery.html#slide-54" data-index="54" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-54.webp" alt="重視する条件と選択肢の適合を分けて比較する" width="520" height="360"></a><div class="caption"><div class="meta">G54 · 階層・判断・実行 · ワイド</div><h2>重視する条件と選択肢の適合を分けて比較する</h2><p>二段の列見出しで異なる比較軸を分離。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;nested-columns&quot;,
+  &quot;title&quot;: &quot;重視する条件と選択肢の適合を分けて比較する&quot;,
+  &quot;rowHeading&quot;: &quot;評価軸&quot;,
+  &quot;groups&quot;: [
+    &quot;用途別の重要度&quot;,
+    &quot;選択肢の適合度&quot;
+  ],
+  &quot;columns&quot;: [
+    &quot;定常業務&quot;,
+    &quot;個別対応&quot;,
+    &quot;案A&quot;,
+    &quot;案B&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;安定性&quot;,
+      &quot;cells&quot;: [
+        &quot;高&quot;,
+        &quot;中&quot;,
+        &quot;高&quot;,
+        &quot;中&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;柔軟性&quot;,
+      &quot;cells&quot;: [
+        &quot;中&quot;,
+        &quot;高&quot;,
+        &quot;中&quot;,
+        &quot;高&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;導入の速さ&quot;,
+      &quot;cells&quot;: [
+        &quot;中&quot;,
+        &quot;高&quot;,
+        &quot;高&quot;,
+        &quot;低&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;維持の容易さ&quot;,
+      &quot;cells&quot;: [
+        &quot;高&quot;,
+        &quot;中&quot;,
+        &quot;高&quot;,
+        &quot;中&quot;
+      ]
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G54&quot;,
+  &quot;category&quot;: &quot;階層・判断・実行&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;二段の列見出しで異なる比較軸を分離。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G55" data-category="階層・判断・実行" data-search="各工程の作業と成果物を対応させる 縦工程と作業・成果物を対応。 vertical-process 階層・判断・実行"><a class="preview" href="layout-gallery.html#slide-55" data-index="55" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-55.webp" alt="各工程の作業と成果物を対応させる" width="520" height="360"></a><div class="caption"><div class="meta">G55 · 階層・判断・実行 · ワイド</div><h2>各工程の作業と成果物を対応させる</h2><p>縦工程と作業・成果物を対応。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;vertical-process&quot;,
+  &quot;title&quot;: &quot;各工程の作業と成果物を対応させる&quot;,
+  &quot;columns&quot;: [
+    &quot;工程&quot;,
+    &quot;主な作業&quot;,
+    &quot;成果物&quot;
+  ],
+  &quot;steps&quot;: [
+    {
+      &quot;label&quot;: &quot;現状把握&quot;,
+      &quot;tasks&quot;: [
+        &quot;実態を確認する&quot;,
+        &quot;論点を整理する&quot;
+      ],
+      &quot;output&quot;: &quot;課題と対象範囲&quot;
+    },
+    {
+      &quot;label&quot;: &quot;選択肢作成&quot;,
+      &quot;tasks&quot;: [
+        &quot;代替案を比較する&quot;,
+        &quot;実行条件を確認する&quot;
+      ],
+      &quot;output&quot;: &quot;比較案と概算&quot;
+    },
+    {
+      &quot;label&quot;: &quot;方針決定&quot;,
+      &quot;tasks&quot;: [
+        &quot;優先順位を議論する&quot;,
+        &quot;担当と時期を決める&quot;
+      ],
+      &quot;output&quot;: &quot;合意した実施方針&quot;
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G55&quot;,
+  &quot;category&quot;: &quot;階層・判断・実行&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;縦工程と作業・成果物を対応。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G56" data-category="階層・判断・実行" data-search="対象を分類し、条件に応じた対応を選ぶ 段階的な分類と対応方針。件数は例示。 classification-actions 階層・判断・実行"><a class="preview" href="layout-gallery.html#slide-56" data-index="56" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-56.webp" alt="対象を分類し、条件に応じた対応を選ぶ" width="520" height="360"></a><div class="caption"><div class="meta">G56 · 階層・判断・実行 · ワイド</div><h2>対象を分類し、条件に応じた対応を選ぶ</h2><p>段階的な分類と対応方針。件数は例示。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;classification-actions&quot;,
+  &quot;title&quot;: &quot;対象を分類し、条件に応じた対応を選ぶ&quot;,
+  &quot;columns&quot;: [
+    &quot;対象全体&quot;,
+    &quot;利用状況&quot;,
+    &quot;判定&quot;,
+    &quot;対応方針&quot;
+  ],
+  &quot;total&quot;: &quot;対象サービス\n12件&quot;,
+  &quot;branches&quot;: [
+    &quot;利用が少ない\n3件&quot;,
+    &quot;継続利用\n9件&quot;
+  ],
+  &quot;leaves&quot;: [
+    {
+      &quot;label&quot;: &quot;代替可能\n3件&quot;,
+      &quot;action&quot;: &quot;利用者への影響を確認し、統合を検討する。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;運営が安定\n5件&quot;,
+      &quot;action&quot;: &quot;現行の運営を維持し、必要な改善を進める。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;運営に課題\n4件&quot;,
+      &quot;action&quot;: &quot;原因と改善費用を確認し、対応を優先する。&quot;
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G56&quot;,
+  &quot;category&quot;: &quot;階層・判断・実行&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;段階的な分類と対応方針。件数は例示。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G57" data-category="階層・判断・実行" data-search="方針とその根拠を、まとまりごとに伝える 二つの方針と根拠を、無理に箱で囲まず整理。 numbered-narrative 階層・判断・実行"><a class="preview" href="layout-gallery.html#slide-57" data-index="57" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-57.webp" alt="方針とその根拠を、まとまりごとに伝える" width="520" height="360"></a><div class="caption"><div class="meta">G57 · 階層・判断・実行 · 標準幅</div><h2>方針とその根拠を、まとまりごとに伝える</h2><p>二つの方針と根拠を、無理に箱で囲まず整理。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;numbered-narrative&quot;,
+  &quot;title&quot;: &quot;方針とその根拠を、まとまりごとに伝える&quot;,
+  &quot;items&quot;: [
+    {
+      &quot;heading&quot;: &quot;既存の強みを維持しながら、運営を改善する&quot;,
+      &quot;items&quot;: [
+        &quot;顧客が評価する品質と対応力を維持する。&quot;,
+        &quot;重複作業や判断のばらつきを減らし、継続できる運営にする。&quot;
+      ]
+    },
+    {
+      &quot;heading&quot;: &quot;新しい領域は、検証結果を踏まえて段階的に広げる&quot;,
+      &quot;items&quot;: [
+        &quot;限定した範囲で需要と実行条件を確かめる。&quot;,
+        &quot;確認した効果と負担に基づき、拡大する範囲を判断する。&quot;
+      ]
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G57&quot;,
+  &quot;category&quot;: &quot;階層・判断・実行&quot;,
+  &quot;contentWidth&quot;: &quot;standard&quot;,
+  &quot;use&quot;: &quot;二つの方針と根拠を、無理に箱で囲まず整理。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G58" data-category="階層・判断・実行" data-search="検討作業・成果物・前提条件を一枚にまとめる 広い作業欄と、狭い成果物・前提条件欄。 workpackage 階層・判断・実行"><a class="preview" href="layout-gallery.html#slide-58" data-index="58" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-58.webp" alt="検討作業・成果物・前提条件を一枚にまとめる" width="520" height="360"></a><div class="caption"><div class="meta">G58 · 階層・判断・実行 · ワイド</div><h2>検討作業・成果物・前提条件を一枚にまとめる</h2><p>広い作業欄と、狭い成果物・前提条件欄。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;workpackage&quot;,
+  &quot;title&quot;: &quot;検討作業・成果物・前提条件を一枚にまとめる&quot;,
+  &quot;activityHeading&quot;: &quot;主な検討作業&quot;,
+  &quot;outputHeading&quot;: &quot;成果物&quot;,
+  &quot;activities&quot;: [
+    {
+      &quot;label&quot;: &quot;1　現状と論点を整理&quot;,
+      &quot;items&quot;: [
+        &quot;業務とデータの流れを確認&quot;,
+        &quot;課題の影響と原因を整理&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;2　選択肢を比較&quot;,
+      &quot;items&quot;: [
+        &quot;改善案と実行条件を検討&quot;,
+        &quot;費用・効果・リスクを比較&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;3　実行計画を作成&quot;,
+      &quot;items&quot;: [
+        &quot;優先順位と担当を設定&quot;,
+        &quot;開始条件と確認方法を合意&quot;
+      ]
+    }
+  ],
+  &quot;outputs&quot;: [
+    &quot;現状と課題の一覧&quot;,
+    &quot;選択肢の比較資料&quot;,
+    &quot;実行計画と判断事項&quot;
+  ],
+  &quot;conditionHeading&quot;: &quot;検討の前提条件&quot;,
+  &quot;conditions&quot;: [
+    &quot;関係者が情報を提供&quot;,
+    &quot;判断する責任者を設定&quot;
+  ],
+  &quot;galleryId&quot;: &quot;G58&quot;,
+  &quot;category&quot;: &quot;階層・判断・実行&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;広い作業欄と、狭い成果物・前提条件欄。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G59" data-category="階層・判断・実行" data-search="構成の変化を、その理由と合わせて示す 構成比の変化と理由を同じ順で説明。数値は例示。 share-explanation 階層・判断・実行"><a class="preview" href="layout-gallery.html#slide-59" data-index="59" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-59.webp" alt="構成の変化を、その理由と合わせて示す" width="520" height="360"></a><div class="caption"><div class="meta">G59 · 階層・判断・実行 · ワイド</div><h2>構成の変化を、その理由と合わせて示す</h2><p>構成比の変化と理由を同じ順で説明。数値は例示。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;share-explanation&quot;,
+  &quot;title&quot;: &quot;構成の変化を、その理由と合わせて示す&quot;,
+  &quot;chartHeading&quot;: &quot;対応方法の構成比&quot;,
+  &quot;detailHeading&quot;: &quot;変化の背景&quot;,
+  &quot;periods&quot;: [
+    &quot;現状&quot;,
+    &quot;目標&quot;
+  ],
+  &quot;parts&quot;: [
+    {
+      &quot;label&quot;: &quot;標準対応&quot;,
+      &quot;values&quot;: [
+        40,
+        60
+      ],
+      &quot;explanation&quot;: &quot;共通化できる業務を増やし、安定した対応を広げる。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;個別対応&quot;,
+      &quot;values&quot;: [
+        35,
+        25
+      ],
+      &quot;explanation&quot;: &quot;顧客固有の事情があるものに対象を絞る。&quot;
+    },
+    {
+      &quot;label&quot;: &quot;手作業&quot;,
+      &quot;values&quot;: [
+        25,
+        15
+      ],
+      &quot;explanation&quot;: &quot;繰り返し発生する転記や照合作業を減らす。&quot;
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G59&quot;,
+  &quot;category&quot;: &quot;階層・判断・実行&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;構成比の変化と理由を同じ順で説明。数値は例示。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G60" data-category="階層・判断・実行" data-search="段階ごとに成果物と次へ進む条件を明確にする 共通の時間軸で作業・成果物・判断条件を整理。 stage-gate 階層・判断・実行"><a class="preview" href="layout-gallery.html#slide-60" data-index="60" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-60.webp" alt="段階ごとに成果物と次へ進む条件を明確にする" width="520" height="360"></a><div class="caption"><div class="meta">G60 · 階層・判断・実行 · ワイド</div><h2>段階ごとに成果物と次へ進む条件を明確にする</h2><p>共通の時間軸で作業・成果物・判断条件を整理。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;stage-gate&quot;,
+  &quot;title&quot;: &quot;段階ごとに成果物と次へ進む条件を明確にする&quot;,
+  &quot;stages&quot;: [
+    {
+      &quot;label&quot;: &quot;把握&quot;,
+      &quot;tasks&quot;: [
+        &quot;実態を確認&quot;,
+        &quot;論点を整理&quot;
+      ],
+      &quot;output&quot;: &quot;課題一覧&quot;,
+      &quot;gate&quot;: &quot;対象範囲の合意&quot;
+    },
+    {
+      &quot;label&quot;: &quot;構想&quot;,
+      &quot;tasks&quot;: [
+        &quot;案を比較&quot;,
+        &quot;概算を確認&quot;
+      ],
+      &quot;output&quot;: &quot;比較資料&quot;,
+      &quot;gate&quot;: &quot;実行方針の合意&quot;
+    },
+    {
+      &quot;label&quot;: &quot;検証&quot;,
+      &quot;tasks&quot;: [
+        &quot;試行を実施&quot;,
+        &quot;効果を確認&quot;
+      ],
+      &quot;output&quot;: &quot;検証結果&quot;,
+      &quot;gate&quot;: &quot;効果と負担の確認&quot;
+    },
+    {
+      &quot;label&quot;: &quot;展開&quot;,
+      &quot;tasks&quot;: [
+        &quot;対象を拡大&quot;,
+        &quot;運営を定着&quot;
+      ],
+      &quot;output&quot;: &quot;運営手順&quot;,
+      &quot;gate&quot;: &quot;運営体制の確立&quot;
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G60&quot;,
+  &quot;category&quot;: &quot;階層・判断・実行&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;共通の時間軸で作業・成果物・判断条件を整理。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G61" data-category="カラム・入れ子" data-search="同じ観点で、三つの選択肢を比較する 箱見出しと共通の行観点で比較するカラム。 box-columns カラム・入れ子"><a class="preview" href="layout-gallery.html#slide-61" data-index="61" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-61.webp" alt="同じ観点で、三つの選択肢を比較する" width="520" height="360"></a><div class="caption"><div class="meta">G61 · カラム・入れ子 · ワイド</div><h2>同じ観点で、三つの選択肢を比較する</h2><p>箱見出しと共通の行観点で比較するカラム。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;box-columns&quot;,
+  &quot;title&quot;: &quot;同じ観点で、三つの選択肢を比較する&quot;,
+  &quot;columns&quot;: [
+    {
+      &quot;label&quot;: &quot;標準化&quot;,
+      &quot;summary&quot;: &quot;共通ルールで品質を揃える&quot;,
+      &quot;items&quot;: [
+        &quot;判断のばらつきを減らす&quot;,
+        &quot;例外の扱いを明確にする&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;集約化&quot;,
+      &quot;summary&quot;: &quot;専門性と処理量をまとめる&quot;,
+      &quot;items&quot;: [
+        &quot;重複する作業を減らす&quot;,
+        &quot;窓口と責任を整理する&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;分散化&quot;,
+      &quot;summary&quot;: &quot;現場の判断速度を高める&quot;,
+      &quot;items&quot;: [
+        &quot;顧客への対応を早める&quot;,
+        &quot;共通基準との整合を保つ&quot;
+      ]
+    }
+  ],
+  &quot;rowLabels&quot;: [
+    &quot;狙い&quot;,
+    &quot;設計時の論点&quot;
+  ],
+  &quot;galleryId&quot;: &quot;G61&quot;,
+  &quot;category&quot;: &quot;カラム・入れ子&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;箱見出しと共通の行観点で比較するカラム。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G62" data-category="カラム・入れ子" data-search="三つの観点から、実行できるかを確認する 円見出し＋要点＋箇条書き。円面積は数値を表さない。 circle-columns カラム・入れ子"><a class="preview" href="layout-gallery.html#slide-62" data-index="62" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-62.webp" alt="三つの観点から、実行できるかを確認する" width="520" height="360"></a><div class="caption"><div class="meta">G62 · カラム・入れ子 · ワイド</div><h2>三つの観点から、実行できるかを確認する</h2><p>円見出し＋要点＋箇条書き。円面積は数値を表さない。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;circle-columns&quot;,
+  &quot;title&quot;: &quot;三つの観点から、実行できるかを確認する&quot;,
+  &quot;columns&quot;: [
+    {
+      &quot;label&quot;: &quot;価値&quot;,
+      &quot;heading&quot;: &quot;必要性はあるか&quot;,
+      &quot;items&quot;: [
+        &quot;解決する課題が明確&quot;,
+        &quot;利用する人が具体的&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;実行性&quot;,
+      &quot;heading&quot;: &quot;進められるか&quot;,
+      &quot;items&quot;: [
+        &quot;担当と協力者が決定&quot;,
+        &quot;必要な時間を確保&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;継続性&quot;,
+      &quot;heading&quot;: &quot;維持できるか&quot;,
+      &quot;items&quot;: [
+        &quot;運営方法が明確&quot;,
+        &quot;継続する負担を確認&quot;
+      ]
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G62&quot;,
+  &quot;category&quot;: &quot;カラム・入れ子&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;円見出し＋要点＋箇条書き。円面積は数値を表さない。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G63" data-category="カラム・入れ子" data-search="共通の方針と個別の施策を階層で整理する 親カラムの中に子項目を持つ二階層構成。 nested-box-columns カラム・入れ子"><a class="preview" href="layout-gallery.html#slide-63" data-index="63" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-63.webp" alt="共通の方針と個別の施策を階層で整理する" width="520" height="360"></a><div class="caption"><div class="meta">G63 · カラム・入れ子 · ワイド</div><h2>共通の方針と個別の施策を階層で整理する</h2><p>親カラムの中に子項目を持つ二階層構成。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;nested-box-columns&quot;,
+  &quot;title&quot;: &quot;共通の方針と個別の施策を階層で整理する&quot;,
+  &quot;columns&quot;: [
+    {
+      &quot;label&quot;: &quot;顧客体験の改善&quot;,
+      &quot;children&quot;: [
+        {
+          &quot;label&quot;: &quot;入口を揃える&quot;,
+          &quot;items&quot;: [
+            &quot;受付経路を整理&quot;,
+            &quot;案内を共通化&quot;
+          ]
+        },
+        {
+          &quot;label&quot;: &quot;対応を揃える&quot;,
+          &quot;items&quot;: [
+            &quot;引き継ぎを統一&quot;,
+            &quot;判断基準を共有&quot;
+          ]
+        }
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;業務運営の改善&quot;,
+      &quot;children&quot;: [
+        {
+          &quot;label&quot;: &quot;作業を減らす&quot;,
+          &quot;items&quot;: [
+            &quot;重複入力を削減&quot;,
+            &quot;確認作業を整理&quot;
+          ]
+        },
+        {
+          &quot;label&quot;: &quot;継続性を高める&quot;,
+          &quot;items&quot;: [
+            &quot;手順を標準化&quot;,
+            &quot;担当を複数化&quot;
+          ]
+        }
+      ]
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G63&quot;,
+  &quot;category&quot;: &quot;カラム・入れ子&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;親カラムの中に子項目を持つ二階層構成。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G64" data-category="カラム・入れ子" data-search="項目ごとの要点を、余計な囲みなく比較する 短いラベルと本文を対応させるテキスト中心の比較。 label-columns カラム・入れ子"><a class="preview" href="layout-gallery.html#slide-64" data-index="64" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-64.webp" alt="項目ごとの要点を、余計な囲みなく比較する" width="520" height="360"></a><div class="caption"><div class="meta">G64 · カラム・入れ子 · ワイド</div><h2>項目ごとの要点を、余計な囲みなく比較する</h2><p>短いラベルと本文を対応させるテキスト中心の比較。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;label-columns&quot;,
+  &quot;title&quot;: &quot;項目ごとの要点を、余計な囲みなく比較する&quot;,
+  &quot;columns&quot;: [
+    {
+      &quot;label&quot;: &quot;短期の改善&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;label&quot;: &quot;対象&quot;,
+          &quot;body&quot;: &quot;手順の整理で解決する課題&quot;
+        },
+        {
+          &quot;label&quot;: &quot;進め方&quot;,
+          &quot;body&quot;: &quot;現場で試し、効果を確認&quot;
+        },
+        {
+          &quot;label&quot;: &quot;判断&quot;,
+          &quot;body&quot;: &quot;負担が小さく、早く着手できる&quot;
+        }
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;中期の改善&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;label&quot;: &quot;対象&quot;,
+          &quot;body&quot;: &quot;複数の業務にまたがる課題&quot;
+        },
+        {
+          &quot;label&quot;: &quot;進め方&quot;,
+          &quot;body&quot;: &quot;関係者で範囲と方法を調整&quot;
+        },
+        {
+          &quot;label&quot;: &quot;判断&quot;,
+          &quot;body&quot;: &quot;効果と実行条件を比較する&quot;
+        }
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;継続的な改善&quot;,
+      &quot;rows&quot;: [
+        {
+          &quot;label&quot;: &quot;対象&quot;,
+          &quot;body&quot;: &quot;運営しながら見直す課題&quot;
+        },
+        {
+          &quot;label&quot;: &quot;進め方&quot;,
+          &quot;body&quot;: &quot;定期的に利用状況を確認&quot;
+        },
+        {
+          &quot;label&quot;: &quot;判断&quot;,
+          &quot;body&quot;: &quot;続ける価値と負担を確認する&quot;
+        }
+      ]
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G64&quot;,
+  &quot;category&quot;: &quot;カラム・入れ子&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;短いラベルと本文を対応させるテキスト中心の比較。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G65" data-category="カラム・入れ子" data-search="列の役割を明確にして、詳細を読みやすく整理する 濃いグレー地・白文字の列見出し。本文は背景を抑える。 table-dark-head カラム・入れ子"><a class="preview" href="layout-gallery.html#slide-65" data-index="65" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-65.webp" alt="列の役割を明確にして、詳細を読みやすく整理する" width="520" height="360"></a><div class="caption"><div class="meta">G65 · カラム・入れ子 · ワイド</div><h2>列の役割を明確にして、詳細を読みやすく整理する</h2><p>濃いグレー地・白文字の列見出し。本文は背景を抑える。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;columns&quot;: [
+    &quot;対象&quot;,
+    &quot;現状と課題&quot;,
+    &quot;改善の方向&quot;,
+    &quot;確認する条件&quot;
+  ],
+  &quot;widths&quot;: [
+    0.16,
+    0.3,
+    0.29,
+    0.25
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;受付&quot;,
+      &quot;cells&quot;: [
+        &quot;窓口ごとに情報が異なる&quot;,
+        &quot;必要な情報を共通化&quot;,
+        &quot;例外的な依頼の扱い&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;判断&quot;,
+      &quot;cells&quot;: [
+        &quot;担当者によって判断が異なる&quot;,
+        &quot;判断基準を共有&quot;,
+        &quot;責任と権限の範囲&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;引き継ぎ&quot;,
+      &quot;cells&quot;: [
+        &quot;確認や説明が重複する&quot;,
+        &quot;記録と手順を揃える&quot;,
+        &quot;現場で継続できるか&quot;
+      ]
+    }
+  ],
+  &quot;pattern&quot;: &quot;table-dark-head&quot;,
+  &quot;title&quot;: &quot;列の役割を明確にして、詳細を読みやすく整理する&quot;,
+  &quot;use&quot;: &quot;濃いグレー地・白文字の列見出し。本文は背景を抑える。&quot;,
+  &quot;galleryId&quot;: &quot;G65&quot;,
+  &quot;category&quot;: &quot;カラム・入れ子&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G66" data-category="カラム・入れ子" data-search="見出しと本文を左から自然に読みつなぐ 背景なし・太字・左揃え・上下中央の列見出し。 table-plain-head カラム・入れ子"><a class="preview" href="layout-gallery.html#slide-66" data-index="66" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-66.webp" alt="見出しと本文を左から自然に読みつなぐ" width="520" height="360"></a><div class="caption"><div class="meta">G66 · カラム・入れ子 · ワイド</div><h2>見出しと本文を左から自然に読みつなぐ</h2><p>背景なし・太字・左揃え・上下中央の列見出し。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;columns&quot;: [
+    &quot;対象&quot;,
+    &quot;現状と課題&quot;,
+    &quot;改善の方向&quot;,
+    &quot;確認する条件&quot;
+  ],
+  &quot;widths&quot;: [
+    0.16,
+    0.3,
+    0.29,
+    0.25
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;受付&quot;,
+      &quot;cells&quot;: [
+        &quot;窓口ごとに情報が異なる&quot;,
+        &quot;必要な情報を共通化&quot;,
+        &quot;例外的な依頼の扱い&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;判断&quot;,
+      &quot;cells&quot;: [
+        &quot;担当者によって判断が異なる&quot;,
+        &quot;判断基準を共有&quot;,
+        &quot;責任と権限の範囲&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;引き継ぎ&quot;,
+      &quot;cells&quot;: [
+        &quot;確認や説明が重複する&quot;,
+        &quot;記録と手順を揃える&quot;,
+        &quot;現場で継続できるか&quot;
+      ]
+    }
+  ],
+  &quot;pattern&quot;: &quot;table-plain-head&quot;,
+  &quot;title&quot;: &quot;見出しと本文を左から自然に読みつなぐ&quot;,
+  &quot;use&quot;: &quot;背景なし・太字・左揃え・上下中央の列見出し。&quot;,
+  &quot;galleryId&quot;: &quot;G66&quot;,
+  &quot;category&quot;: &quot;カラム・入れ子&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G67" data-category="カラム・入れ子" data-search="同じ観点を使って、対象ごとの違いを整理する 楕円の行ラベル＋複数の比較列。対象の同格性を示す。 circle-row-columns カラム・入れ子"><a class="preview" href="layout-gallery.html#slide-67" data-index="67" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-67.webp" alt="同じ観点を使って、対象ごとの違いを整理する" width="520" height="360"></a><div class="caption"><div class="meta">G67 · カラム・入れ子 · ワイド</div><h2>同じ観点を使って、対象ごとの違いを整理する</h2><p>楕円の行ラベル＋複数の比較列。対象の同格性を示す。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;circle-row-columns&quot;,
+  &quot;title&quot;: &quot;同じ観点を使って、対象ごとの違いを整理する&quot;,
+  &quot;columns&quot;: [
+    &quot;重視すること&quot;,
+    &quot;対応の方向&quot;,
+    &quot;確認する条件&quot;
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;label&quot;: &quot;既存顧客&quot;,
+      &quot;cells&quot;: [
+        &quot;安定した品質と対応&quot;,
+        &quot;現在の強みを維持&quot;,
+        &quot;継続的な満足度&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;新規顧客&quot;,
+      &quot;cells&quot;: [
+        &quot;分かりやすさと安心感&quot;,
+        &quot;入口と案内を改善&quot;,
+        &quot;最初の利用の障壁&quot;
+      ]
+    },
+    {
+      &quot;label&quot;: &quot;協力先&quot;,
+      &quot;cells&quot;: [
+        &quot;連携の容易さ&quot;,
+        &quot;情報と手順を共有&quot;,
+        &quot;役割と負担の配分&quot;
+      ]
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G67&quot;,
+  &quot;category&quot;: &quot;カラム・入れ子&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;楕円の行ラベル＋複数の比較列。対象の同格性を示す。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G68" data-category="見出しの包含関係" data-search="全体の評価と、その内訳を階層で伝える 親見出しから伸びる帯で子項目の適用範囲を示す。 nested-summary 見出しの包含関係"><a class="preview" href="layout-gallery.html#slide-68" data-index="68" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-68.webp" alt="全体の評価と、その内訳を階層で伝える" width="520" height="360"></a><div class="caption"><div class="meta">G68 · 見出しの包含関係 · ワイド</div><h2>全体の評価と、その内訳を階層で伝える</h2><p>親見出しから伸びる帯で子項目の適用範囲を示す。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;nested-summary&quot;,
+  &quot;title&quot;: &quot;全体の評価と、その内訳を階層で伝える&quot;,
+  &quot;overview&quot;: {
+    &quot;label&quot;: &quot;事業の全体像&quot;,
+    &quot;text&quot;: &quot;安定した品質と柔軟な対応を強みに、継続的な取引を築いている。&quot;
+  },
+  &quot;parent&quot;: {
+    &quot;label&quot;: &quot;強みの評価&quot;,
+    &quot;summary&quot;: &quot;品質と対応力は維持できているが、収益性には改善の余地がある。&quot;
+  },
+  &quot;children&quot;: [
+    {
+      &quot;label&quot;: &quot;品質&quot;,
+      &quot;claim&quot;: &quot;共通の基準と確認手順が品質を支えている。&quot;,
+      &quot;evidence&quot;: [
+        &quot;担当者が変わっても同じ手順で確認できる。&quot;
+      ],
+      &quot;weight&quot;: 1
+    },
+    {
+      &quot;label&quot;: &quot;対応力&quot;,
+      &quot;claim&quot;: &quot;顧客ごとの事情を踏まえた調整ができている。&quot;,
+      &quot;evidence&quot;: [
+        &quot;関係者への引き継ぎ方法が共有されている。&quot;
+      ],
+      &quot;weight&quot;: 1
+    },
+    {
+      &quot;label&quot;: &quot;収益性&quot;,
+      &quot;claim&quot;: &quot;個別対応の負担と価格の関係を見直す。&quot;,
+      &quot;evidence&quot;: [
+        &quot;追加作業の実態を把握し、条件を整理する。&quot;
+      ],
+      &quot;weight&quot;: 1
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G68&quot;,
+  &quot;category&quot;: &quot;見出しの包含関係&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;親見出しから伸びる帯で子項目の適用範囲を示す。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article><article id="G69" data-category="見出しの包含関係" data-search="分類の深さが異なる対象を、共通の指標で比較する 親子の木構造から行範囲を計算し、浅い葉は残りの分類列を結合。 nested-classification 見出しの包含関係"><a class="preview" href="layout-gallery.html#slide-69" data-index="69" target="_blank"><img loading="lazy" src="gallery-thumbs/standard-69.webp" alt="分類の深さが異なる対象を、共通の指標で比較する" width="520" height="360"></a><div class="caption"><div class="meta">G69 · 見出しの包含関係 · ワイド</div><h2>分類の深さが異なる対象を、共通の指標で比較する</h2><p>親子の木構造から行範囲を計算し、浅い葉は残りの分類列を結合。</p><details><summary>このパターンの入力例</summary><pre>{
+  &quot;pattern&quot;: &quot;nested-classification&quot;,
+  &quot;title&quot;: &quot;分類の深さが異なる対象を、共通の指標で比較する&quot;,
+  &quot;levels&quot;: [
+    &quot;対象&quot;,
+    &quot;区分&quot;,
+    &quot;詳細区分&quot;
+  ],
+  &quot;detailHeading&quot;: &quot;特徴と対応の方向&quot;,
+  &quot;metricHeading&quot;: &quot;対象数&quot;,
+  &quot;roots&quot;: [
+    {
+      &quot;label&quot;: &quot;サービス群&quot;,
+      &quot;children&quot;: [
+        {
+          &quot;label&quot;: &quot;継続対象&quot;,
+          &quot;children&quot;: [
+            {
+              &quot;label&quot;: &quot;安定運営&quot;,
+              &quot;finding&quot;: &quot;安定した運営を維持し、必要な改善を進める。&quot;,
+              &quot;metric&quot;: &quot;8件&quot;
+            },
+            {
+              &quot;label&quot;: &quot;改善が必要&quot;,
+              &quot;finding&quot;: &quot;負担の原因を確認し、運営方法を改善する。&quot;,
+              &quot;metric&quot;: &quot;4件&quot;
+            }
+          ]
+        },
+        {
+          &quot;label&quot;: &quot;統合候補&quot;,
+          &quot;finding&quot;: &quot;代替手段と利用者への影響を確認する。&quot;,
+          &quot;metric&quot;: &quot;3件&quot;
+        }
+      ]
+    }
+  ],
+  &quot;galleryId&quot;: &quot;G69&quot;,
+  &quot;category&quot;: &quot;見出しの包含関係&quot;,
+  &quot;contentWidth&quot;: &quot;wide&quot;,
+  &quot;use&quot;: &quot;親子の木構造から行範囲を計算し、浅い葉は残りの分類列を結合。&quot;
+}</pre><button class="copy" type="button">入力例をコピー</button></details></div></article></main><p class="empty" id="empty">該当する見本がありません。検索語や用途を変更してください。</p><footer>パターンを固定的に当てはめず、情報の関係・文章量・比較条件に合わせて調整してください。<a href="../references/gallery.md">構成と生成方法</a></footer><script>
+const search=document.querySelector('#search'),category=document.querySelector('#category'),ratio=document.querySelector('#ratio'),cards=[...document.querySelectorAll('article')];
+function update(){let count=0;for(const card of cards){const visible=(!category.value||card.dataset.category===category.value)&&card.dataset.search.toLowerCase().includes(search.value.trim().toLowerCase());card.hidden=!visible;if(visible)count++;const link=card.querySelector('.preview'),img=link.querySelector('img'),n=link.dataset.index;link.href=(ratio.value==='wide'?'layout-gallery-wide.html':'layout-gallery.html')+'#slide-'+n;img.src='gallery-thumbs/'+ratio.value+'-'+n+'.webp';img.width=ratio.value==='wide'?640:520;img.height=360;}document.querySelector('#count').textContent=count+' / '+cards.length+'件';document.querySelector('#empty').style.display=count?'none':'block';}
+search.addEventListener('input',update);category.addEventListener('change',update);ratio.addEventListener('change',update);update();
+document.querySelectorAll('.copy').forEach(b=>b.onclick=async()=>{const value=b.previousElementSibling.textContent;try{await navigator.clipboard.writeText(value);b.textContent='コピーしました';}catch{const range=document.createRange();range.selectNodeContents(b.previousElementSibling);const selection=getSelection();selection.removeAllRanges();selection.addRange(range);b.textContent='選択しました。コピーしてください';}});
+</script></html>

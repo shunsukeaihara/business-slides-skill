@@ -1,0 +1,2739 @@
+{
+  "title": "本文レイアウト・チャートの使い分け",
+  "slides": [
+    {
+      "pattern": "cover",
+      "title": "本文レイアウト・チャート集",
+      "subtitle": "情報の関係から構成を選ぶ\nマスタと画面比率を切り替えて利用",
+      "category": "表紙",
+      "use": "表紙。会社別マスタのロゴ・配置・書体を適用する。",
+      "contentWidth": "wide",
+      "galleryId": "G01"
+    },
+    {
+      "pattern": "compare",
+      "title": "同じ条件で選択肢を比較する",
+      "columns": [
+        {
+          "label": "選択肢A",
+          "summary": "現在の仕組みを活かし、変更する範囲を絞る。",
+          "items": [
+            "短期間で着手できる",
+            "対象外となる範囲を確認する",
+            "既存の制約が残る"
+          ]
+        },
+        {
+          "label": "選択肢B",
+          "summary": "共通の仕組みを整え、対象範囲を広げる。",
+          "items": [
+            "複数の用途に対応できる",
+            "移行に必要な準備を確認する",
+            "初期の作業が増える"
+          ]
+        }
+      ],
+      "category": "比較・判断",
+      "use": "共通の観点で選択肢の特徴や制約を並べる。",
+      "contentWidth": "wide",
+      "galleryId": "G02"
+    },
+    {
+      "pattern": "evidence",
+      "title": "根拠と判断を同じ行で対応させる",
+      "columns": [
+        "観察された事実",
+        "読み取り",
+        "判断・対応"
+      ],
+      "rows": [
+        {
+          "label": "処理時間",
+          "cells": [
+            "複数の手順で同じ情報を入力している。",
+            "重複入力が負担の一因と考えられる。",
+            "共通化の対象を確認。"
+          ]
+        },
+        {
+          "label": "品質",
+          "cells": [
+            "担当によって確認方法が異なる。",
+            "確認基準が共有されていない。",
+            "共通の確認項目を整理。"
+          ]
+        },
+        {
+          "label": "継続性",
+          "cells": [
+            "一部の作業は特定の人しか扱えない。",
+            "不在時に作業が止まる可能性がある。",
+            "引き継ぎに必要な情報を整える。"
+          ]
+        }
+      ],
+      "category": "比較・判断",
+      "use": "事実・解釈・判断を区別し、同じ行で対応づける。",
+      "contentWidth": "wide",
+      "galleryId": "G03"
+    },
+    {
+      "pattern": "focus",
+      "title": "全体の位置を保ちながら詳細を示す",
+      "items": [
+        "背景の把握",
+        "比較・検証",
+        "判断・実行"
+      ],
+      "selected": 1,
+      "detailTitle": "比較・検証で確かめること",
+      "rows": [
+        {
+          "label": "比較条件を揃える",
+          "body": "対象・期間・評価尺度を揃えて、条件の違いによる差を切り分ける。"
+        },
+        {
+          "label": "例外を確かめる",
+          "body": "平均だけでなく、対象ごとの違いや例外が生じる条件を確認する。"
+        },
+        {
+          "label": "判断に必要な根拠を残す",
+          "body": "結論に至った理由と、まだ確認できていない点を区別して記録する。"
+        }
+      ],
+      "category": "構造・関係",
+      "use": "全体のどこを説明しているかを保ちながら掘り下げる。",
+      "contentWidth": "wide",
+      "galleryId": "G04"
+    },
+    {
+      "pattern": "driver",
+      "title": "指標を構成する要因と前提を分ける",
+      "total": "全体量\n600件",
+      "operator": "×",
+      "factors": [
+        {
+          "label": "対象数\n120組",
+          "evidence": "対象の定義を揃え、重複する対象を除く。集計時点も統一する。"
+        },
+        {
+          "label": "平均回数\n5回／組",
+          "evidence": "同じ期間の回数を使う。例外やばらつきは別途確認する。"
+        }
+      ],
+      "note": "数値は例示。120組 × 5回／組 ＝ 600件。",
+      "category": "構造・関係",
+      "use": "数量を構成する因子と、その前提条件を説明する。",
+      "contentWidth": "wide",
+      "galleryId": "G05"
+    },
+    {
+      "pattern": "funnel",
+      "title": "候補数と選別基準を段階ごとに示す",
+      "stages": [
+        {
+          "label": "候補を集める",
+          "count": "120件",
+          "criteria": [
+            "対象の定義を揃える",
+            "重複を除いて整理する"
+          ],
+          "excluded": "対象外の情報は、集計前に区別する。"
+        },
+        {
+          "label": "条件で絞る",
+          "count": "40件",
+          "criteria": [
+            "必要な条件を満たす",
+            "比較に必要な情報がある"
+          ],
+          "excluded": "条件に合わない80件を除外する。"
+        },
+        {
+          "label": "詳細を確認する",
+          "count": "12件",
+          "criteria": [
+            "根拠を確認できる",
+            "実施条件を満たす"
+          ],
+          "excluded": "追加確認により28件を除外する。"
+        }
+      ],
+      "category": "工程・時間",
+      "use": "候補が絞られる過程と、除外基準を示す。",
+      "contentWidth": "wide",
+      "galleryId": "G06"
+    },
+    {
+      "pattern": "scenario",
+      "title": "条件の違いと結果を共通の尺度で比べる",
+      "scenarios": [
+        {
+          "label": "条件A",
+          "assumption": "対象範囲を絞って進める。",
+          "values": [
+            30,
+            40,
+            50
+          ]
+        },
+        {
+          "label": "条件B",
+          "assumption": "対象を段階的に広げる。",
+          "values": [
+            30,
+            55,
+            75
+          ]
+        },
+        {
+          "label": "条件C",
+          "assumption": "早期に対象を広げる。",
+          "values": [
+            30,
+            70,
+            95
+          ]
+        }
+      ],
+      "max": 100,
+      "periods": [
+        "1期",
+        "2期",
+        "3期"
+      ],
+      "note": "数量の例示。すべてのグラフは0〜100の共通尺度。",
+      "category": "データ・チャート",
+      "use": "条件による結果の違いを、共通尺度の小さな図で比較する。",
+      "contentWidth": "wide",
+      "galleryId": "G07"
+    },
+    {
+      "pattern": "evaluation",
+      "title": "評価の尺度と根拠をセットで示す",
+      "columns": [
+        "重視度",
+        "対象A",
+        "対象B",
+        "評価の根拠"
+      ],
+      "rows": [
+        {
+          "label": "対象範囲",
+          "cells": [
+            "高",
+            "3",
+            "2",
+            "条件への適合"
+          ]
+        },
+        {
+          "label": "準備の負担",
+          "cells": [
+            "中",
+            "1",
+            "3",
+            "着手前の作業量"
+          ]
+        },
+        {
+          "label": "継続しやすさ",
+          "cells": [
+            "高",
+            "2",
+            "未確認",
+            "運営体制の確認"
+          ]
+        }
+      ],
+      "note": "点数は例示。3＝充足、2＝一部充足、1＝不足。未確認は点数化しない。",
+      "category": "比較・判断",
+      "use": "評価軸・尺度・未確認事項を明らかにして比較する。",
+      "contentWidth": "wide",
+      "galleryId": "G08"
+    },
+    {
+      "pattern": "cycle",
+      "title": "循環の各段階と関係を明らかにする",
+      "nodes": [
+        "状況を把握する",
+        "改善案を試す",
+        "結果を確認する",
+        "方法を更新する"
+      ],
+      "relations": [
+        "仮説を\n作る",
+        "試行結果を\n記録する",
+        "知見を\n反映する",
+        "次の観察へ\n戻す"
+      ],
+      "category": "構造・関係",
+      "use": "一度きりの順序ではなく、反復・フィードバックを示す。",
+      "contentWidth": "standard",
+      "galleryId": "G09"
+    },
+    {
+      "pattern": "scope",
+      "title": "対応範囲と未確認の領域を区別する",
+      "columns": [
+        "領域A",
+        "領域B",
+        "領域C"
+      ],
+      "rows": [
+        {
+          "label": "収集",
+          "cells": [
+            "対応",
+            "対応",
+            "一部対応"
+          ]
+        },
+        {
+          "label": "分析",
+          "cells": [
+            "対応",
+            "未確認",
+            "対象外"
+          ]
+        },
+        {
+          "label": "共有",
+          "cells": [
+            "一部対応",
+            "対応",
+            "対応"
+          ]
+        }
+      ],
+      "category": "比較・判断",
+      "use": "対応・一部対応・未確認・対象外を混同せず一覧する。",
+      "contentWidth": "wide",
+      "galleryId": "G10"
+    },
+    {
+      "pattern": "range",
+      "title": "代表値とばらつきを一緒に比較する",
+      "min": 0,
+      "max": 100,
+      "rows": [
+        {
+          "label": "対象A",
+          "low": 15,
+          "value": 35,
+          "high": 65
+        },
+        {
+          "label": "対象B",
+          "low": 40,
+          "value": 60,
+          "high": 85
+        },
+        {
+          "label": "対象C",
+          "low": 25,
+          "value": 45,
+          "high": 55
+        },
+        {
+          "label": "対象D",
+          "low": 10,
+          "value": 40,
+          "high": 90
+        }
+      ],
+      "note": "値は例示。線＝観測範囲、点＝中央値。単位：分。",
+      "category": "データ・チャート",
+      "use": "中心値だけでは見えない観測範囲・ばらつきを示す。",
+      "contentWidth": "standard",
+      "galleryId": "G11"
+    },
+    {
+      "pattern": "diverging",
+      "title": "基準からの増減を共通の原点で示す",
+      "limit": 40,
+      "rows": [
+        {
+          "label": "対象A",
+          "value": 30
+        },
+        {
+          "label": "対象B",
+          "value": -20
+        },
+        {
+          "label": "対象C",
+          "value": 10
+        },
+        {
+          "label": "対象D",
+          "value": -30
+        }
+      ],
+      "note": "値は例示。基準時点との差、単位：件。",
+      "category": "データ・チャート",
+      "use": "共通の原点からの増加・減少を比較する。",
+      "contentWidth": "standard",
+      "galleryId": "G12"
+    },
+    {
+      "pattern": "mekko",
+      "title": "全体の規模と内訳を面積で読む",
+      "groups": [
+        {
+          "label": "領域A",
+          "total": 50,
+          "parts": [
+            {
+              "label": "区分1",
+              "value": 60
+            },
+            {
+              "label": "区分2",
+              "value": 40
+            }
+          ]
+        },
+        {
+          "label": "領域B",
+          "total": 30,
+          "parts": [
+            {
+              "label": "区分1",
+              "value": 40
+            },
+            {
+              "label": "区分2",
+              "value": 60
+            }
+          ]
+        },
+        {
+          "label": "領域C",
+          "total": 20,
+          "parts": [
+            {
+              "label": "区分1",
+              "value": 75
+            },
+            {
+              "label": "区分2",
+              "value": 25
+            }
+          ]
+        }
+      ],
+      "note": "値は例示。幅＝各領域の件数、縦の比率＝領域内の構成比。",
+      "category": "データ・チャート",
+      "use": "領域の総量と、領域内の構成比を同時に示す。",
+      "contentWidth": "wide",
+      "galleryId": "G13"
+    },
+    {
+      "pattern": "process",
+      "title": "作業と成果物を工程ごとに対応させる",
+      "stages": [
+        {
+          "label": "状況把握",
+          "items": [
+            "現状の手順を確認",
+            "困りごとを整理"
+          ],
+          "result": "現状と論点"
+        },
+        {
+          "label": "比較・検証",
+          "items": [
+            "候補を同じ基準で比較",
+            "仮説を小さく試す"
+          ],
+          "result": "比較結果と根拠"
+        },
+        {
+          "label": "実行準備",
+          "items": [
+            "範囲と担当を決定",
+            "実施条件を確認"
+          ],
+          "result": "実行計画"
+        }
+      ],
+      "category": "工程・時間",
+      "use": "工程ごとに作業と成果物を対応させる",
+      "contentWidth": "wide",
+      "galleryId": "G14"
+    },
+    {
+      "pattern": "timeline",
+      "title": "節目とその時点で決まることを示す",
+      "events": [
+        {
+          "date": "4月",
+          "label": "調査完了",
+          "items": [
+            "対象範囲を確認",
+            "論点を共有"
+          ]
+        },
+        {
+          "date": "6月",
+          "label": "方針決定",
+          "items": [
+            "候補を比較",
+            "判断理由を記録"
+          ]
+        },
+        {
+          "date": "9月",
+          "label": "試行評価",
+          "items": [
+            "結果を検証",
+            "改善点を整理"
+          ]
+        },
+        {
+          "date": "12月",
+          "label": "展開判断",
+          "items": [
+            "実施条件を確認",
+            "次期計画を決定"
+          ]
+        }
+      ],
+      "category": "工程・時間",
+      "use": "日付と節目を示す。期間の長さにはガントを使う",
+      "contentWidth": "wide",
+      "galleryId": "G15"
+    },
+    {
+      "pattern": "gantt",
+      "title": "項目ごとの実施期間を同じ時間軸で見る",
+      "periods": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "rows": [
+        {
+          "label": "対象A",
+          "spans": [
+            {
+              "start": 0,
+              "end": 1,
+              "label": "調査・試行"
+            },
+            {
+              "start": 2,
+              "end": 3,
+              "label": "展開",
+              "secondary": true
+            }
+          ]
+        },
+        {
+          "label": "対象B",
+          "spans": [
+            {
+              "start": 1,
+              "end": 2,
+              "label": "準備・実施"
+            }
+          ]
+        },
+        {
+          "label": "対象C",
+          "spans": [
+            {
+              "start": 2,
+              "end": 3,
+              "label": "検証・定着"
+            }
+          ]
+        },
+        {
+          "label": "対象D",
+          "spans": [
+            {
+              "start": 0,
+              "end": 3,
+              "label": "継続的な確認",
+              "secondary": true
+            }
+          ]
+        }
+      ],
+      "category": "工程・時間",
+      "use": "期間と並行実施を示す",
+      "contentWidth": "wide",
+      "galleryId": "G16"
+    },
+    {
+      "pattern": "swimlane",
+      "title": "同じ工程に関わる役割を横断して確認する",
+      "periods": [
+        "準備",
+        "検証",
+        "判断",
+        "実行"
+      ],
+      "rows": [
+        {
+          "label": "役割A",
+          "spans": [
+            {
+              "start": 0,
+              "end": 0,
+              "label": "条件整理"
+            },
+            {
+              "start": 2,
+              "end": 2,
+              "label": "判断"
+            }
+          ]
+        },
+        {
+          "label": "役割B",
+          "spans": [
+            {
+              "start": 0,
+              "end": 1,
+              "label": "分析・比較",
+              "secondary": true
+            },
+            {
+              "start": 3,
+              "end": 3,
+              "label": "実行支援"
+            }
+          ]
+        },
+        {
+          "label": "役割C",
+          "spans": [
+            {
+              "start": 1,
+              "end": 2,
+              "label": "確認・調整"
+            },
+            {
+              "start": 3,
+              "end": 3,
+              "label": "運用",
+              "secondary": true
+            }
+          ]
+        }
+      ],
+      "category": "工程・時間",
+      "use": "工程をまたぐ担当・役割の違いを示す",
+      "contentWidth": "wide",
+      "galleryId": "G17"
+    },
+    {
+      "pattern": "beforeafter",
+      "title": "変わる点を同じ観点で対比する",
+      "columns": [
+        "現在",
+        "目指す状態"
+      ],
+      "rows": [
+        {
+          "label": "手順",
+          "cells": [
+            "担当ごとに異なる手順で処理する。",
+            "共通の手順と例外の扱いを分ける。"
+          ]
+        },
+        {
+          "label": "情報",
+          "cells": [
+            "必要な情報が複数の場所に分散する。",
+            "参照先を揃え、更新の責任を決める。"
+          ]
+        },
+        {
+          "label": "確認",
+          "cells": [
+            "問題が起きてから個別に確認する。",
+            "途中で確認し、早期に修正する。"
+          ]
+        }
+      ],
+      "category": "比較・判断",
+      "use": "共通の観点で変更前後を比べる",
+      "contentWidth": "wide",
+      "galleryId": "G18"
+    },
+    {
+      "pattern": "issue-tree",
+      "title": "論点を分解し、確認する事項までつなげる",
+      "root": "遅れが生じる\n要因は何か",
+      "branches": [
+        {
+          "label": "作業の集中",
+          "items": [
+            "時間帯ごとの件数",
+            "例外処理の割合"
+          ]
+        },
+        {
+          "label": "確認の停滞",
+          "items": [
+            "承認までの時間",
+            "差し戻しの理由"
+          ]
+        },
+        {
+          "label": "情報の不足",
+          "items": [
+            "不足項目の種類",
+            "追加確認の頻度"
+          ]
+        }
+      ],
+      "category": "構造・関係",
+      "use": "論点を分解して検証項目へつなぐ",
+      "contentWidth": "wide",
+      "galleryId": "G19"
+    },
+    {
+      "pattern": "hierarchy",
+      "title": "全体方針と具体的な取り組みを階層で示す",
+      "root": "継続的な改善を実現する",
+      "groups": [
+        {
+          "label": "見えるようにする",
+          "items": [
+            "現状の流れを整理",
+            "判断に必要な情報を揃える"
+          ]
+        },
+        {
+          "label": "実行しやすくする",
+          "items": [
+            "担当と役割を明確化",
+            "共通の手順を整える"
+          ]
+        },
+        {
+          "label": "続けられるようにする",
+          "items": [
+            "結果を定期的に確認",
+            "学びを次の改善に反映"
+          ]
+        }
+      ],
+      "category": "構造・関係",
+      "use": "全体方針と下位の取り組みを対応させる",
+      "contentWidth": "standard",
+      "galleryId": "G20"
+    },
+    {
+      "pattern": "hub",
+      "title": "中心となる機能と周囲の関係を示す",
+      "center": "共通の情報基盤",
+      "nodes": [
+        {
+          "label": "収集",
+          "relation": "情報を集める"
+        },
+        {
+          "label": "分析",
+          "relation": "状況を読み取る"
+        },
+        {
+          "label": "共有",
+          "relation": "必要な相手へ伝える"
+        },
+        {
+          "label": "更新",
+          "relation": "結果を反映する"
+        }
+      ],
+      "category": "構造・関係",
+      "use": "中心と周辺の関係を示す。順序は表さない",
+      "contentWidth": "standard",
+      "galleryId": "G21"
+    },
+    {
+      "pattern": "layers",
+      "title": "役割の異なる層を分けて全体像を示す",
+      "layers": [
+        {
+          "label": "目的・方針",
+          "body": "何を実現するか、何を優先するかを定める。"
+        },
+        {
+          "label": "ルール・責任",
+          "body": "判断の基準と、それぞれの役割を明確にする。"
+        },
+        {
+          "label": "業務・手順",
+          "body": "日々の作業と例外への対応を具体化する。"
+        },
+        {
+          "label": "情報・仕組み",
+          "body": "実行に必要な情報と道具を整える。"
+        }
+      ],
+      "category": "構造・関係",
+      "use": "役割の異なる層を整理する",
+      "contentWidth": "wide",
+      "galleryId": "G22"
+    },
+    {
+      "pattern": "decision",
+      "title": "条件によって異なる対応を分岐で示す",
+      "question": "共通の条件を\n満たしているか",
+      "branches": [
+        {
+          "condition": "満たしている",
+          "action": "共通の手順で進める",
+          "items": [
+            "必要な記録を残す",
+            "結果を定期的に確認する"
+          ]
+        },
+        {
+          "condition": "満たしていない",
+          "action": "例外の条件を確認する",
+          "items": [
+            "不足している条件を特定",
+            "個別対応の範囲を判断"
+          ]
+        }
+      ],
+      "category": "比較・判断",
+      "use": "条件による対応の分岐を示す",
+      "contentWidth": "standard",
+      "galleryId": "G23"
+    },
+    {
+      "pattern": "quadrant",
+      "title": "二つの観点で対応方針を整理する",
+      "xLabel": "実施のしやすさ →",
+      "yLabel": "効果\n高",
+      "cells": [
+        {
+          "label": "条件を整えて進める",
+          "body": "効果は大きいが、\n事前の準備が必要。"
+        },
+        {
+          "label": "優先して着手する",
+          "body": "効果と実現性を\n両立できる。"
+        },
+        {
+          "label": "必要性を見直す",
+          "body": "負担に対する効果を\n再確認する。"
+        },
+        {
+          "label": "小さく試す",
+          "body": "限られた範囲で\n結果を確かめる。"
+        }
+      ],
+      "category": "比較・判断",
+      "use": "二つの独立した軸で方針を整理する",
+      "contentWidth": "wide",
+      "galleryId": "G24"
+    },
+    {
+      "pattern": "bars",
+      "title": "対象間の量の違いを長さで比較する",
+      "max": 100,
+      "rows": [
+        {
+          "label": "対象A",
+          "value": 82
+        },
+        {
+          "label": "対象B",
+          "value": 65
+        },
+        {
+          "label": "対象C",
+          "value": 48
+        },
+        {
+          "label": "対象D",
+          "value": 30
+        },
+        {
+          "label": "対象E",
+          "value": 18
+        }
+      ],
+      "note": "数値は例示。単位：件。棒の原点は0。",
+      "category": "データ・チャート",
+      "use": "共通単位の量を比較する",
+      "contentWidth": "standard",
+      "galleryId": "G25"
+    },
+    {
+      "pattern": "stacked",
+      "title": "総量を揃えて内訳の違いを比較する",
+      "series": [
+        "区分1",
+        "区分2",
+        "区分3"
+      ],
+      "rows": [
+        {
+          "label": "対象A",
+          "values": [
+            50,
+            30,
+            20
+          ]
+        },
+        {
+          "label": "対象B",
+          "values": [
+            30,
+            45,
+            25
+          ]
+        },
+        {
+          "label": "対象C",
+          "values": [
+            60,
+            25,
+            15
+          ]
+        },
+        {
+          "label": "対象D",
+          "values": [
+            25,
+            35,
+            40
+          ]
+        }
+      ],
+      "note": "数値は例示。各行の合計は100%。総量の大小は表さない。",
+      "category": "データ・チャート",
+      "use": "内訳の割合を比較する。総量は比較できない",
+      "contentWidth": "wide",
+      "galleryId": "G26"
+    },
+    {
+      "pattern": "line-chart",
+      "title": "複数系列の変化を同じ尺度で追う",
+      "max": 100,
+      "periods": [
+        "1期",
+        "2期",
+        "3期",
+        "4期",
+        "5期"
+      ],
+      "series": [
+        {
+          "label": "対象A",
+          "values": [
+            25,
+            40,
+            35,
+            65,
+            85
+          ]
+        },
+        {
+          "label": "対象B",
+          "values": [
+            20,
+            30,
+            45,
+            50,
+            60
+          ]
+        }
+      ],
+      "note": "数値は例示。単位：件。同じ期間・同じ集計方法で比較。",
+      "category": "データ・チャート",
+      "use": "連続する期間の変化を比較する",
+      "contentWidth": "wide",
+      "galleryId": "G27"
+    },
+    {
+      "pattern": "scatter",
+      "title": "二つの量の関係と例外を確認する",
+      "max": 100,
+      "xMax": 100,
+      "xLabel": "作業量（件）",
+      "yLabel": "所要時間（分）",
+      "points": [
+        {
+          "label": "A",
+          "x": 12,
+          "y": 15
+        },
+        {
+          "label": "B",
+          "x": 30,
+          "y": 35
+        },
+        {
+          "label": "C",
+          "x": 45,
+          "y": 25
+        },
+        {
+          "label": "D",
+          "x": 55,
+          "y": 65
+        },
+        {
+          "label": "E",
+          "x": 72,
+          "y": 55
+        },
+        {
+          "label": "F",
+          "x": 85,
+          "y": 82
+        }
+      ],
+      "note": "数値は例示。相関だけで因果関係を判断しない。",
+      "category": "データ・チャート",
+      "use": "二変数の関係・外れ値を見る",
+      "contentWidth": "wide",
+      "galleryId": "G28"
+    },
+    {
+      "pattern": "slope",
+      "title": "二時点の変化と順位の入れ替わりを見る",
+      "max": 120,
+      "periods": [
+        "変更前",
+        "変更後"
+      ],
+      "rows": [
+        {
+          "label": "対象A",
+          "values": [
+            85,
+            60
+          ]
+        },
+        {
+          "label": "対象B",
+          "values": [
+            60,
+            90
+          ]
+        },
+        {
+          "label": "対象C",
+          "values": [
+            30,
+            42
+          ]
+        }
+      ],
+      "note": "数値は例示。単位：件。両時点で同じ尺度を使用。",
+      "category": "データ・チャート",
+      "use": "二時点の変化を追う",
+      "contentWidth": "standard",
+      "galleryId": "G29"
+    },
+    {
+      "pattern": "waterfall",
+      "title": "開始値から終了値への増減要因を示す",
+      "max": 160,
+      "values": [
+        {
+          "label": "開始",
+          "value": 100,
+          "total": true
+        },
+        {
+          "label": "要因A",
+          "value": 35
+        },
+        {
+          "label": "要因B",
+          "value": -20
+        },
+        {
+          "label": "要因C",
+          "value": 15
+        },
+        {
+          "label": "終了",
+          "value": 130,
+          "total": true
+        }
+      ],
+      "note": "数値は例示。100 ＋ 35 − 20 ＋ 15 ＝ 130。単位：件。",
+      "category": "データ・チャート",
+      "use": "増減要因と最終値をつなぐ",
+      "contentWidth": "wide",
+      "galleryId": "G30"
+    },
+    {
+      "pattern": "pareto",
+      "title": "量の大きい項目と累積比率を確認する",
+      "max": 50,
+      "rows": [
+        {
+          "label": "分類A",
+          "value": 40
+        },
+        {
+          "label": "分類B",
+          "value": 25
+        },
+        {
+          "label": "分類C",
+          "value": 18
+        },
+        {
+          "label": "分類D",
+          "value": 10
+        },
+        {
+          "label": "分類E",
+          "value": 7
+        }
+      ],
+      "note": "数値は例示。棒＝件数、折れ線＝累積比率。",
+      "category": "データ・チャート",
+      "use": "分類の件数と累積比率を見る",
+      "contentWidth": "wide",
+      "galleryId": "G31"
+    },
+    {
+      "pattern": "heatmap",
+      "title": "複数の観点にまたがる強弱を一覧する",
+      "columns": [
+        "観点1",
+        "観点2",
+        "観点3",
+        "観点4"
+      ],
+      "rows": [
+        {
+          "label": "対象A",
+          "values": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "label": "対象B",
+          "values": [
+            1,
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "label": "対象C",
+          "values": [
+            2,
+            1,
+            3,
+            2
+          ]
+        },
+        {
+          "label": "対象D",
+          "values": [
+            0,
+            2,
+            1,
+            3
+          ]
+        }
+      ],
+      "note": "値は例示。0＝該当なし、1＝低、2＝中、3＝高。濃淡と数値を併記。",
+      "category": "データ・チャート",
+      "use": "複数対象・複数観点の強弱を見る",
+      "contentWidth": "wide",
+      "galleryId": "G32"
+    },
+    {
+      "pattern": "strategy-map",
+      "title": "環境変化・対応・期待する成果をつなげる",
+      "columns": [
+        "環境・課題",
+        "対応方針",
+        "期待する成果"
+      ],
+      "rows": [
+        {
+          "driver": "依頼の種類が増えている",
+          "response": "受付の条件と分類を整える",
+          "outcome": "確認の手戻りを減らす"
+        },
+        {
+          "driver": "対応方法が担当に依存する",
+          "response": "共通手順と例外を分ける",
+          "outcome": "品質のばらつきを抑える"
+        },
+        {
+          "driver": "結果が次の判断に使われない",
+          "response": "記録と振り返りを定着させる",
+          "outcome": "改善の根拠を蓄積する"
+        }
+      ],
+      "galleryId": "G33",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "外部環境や課題が、どの方針・成果につながるかを読む。"
+    },
+    {
+      "pattern": "exchange",
+      "title": "提供するものと受け取るものを分けて示す",
+      "actors": [
+        "提供者",
+        "共通サービス",
+        "利用者"
+      ],
+      "flows": [
+        {
+          "forward": "情報・素材を提供",
+          "backward": "利用実績を還元"
+        },
+        {
+          "forward": "整理した情報を提供",
+          "backward": "評価・要望を返す"
+        }
+      ],
+      "galleryId": "G34",
+      "category": "複合・分析構成",
+      "contentWidth": "standard",
+      "use": "主体間の往路・復路で受け渡すものを区別する。"
+    },
+    {
+      "pattern": "operating-model",
+      "title": "各機能の役割と横断する基盤を整理する",
+      "columns": [
+        "方針を決める",
+        "実行する",
+        "結果を確認する"
+      ],
+      "rows": [
+        {
+          "label": "活動",
+          "cells": [
+            "優先順位を決定",
+            "手順に沿って実施",
+            "差分と原因を確認"
+          ]
+        },
+        {
+          "label": "責任",
+          "cells": [
+            "判断の根拠を示す",
+            "記録と例外を残す",
+            "改善案を提示"
+          ]
+        },
+        {
+          "label": "情報",
+          "cells": [
+            "目的・判断条件",
+            "対象・進捗・実績",
+            "効果・未解決事項"
+          ]
+        }
+      ],
+      "foundation": "共通の情報定義・アクセス管理・更新ルール",
+      "galleryId": "G35",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "役割・活動・情報と、それらを支える横断基盤を整理する。"
+    },
+    {
+      "pattern": "maturity",
+      "title": "現在地・目標・次の段階への条件を示す",
+      "current": 0,
+      "target": 2,
+      "stages": [
+        {
+          "label": "個別に対応",
+          "state": "担当者の経験で対応する。",
+          "conditions": [
+            "現状を可視化",
+            "共通項目を特定"
+          ],
+          "position": "現在"
+        },
+        {
+          "label": "手順を共通化",
+          "state": "共通手順と例外を区別する。",
+          "conditions": [
+            "結果を記録",
+            "差分を検証"
+          ],
+          "position": "中間段階"
+        },
+        {
+          "label": "継続的に改善",
+          "state": "結果を次の判断に活かす。",
+          "conditions": [
+            "基準を定期更新",
+            "変化に合わせて見直す"
+          ],
+          "position": "目標"
+        }
+      ],
+      "galleryId": "G36",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "現在と目標の違い、次段階へ移る条件を示す。"
+    },
+    {
+      "pattern": "pyramid-detail",
+      "title": "上位の目的と実行を支える要素を対応させる",
+      "levels": [
+        {
+          "label": "目的",
+          "heading": "何を実現するか",
+          "body": "判断の基準となる目的を共有する。"
+        },
+        {
+          "label": "仕組み",
+          "heading": "どう動くか",
+          "body": "役割・手順・確認方法を整える。"
+        },
+        {
+          "label": "基盤",
+          "heading": "何が支えるか",
+          "body": "人材・情報・道具を揃える。"
+        }
+      ],
+      "galleryId": "G37",
+      "category": "複合・分析構成",
+      "contentWidth": "standard",
+      "use": "目的・仕組み・基盤の包含関係と具体的な意味を対応させる。"
+    },
+    {
+      "pattern": "portfolio-bubbles",
+      "title": "位置・規模・分布を同時に比較する",
+      "xLabel": "実現性 →",
+      "yLabel": "期待効果 ↑",
+      "points": [
+        {
+          "label": "A",
+          "x": 25,
+          "y": 75,
+          "size": 100
+        },
+        {
+          "label": "B",
+          "x": 65,
+          "y": 70,
+          "size": 240
+        },
+        {
+          "label": "C",
+          "x": 42,
+          "y": 30,
+          "size": 65
+        },
+        {
+          "label": "D",
+          "x": 78,
+          "y": 25,
+          "size": 150
+        }
+      ],
+      "note": "例示。円の面積＝対象規模、座標＝共通尺度による評価。",
+      "galleryId": "G38",
+      "category": "複合・分析構成",
+      "contentWidth": "standard",
+      "use": "二つの評価軸と対象規模を同時に読む。"
+    },
+    {
+      "pattern": "portfolio-moves",
+      "title": "現在位置から目指す位置への変化を示す",
+      "xLabel": "対応範囲 →",
+      "yLabel": "成熟度 ↑",
+      "points": [
+        {
+          "label": "A",
+          "x": 18,
+          "y": 35,
+          "to": [
+            38,
+            70
+          ]
+        },
+        {
+          "label": "B",
+          "x": 55,
+          "y": 25,
+          "to": [
+            78,
+            55
+          ]
+        },
+        {
+          "label": "C",
+          "x": 68,
+          "y": 78,
+          "to": [
+            88,
+            88
+          ]
+        }
+      ],
+      "note": "例示。移動線は目標への方向を示し、実績の推移ではない。",
+      "galleryId": "G39",
+      "category": "複合・分析構成",
+      "contentWidth": "standard",
+      "use": "現在の分布だけでなく、目標へ向かう方向を示す。"
+    },
+    {
+      "pattern": "portfolio-actions",
+      "title": "対象の位置づけから対応方針へつなげる",
+      "xLabel": "実現性 →",
+      "yLabel": "期待効果 ↑",
+      "groups": [
+        {
+          "id": "A",
+          "x": 75,
+          "y": 75,
+          "action": "先行実施",
+          "body": "効果と実現性が高い領域から着手する。"
+        },
+        {
+          "id": "B",
+          "x": 25,
+          "y": 70,
+          "action": "条件整備",
+          "body": "障害となる条件を確認し、準備を進める。"
+        },
+        {
+          "id": "C",
+          "x": 65,
+          "y": 25,
+          "action": "小規模検証",
+          "body": "対象を絞り、実際の効果を確かめる。"
+        }
+      ],
+      "galleryId": "G40",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "二軸の位置づけを、具体的な対応方針に結び付ける。"
+    },
+    {
+      "pattern": "valuechain",
+      "title": "工程全体に対する対応範囲と重点を示す",
+      "stages": [
+        "収集",
+        "整理",
+        "分析",
+        "共有"
+      ],
+      "rows": [
+        {
+          "label": "機能A",
+          "cells": [
+            "対応",
+            "重点",
+            "対応",
+            "対象外"
+          ]
+        },
+        {
+          "label": "機能B",
+          "cells": [
+            "対象外",
+            "対応",
+            "重点",
+            "対応"
+          ]
+        },
+        {
+          "label": "機能C",
+          "cells": [
+            "対応",
+            "対応",
+            "対応",
+            "重点"
+          ]
+        }
+      ],
+      "note": "例示。「重点」は改善対象であり、量の大小を意味しない。",
+      "galleryId": "G41",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "工程に沿った対応範囲・欠落・重点を横断的に見る。"
+    },
+    {
+      "pattern": "part-whole",
+      "title": "全体の中の対象と、その内訳を区別する",
+      "wholeLabel": "全体の構成",
+      "partLabel": "区分Bの内訳",
+      "selected": 1,
+      "whole": [
+        {
+          "label": "区分A",
+          "value": 40
+        },
+        {
+          "label": "区分B",
+          "value": 60
+        }
+      ],
+      "parts": [
+        {
+          "label": "内訳1",
+          "value": 45
+        },
+        {
+          "label": "内訳2",
+          "value": 35
+        },
+        {
+          "label": "内訳3",
+          "value": 20
+        }
+      ],
+      "note": "例示。右図の100%は区分Bを分母とする。全体の比率とは異なる。",
+      "galleryId": "G42",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "全体と部分の分母を区別しながら内訳を拡大する。"
+    },
+    {
+      "pattern": "small-multiples",
+      "title": "対象と指標を揃えて複数の変化を比較する",
+      "columns": [
+        "対象A",
+        "対象B"
+      ],
+      "periods": [
+        "1期",
+        "2期",
+        "3期"
+      ],
+      "max": 100,
+      "rows": [
+        {
+          "label": "数量",
+          "charts": [
+            [
+              30,
+              45,
+              60
+            ],
+            [
+              45,
+              55,
+              65
+            ]
+          ]
+        },
+        {
+          "label": "稼働率",
+          "charts": [
+            [
+              40,
+              60,
+              75
+            ],
+            [
+              60,
+              65,
+              70
+            ]
+          ]
+        }
+      ],
+      "note": "例示。数量：件、稼働率：%。同じ行の尺度・期間を統一。",
+      "galleryId": "G43",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "対象×指標の共通グリッドで推移を比較する。"
+    },
+    {
+      "pattern": "scenario-metrics",
+      "title": "前提別の結果を複数の指標で確かめる",
+      "scenarios": [
+        "対象を絞る",
+        "段階的に広げる",
+        "早期に広げる"
+      ],
+      "periods": [
+        "1期",
+        "2期",
+        "3期"
+      ],
+      "rows": [
+        {
+          "label": "成果量\n（件）",
+          "max": 100,
+          "values": [
+            [
+              25,
+              35,
+              45
+            ],
+            [
+              25,
+              50,
+              70
+            ],
+            [
+              25,
+              65,
+              90
+            ]
+          ]
+        },
+        {
+          "label": "必要工数\n（人月）",
+          "max": 20,
+          "values": [
+            [
+              5,
+              7,
+              8
+            ],
+            [
+              7,
+              10,
+              12
+            ],
+            [
+              10,
+              14,
+              18
+            ]
+          ]
+        }
+      ],
+      "note": "数値は仮定による例示。予測値・実績値ではない。",
+      "galleryId": "G44",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "条件が変わると成果と負担がどう変わるかを同時に比較する。"
+    },
+    {
+      "pattern": "annotated-trend",
+      "title": "変化の特徴と、その解釈を対応づける",
+      "max": 100,
+      "periods": [
+        "1期",
+        "2期",
+        "3期",
+        "4期",
+        "5期",
+        "6期"
+      ],
+      "values": [
+        30,
+        35,
+        70,
+        50,
+        55,
+        85
+      ],
+      "callouts": [
+        {
+          "index": 2,
+          "label": "一時的な増加",
+          "body": "対象範囲の変更の影響を確認する。"
+        },
+        {
+          "index": 3,
+          "label": "増加後の低下",
+          "body": "変動が一時的か継続的かを確認する。"
+        },
+        {
+          "index": 5,
+          "label": "再び増加",
+          "body": "集計条件に変更がないかを確認する。"
+        }
+      ],
+      "note": "数量の例示（件）。解釈は仮説であり、因果を断定しない。",
+      "galleryId": "G45",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "グラフ上の注目点と解釈を番号で対応させる。"
+    },
+    {
+      "pattern": "survey-grid",
+      "title": "同じ属性に対する二つの回答傾向を比べる",
+      "columns": [
+        "現在の利用状況",
+        "今後の利用意向"
+      ],
+      "rows": [
+        {
+          "label": "グループA",
+          "values": [
+            [
+              45,
+              35,
+              20
+            ],
+            [
+              60,
+              25,
+              15
+            ]
+          ]
+        },
+        {
+          "label": "グループB",
+          "values": [
+            [
+              30,
+              45,
+              25
+            ],
+            [
+              40,
+              35,
+              25
+            ]
+          ]
+        },
+        {
+          "label": "グループC",
+          "values": [
+            [
+              20,
+              40,
+              40
+            ],
+            [
+              30,
+              40,
+              30
+            ]
+          ]
+        }
+      ],
+      "legend": [
+        "肯定",
+        "中立",
+        "否定"
+      ],
+      "note": "例示。各行の母数は100件。回答カテゴリーと質問文は実調査で明示。",
+      "galleryId": "G46",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "同じ属性について複数の質問結果を同じ行で比較する。"
+    },
+    {
+      "pattern": "chart-quotes",
+      "title": "回答の量と、背景にある声を対応させる",
+      "max": 40,
+      "rows": [
+        {
+          "label": "情報",
+          "negative": 25,
+          "positive": 15,
+          "quote": "必要な情報を探すのに時間がかかる。"
+        },
+        {
+          "label": "手順",
+          "negative": 15,
+          "positive": 30,
+          "quote": "共通の手順があると迷わず進められる。"
+        },
+        {
+          "label": "確認",
+          "negative": 30,
+          "positive": 10,
+          "quote": "どこで確認すべきか分かりにくい。"
+        }
+      ],
+      "note": "例示。左＝否定、右＝肯定、単位：%。コメントも説明用の創作文。",
+      "galleryId": "G47",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "定量的な回答傾向と定性的なコメントを同じ行で示す。"
+    },
+    {
+      "pattern": "benchmark-profile",
+      "title": "評価の強弱を同じ尺度で横断的に比べる",
+      "series": [
+        "対象A",
+        "比較対象"
+      ],
+      "rows": [
+        {
+          "label": "対象範囲",
+          "values": [
+            4,
+            3
+          ]
+        },
+        {
+          "label": "準備の容易さ",
+          "values": [
+            2,
+            4
+          ]
+        },
+        {
+          "label": "継続しやすさ",
+          "values": [
+            4,
+            3
+          ]
+        },
+        {
+          "label": "柔軟性",
+          "values": [
+            3,
+            2
+          ]
+        }
+      ],
+      "note": "例示。1＝低、5＝高。線は同じ系列を追う補助で、連続量ではない。",
+      "galleryId": "G48",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "評価項目ごとに、対象と比較対象の強弱を追う。"
+    },
+    {
+      "pattern": "paired-dots",
+      "title": "二群の差を項目ごとに比較する",
+      "max": 100,
+      "series": [
+        "比較対象",
+        "対象A"
+      ],
+      "rows": [
+        {
+          "label": "項目1",
+          "values": [
+            35,
+            60
+          ]
+        },
+        {
+          "label": "項目2",
+          "values": [
+            55,
+            40
+          ]
+        },
+        {
+          "label": "項目3",
+          "values": [
+            30,
+            70
+          ]
+        },
+        {
+          "label": "項目4",
+          "values": [
+            65,
+            75
+          ]
+        }
+      ],
+      "note": "例示。値：%、右端：差（ポイント）。各点は同じ定義の割合。",
+      "galleryId": "G49",
+      "category": "複合・分析構成",
+      "contentWidth": "standard",
+      "use": "項目ごとの二群の差を原点に依存せず直接読む。"
+    },
+    {
+      "pattern": "segment-profiles",
+      "title": "対象群の特徴から異なる対応を導く",
+      "fields": [
+        {
+          "label": "特徴",
+          "key": "feature"
+        },
+        {
+          "label": "重視点",
+          "key": "need"
+        },
+        {
+          "label": "障害",
+          "key": "barrier"
+        },
+        {
+          "label": "対応",
+          "key": "response"
+        }
+      ],
+      "segments": [
+        {
+          "label": "グループA",
+          "feature": "頻繁に利用する",
+          "need": "速さと安定性",
+          "barrier": "例外処理の多さ",
+          "response": "共通手順を整える"
+        },
+        {
+          "label": "グループB",
+          "feature": "必要なときに利用",
+          "need": "分かりやすさ",
+          "barrier": "使い方が分からない",
+          "response": "案内を簡潔にする"
+        },
+        {
+          "label": "グループC",
+          "feature": "ほとんど利用しない",
+          "need": "利用する理由",
+          "barrier": "効果が見えない",
+          "response": "具体的な用途を示す"
+        }
+      ],
+      "galleryId": "G50",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "対象群の特徴・要求・障害から、対応を変える理由を示す。"
+    },
+    {
+      "pattern": "workplan-deliverables",
+      "title": "論点ごとに作業・検証方法・成果物を定める",
+      "columns": [
+        "行う作業",
+        "確かめ方",
+        "成果物"
+      ],
+      "rows": [
+        {
+          "label": "現状",
+          "tasks": [
+            "流れを整理",
+            "例外を抽出"
+          ],
+          "method": "実績データと現場の説明を照合する。",
+          "output": "現状図と論点"
+        },
+        {
+          "label": "選択肢",
+          "tasks": [
+            "候補を比較",
+            "条件を確認"
+          ],
+          "method": "共通の評価基準で違いを確認する。",
+          "output": "比較表と判断根拠"
+        },
+        {
+          "label": "実行",
+          "tasks": [
+            "担当を調整",
+            "時期を整理"
+          ],
+          "method": "必要な条件と体制の実現性を確認する。",
+          "output": "実施計画"
+        }
+      ],
+      "galleryId": "G51",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "論点に対する作業・検証・出力を一つの行で完結させる。"
+    },
+    {
+      "pattern": "dependency-map",
+      "title": "複数の取り組みと受け渡しの関係を示す",
+      "stages": [
+        "準備",
+        "検証",
+        "展開"
+      ],
+      "rows": [
+        {
+          "label": "領域A",
+          "cells": [
+            "条件整理",
+            "試行",
+            "結果共有"
+          ]
+        },
+        {
+          "label": "領域B",
+          "cells": [
+            "対象整理",
+            "対応準備",
+            "実施"
+          ]
+        },
+        {
+          "label": "領域C",
+          "cells": [
+            "現状確認",
+            "改善案",
+            "運用へ反映"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "from": [
+            0,
+            1
+          ],
+          "to": [
+            1,
+            2
+          ]
+        },
+        {
+          "from": [
+            1,
+            2
+          ],
+          "to": [
+            2,
+            2
+          ]
+        }
+      ],
+      "galleryId": "G52",
+      "category": "複合・分析構成",
+      "contentWidth": "wide",
+      "use": "並行する取り組みの間で、何が次の作業へ渡るかを示す。"
+    },
+    {
+      "pattern": "grouped-rows",
+      "title": "個別の課題を束ね、共通する対応を示す",
+      "columns": [
+        "領域",
+        "対象",
+        "確認した課題",
+        "対応方針"
+      ],
+      "groups": [
+        {
+          "label": "顧客接点",
+          "start": 0,
+          "span": 2
+        },
+        {
+          "label": "社内業務",
+          "start": 2,
+          "span": 2
+        }
+      ],
+      "rows": [
+        {
+          "label": "受付",
+          "finding": "受付経路によって必要情報が異なる"
+        },
+        {
+          "label": "回答",
+          "finding": "引き継ぎ時に確認が重複する"
+        },
+        {
+          "label": "承認",
+          "finding": "案件ごとに判断基準が異なる"
+        },
+        {
+          "label": "集計",
+          "finding": "報告のたびに転記が発生する"
+        }
+      ],
+      "actions": [
+        {
+          "text": "受付情報と引き継ぎ方法を共通化する",
+          "start": 0,
+          "span": 2
+        },
+        {
+          "text": "判断基準を明文化する",
+          "start": 2,
+          "span": 1
+        },
+        {
+          "text": "元データから集計する",
+          "start": 3,
+          "span": 1
+        }
+      ],
+      "galleryId": "G53",
+      "category": "階層・判断・実行",
+      "contentWidth": "wide",
+      "use": "親子の行見出しと複数行にまたがる共通対応。"
+    },
+    {
+      "pattern": "nested-columns",
+      "title": "重視する条件と選択肢の適合を分けて比較する",
+      "rowHeading": "評価軸",
+      "groups": [
+        "用途別の重要度",
+        "選択肢の適合度"
+      ],
+      "columns": [
+        "定常業務",
+        "個別対応",
+        "案A",
+        "案B"
+      ],
+      "rows": [
+        {
+          "label": "安定性",
+          "cells": [
+            "高",
+            "中",
+            "高",
+            "中"
+          ]
+        },
+        {
+          "label": "柔軟性",
+          "cells": [
+            "中",
+            "高",
+            "中",
+            "高"
+          ]
+        },
+        {
+          "label": "導入の速さ",
+          "cells": [
+            "中",
+            "高",
+            "高",
+            "低"
+          ]
+        },
+        {
+          "label": "維持の容易さ",
+          "cells": [
+            "高",
+            "中",
+            "高",
+            "中"
+          ]
+        }
+      ],
+      "galleryId": "G54",
+      "category": "階層・判断・実行",
+      "contentWidth": "wide",
+      "use": "二段の列見出しで異なる比較軸を分離。"
+    },
+    {
+      "pattern": "vertical-process",
+      "title": "各工程の作業と成果物を対応させる",
+      "columns": [
+        "工程",
+        "主な作業",
+        "成果物"
+      ],
+      "steps": [
+        {
+          "label": "現状把握",
+          "tasks": [
+            "実態を確認する",
+            "論点を整理する"
+          ],
+          "output": "課題と対象範囲"
+        },
+        {
+          "label": "選択肢作成",
+          "tasks": [
+            "代替案を比較する",
+            "実行条件を確認する"
+          ],
+          "output": "比較案と概算"
+        },
+        {
+          "label": "方針決定",
+          "tasks": [
+            "優先順位を議論する",
+            "担当と時期を決める"
+          ],
+          "output": "合意した実施方針"
+        }
+      ],
+      "galleryId": "G55",
+      "category": "階層・判断・実行",
+      "contentWidth": "wide",
+      "use": "縦工程と作業・成果物を対応。"
+    },
+    {
+      "pattern": "classification-actions",
+      "title": "対象を分類し、条件に応じた対応を選ぶ",
+      "columns": [
+        "対象全体",
+        "利用状況",
+        "判定",
+        "対応方針"
+      ],
+      "total": "対象サービス\n12件",
+      "branches": [
+        "利用が少ない\n3件",
+        "継続利用\n9件"
+      ],
+      "leaves": [
+        {
+          "label": "代替可能\n3件",
+          "action": "利用者への影響を確認し、統合を検討する。"
+        },
+        {
+          "label": "運営が安定\n5件",
+          "action": "現行の運営を維持し、必要な改善を進める。"
+        },
+        {
+          "label": "運営に課題\n4件",
+          "action": "原因と改善費用を確認し、対応を優先する。"
+        }
+      ],
+      "galleryId": "G56",
+      "category": "階層・判断・実行",
+      "contentWidth": "wide",
+      "use": "段階的な分類と対応方針。件数は例示。"
+    },
+    {
+      "pattern": "numbered-narrative",
+      "title": "方針とその根拠を、まとまりごとに伝える",
+      "items": [
+        {
+          "heading": "既存の強みを維持しながら、運営を改善する",
+          "items": [
+            "顧客が評価する品質と対応力を維持する。",
+            "重複作業や判断のばらつきを減らし、継続できる運営にする。"
+          ]
+        },
+        {
+          "heading": "新しい領域は、検証結果を踏まえて段階的に広げる",
+          "items": [
+            "限定した範囲で需要と実行条件を確かめる。",
+            "確認した効果と負担に基づき、拡大する範囲を判断する。"
+          ]
+        }
+      ],
+      "galleryId": "G57",
+      "category": "階層・判断・実行",
+      "contentWidth": "standard",
+      "use": "二つの方針と根拠を、無理に箱で囲まず整理。"
+    },
+    {
+      "pattern": "workpackage",
+      "title": "検討作業・成果物・前提条件を一枚にまとめる",
+      "activityHeading": "主な検討作業",
+      "outputHeading": "成果物",
+      "activities": [
+        {
+          "label": "1　現状と論点を整理",
+          "items": [
+            "業務とデータの流れを確認",
+            "課題の影響と原因を整理"
+          ]
+        },
+        {
+          "label": "2　選択肢を比較",
+          "items": [
+            "改善案と実行条件を検討",
+            "費用・効果・リスクを比較"
+          ]
+        },
+        {
+          "label": "3　実行計画を作成",
+          "items": [
+            "優先順位と担当を設定",
+            "開始条件と確認方法を合意"
+          ]
+        }
+      ],
+      "outputs": [
+        "現状と課題の一覧",
+        "選択肢の比較資料",
+        "実行計画と判断事項"
+      ],
+      "conditionHeading": "検討の前提条件",
+      "conditions": [
+        "関係者が情報を提供",
+        "判断する責任者を設定"
+      ],
+      "galleryId": "G58",
+      "category": "階層・判断・実行",
+      "contentWidth": "wide",
+      "use": "広い作業欄と、狭い成果物・前提条件欄。"
+    },
+    {
+      "pattern": "share-explanation",
+      "title": "構成の変化を、その理由と合わせて示す",
+      "chartHeading": "対応方法の構成比",
+      "detailHeading": "変化の背景",
+      "periods": [
+        "現状",
+        "目標"
+      ],
+      "parts": [
+        {
+          "label": "標準対応",
+          "values": [
+            40,
+            60
+          ],
+          "explanation": "共通化できる業務を増やし、安定した対応を広げる。"
+        },
+        {
+          "label": "個別対応",
+          "values": [
+            35,
+            25
+          ],
+          "explanation": "顧客固有の事情があるものに対象を絞る。"
+        },
+        {
+          "label": "手作業",
+          "values": [
+            25,
+            15
+          ],
+          "explanation": "繰り返し発生する転記や照合作業を減らす。"
+        }
+      ],
+      "galleryId": "G59",
+      "category": "階層・判断・実行",
+      "contentWidth": "wide",
+      "use": "構成比の変化と理由を同じ順で説明。数値は例示。"
+    },
+    {
+      "pattern": "stage-gate",
+      "title": "段階ごとに成果物と次へ進む条件を明確にする",
+      "stages": [
+        {
+          "label": "把握",
+          "tasks": [
+            "実態を確認",
+            "論点を整理"
+          ],
+          "output": "課題一覧",
+          "gate": "対象範囲の合意"
+        },
+        {
+          "label": "構想",
+          "tasks": [
+            "案を比較",
+            "概算を確認"
+          ],
+          "output": "比較資料",
+          "gate": "実行方針の合意"
+        },
+        {
+          "label": "検証",
+          "tasks": [
+            "試行を実施",
+            "効果を確認"
+          ],
+          "output": "検証結果",
+          "gate": "効果と負担の確認"
+        },
+        {
+          "label": "展開",
+          "tasks": [
+            "対象を拡大",
+            "運営を定着"
+          ],
+          "output": "運営手順",
+          "gate": "運営体制の確立"
+        }
+      ],
+      "galleryId": "G60",
+      "category": "階層・判断・実行",
+      "contentWidth": "wide",
+      "use": "共通の時間軸で作業・成果物・判断条件を整理。"
+    },
+    {
+      "pattern": "box-columns",
+      "title": "同じ観点で、三つの選択肢を比較する",
+      "columns": [
+        {
+          "label": "標準化",
+          "summary": "共通ルールで品質を揃える",
+          "items": [
+            "判断のばらつきを減らす",
+            "例外の扱いを明確にする"
+          ]
+        },
+        {
+          "label": "集約化",
+          "summary": "専門性と処理量をまとめる",
+          "items": [
+            "重複する作業を減らす",
+            "窓口と責任を整理する"
+          ]
+        },
+        {
+          "label": "分散化",
+          "summary": "現場の判断速度を高める",
+          "items": [
+            "顧客への対応を早める",
+            "共通基準との整合を保つ"
+          ]
+        }
+      ],
+      "rowLabels": [
+        "狙い",
+        "設計時の論点"
+      ],
+      "galleryId": "G61",
+      "category": "カラム・入れ子",
+      "contentWidth": "wide",
+      "use": "箱見出しと共通の行観点で比較するカラム。"
+    },
+    {
+      "pattern": "circle-columns",
+      "title": "三つの観点から、実行できるかを確認する",
+      "columns": [
+        {
+          "label": "価値",
+          "heading": "必要性はあるか",
+          "items": [
+            "解決する課題が明確",
+            "利用する人が具体的"
+          ]
+        },
+        {
+          "label": "実行性",
+          "heading": "進められるか",
+          "items": [
+            "担当と協力者が決定",
+            "必要な時間を確保"
+          ]
+        },
+        {
+          "label": "継続性",
+          "heading": "維持できるか",
+          "items": [
+            "運営方法が明確",
+            "継続する負担を確認"
+          ]
+        }
+      ],
+      "galleryId": "G62",
+      "category": "カラム・入れ子",
+      "contentWidth": "wide",
+      "use": "円見出し＋要点＋箇条書き。円面積は数値を表さない。"
+    },
+    {
+      "pattern": "nested-box-columns",
+      "title": "共通の方針と個別の施策を階層で整理する",
+      "columns": [
+        {
+          "label": "顧客体験の改善",
+          "children": [
+            {
+              "label": "入口を揃える",
+              "items": [
+                "受付経路を整理",
+                "案内を共通化"
+              ]
+            },
+            {
+              "label": "対応を揃える",
+              "items": [
+                "引き継ぎを統一",
+                "判断基準を共有"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "業務運営の改善",
+          "children": [
+            {
+              "label": "作業を減らす",
+              "items": [
+                "重複入力を削減",
+                "確認作業を整理"
+              ]
+            },
+            {
+              "label": "継続性を高める",
+              "items": [
+                "手順を標準化",
+                "担当を複数化"
+              ]
+            }
+          ]
+        }
+      ],
+      "galleryId": "G63",
+      "category": "カラム・入れ子",
+      "contentWidth": "wide",
+      "use": "親カラムの中に子項目を持つ二階層構成。"
+    },
+    {
+      "pattern": "label-columns",
+      "title": "項目ごとの要点を、余計な囲みなく比較する",
+      "columns": [
+        {
+          "label": "短期の改善",
+          "rows": [
+            {
+              "label": "対象",
+              "body": "手順の整理で解決する課題"
+            },
+            {
+              "label": "進め方",
+              "body": "現場で試し、効果を確認"
+            },
+            {
+              "label": "判断",
+              "body": "負担が小さく、早く着手できる"
+            }
+          ]
+        },
+        {
+          "label": "中期の改善",
+          "rows": [
+            {
+              "label": "対象",
+              "body": "複数の業務にまたがる課題"
+            },
+            {
+              "label": "進め方",
+              "body": "関係者で範囲と方法を調整"
+            },
+            {
+              "label": "判断",
+              "body": "効果と実行条件を比較する"
+            }
+          ]
+        },
+        {
+          "label": "継続的な改善",
+          "rows": [
+            {
+              "label": "対象",
+              "body": "運営しながら見直す課題"
+            },
+            {
+              "label": "進め方",
+              "body": "定期的に利用状況を確認"
+            },
+            {
+              "label": "判断",
+              "body": "続ける価値と負担を確認する"
+            }
+          ]
+        }
+      ],
+      "galleryId": "G64",
+      "category": "カラム・入れ子",
+      "contentWidth": "wide",
+      "use": "短いラベルと本文を対応させるテキスト中心の比較。"
+    },
+    {
+      "columns": [
+        "対象",
+        "現状と課題",
+        "改善の方向",
+        "確認する条件"
+      ],
+      "widths": [
+        0.16,
+        0.3,
+        0.29,
+        0.25
+      ],
+      "rows": [
+        {
+          "label": "受付",
+          "cells": [
+            "窓口ごとに情報が異なる",
+            "必要な情報を共通化",
+            "例外的な依頼の扱い"
+          ]
+        },
+        {
+          "label": "判断",
+          "cells": [
+            "担当者によって判断が異なる",
+            "判断基準を共有",
+            "責任と権限の範囲"
+          ]
+        },
+        {
+          "label": "引き継ぎ",
+          "cells": [
+            "確認や説明が重複する",
+            "記録と手順を揃える",
+            "現場で継続できるか"
+          ]
+        }
+      ],
+      "pattern": "table-dark-head",
+      "title": "列の役割を明確にして、詳細を読みやすく整理する",
+      "use": "濃いグレー地・白文字の列見出し。本文は背景を抑える。",
+      "galleryId": "G65",
+      "category": "カラム・入れ子",
+      "contentWidth": "wide"
+    },
+    {
+      "columns": [
+        "対象",
+        "現状と課題",
+        "改善の方向",
+        "確認する条件"
+      ],
+      "widths": [
+        0.16,
+        0.3,
+        0.29,
+        0.25
+      ],
+      "rows": [
+        {
+          "label": "受付",
+          "cells": [
+            "窓口ごとに情報が異なる",
+            "必要な情報を共通化",
+            "例外的な依頼の扱い"
+          ]
+        },
+        {
+          "label": "判断",
+          "cells": [
+            "担当者によって判断が異なる",
+            "判断基準を共有",
+            "責任と権限の範囲"
+          ]
+        },
+        {
+          "label": "引き継ぎ",
+          "cells": [
+            "確認や説明が重複する",
+            "記録と手順を揃える",
+            "現場で継続できるか"
+          ]
+        }
+      ],
+      "pattern": "table-plain-head",
+      "title": "見出しと本文を左から自然に読みつなぐ",
+      "use": "背景なし・太字・左揃え・上下中央の列見出し。",
+      "galleryId": "G66",
+      "category": "カラム・入れ子",
+      "contentWidth": "wide"
+    },
+    {
+      "pattern": "circle-row-columns",
+      "title": "同じ観点を使って、対象ごとの違いを整理する",
+      "columns": [
+        "重視すること",
+        "対応の方向",
+        "確認する条件"
+      ],
+      "rows": [
+        {
+          "label": "既存顧客",
+          "cells": [
+            "安定した品質と対応",
+            "現在の強みを維持",
+            "継続的な満足度"
+          ]
+        },
+        {
+          "label": "新規顧客",
+          "cells": [
+            "分かりやすさと安心感",
+            "入口と案内を改善",
+            "最初の利用の障壁"
+          ]
+        },
+        {
+          "label": "協力先",
+          "cells": [
+            "連携の容易さ",
+            "情報と手順を共有",
+            "役割と負担の配分"
+          ]
+        }
+      ],
+      "galleryId": "G67",
+      "category": "カラム・入れ子",
+      "contentWidth": "wide",
+      "use": "楕円の行ラベル＋複数の比較列。対象の同格性を示す。"
+    },
+    {
+      "pattern": "nested-summary",
+      "title": "全体の評価と、その内訳を階層で伝える",
+      "overview": {
+        "label": "事業の全体像",
+        "text": "安定した品質と柔軟な対応を強みに、継続的な取引を築いている。"
+      },
+      "parent": {
+        "label": "強みの評価",
+        "summary": "品質と対応力は維持できているが、収益性には改善の余地がある。"
+      },
+      "children": [
+        {
+          "label": "品質",
+          "claim": "共通の基準と確認手順が品質を支えている。",
+          "evidence": [
+            "担当者が変わっても同じ手順で確認できる。"
+          ],
+          "weight": 1
+        },
+        {
+          "label": "対応力",
+          "claim": "顧客ごとの事情を踏まえた調整ができている。",
+          "evidence": [
+            "関係者への引き継ぎ方法が共有されている。"
+          ],
+          "weight": 1
+        },
+        {
+          "label": "収益性",
+          "claim": "個別対応の負担と価格の関係を見直す。",
+          "evidence": [
+            "追加作業の実態を把握し、条件を整理する。"
+          ],
+          "weight": 1
+        }
+      ],
+      "galleryId": "G68",
+      "category": "見出しの包含関係",
+      "contentWidth": "wide",
+      "use": "親見出しから伸びる帯で子項目の適用範囲を示す。"
+    },
+    {
+      "pattern": "nested-classification",
+      "title": "分類の深さが異なる対象を、共通の指標で比較する",
+      "levels": [
+        "対象",
+        "区分",
+        "詳細区分"
+      ],
+      "detailHeading": "特徴と対応の方向",
+      "metricHeading": "対象数",
+      "roots": [
+        {
+          "label": "サービス群",
+          "children": [
+            {
+              "label": "継続対象",
+              "children": [
+                {
+                  "label": "安定運営",
+                  "finding": "安定した運営を維持し、必要な改善を進める。",
+                  "metric": "8件"
+                },
+                {
+                  "label": "改善が必要",
+                  "finding": "負担の原因を確認し、運営方法を改善する。",
+                  "metric": "4件"
+                }
+              ]
+            },
+            {
+              "label": "統合候補",
+              "finding": "代替手段と利用者への影響を確認する。",
+              "metric": "3件"
+            }
+          ]
+        }
+      ],
+      "galleryId": "G69",
+      "category": "見出しの包含関係",
+      "contentWidth": "wide",
+      "use": "親子の木構造から行範囲を計算し、浅い葉は残りの分類列を結合。"
+    }
+  ]
+}

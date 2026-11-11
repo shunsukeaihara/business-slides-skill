@@ -1,0 +1,16 @@
+# Generated output and local dependencies
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.build/
+output/
+outputs/
+.env
+.env.*
+# Only the neutral master belongs in the public repository
+masters/*
+!masters/neutral/
+!masters/neutral/**
+_site/

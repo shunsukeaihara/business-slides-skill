@@ -1,0 +1,89 @@
+{
+  "id": "neutral",
+  "name": "Neutral",
+  "profiles": {
+    "13:9": {
+      "width": 1040,
+      "height": 720
+    },
+    "16:9": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "colors": {
+    "background": "#FFFFFF",
+    "text": "#111111",
+    "coverText": "#000000",
+    "accent": "#294285",
+    "surface": "#F1F2F4",
+    "muted": "#777777",
+    "line": "#D3D6DC",
+    "rule": "#333333",
+    "footerLine": "#CBD0D2",
+    "series": [
+      "#294285",
+      "#7E8DAF",
+      "#BCC3CF",
+      "#E4E7ED"
+    ]
+  },
+  "fonts": {
+    "latin": "Arial",
+    "japanese": "Hiragino Kaku Gothic ProN",
+    "fallback": [
+      "Yu Gothic",
+      "sans-serif"
+    ]
+  },
+  "type": {
+    "cover": 40,
+    "title": 34,
+    "punch": 24,
+    "heading": 24,
+    "body": 22,
+    "dense": 20,
+    "note": 18,
+    "footer": 10
+  },
+  "layout": {
+    "marginX": 22,
+    "titleY": 26,
+    "titleHeight": 48,
+    "ruleY": 76,
+    "punchY": 84,
+    "bodyY": 122,
+    "bodyPunchY": 158,
+    "bodyBottom": 666,
+    "footerY": 688,
+    "footerTextY": 700,
+    "gap": 24,
+    "boxPaddingX": 16,
+    "boxPaddingY": 10,
+    "standardBodyRatio": 0.88
+  },
+  "cover": {
+    "logoRight": 82,
+    "logoY": 251,
+    "logoWidth": 270,
+    "logoHeight": 96,
+    "dividerLeft": 78,
+    "dividerRight": 82,
+    "dividerY": 362,
+    "titleLeft": 86,
+    "titleRight": 82,
+    "titleY": 452,
+    "titleHeight": 60,
+    "subtitleY": 558,
+    "subtitleHeight": 90
+  },
+  "brand": {
+    "coverLogo": "assets/placeholder-cover.png",
+    "footerLogo": "assets/placeholder-footer.png",
+    "footerLogoWidth": 132,
+    "footerLogoHeight": 25,
+    "footerLogoY": 694,
+    "confidential": "",
+    "showPageNumber": true
+  }
+}
