@@ -8,11 +8,12 @@
       "category": "表紙",
       "use": "表紙。会社別マスタのロゴ・配置・書体を適用する。",
       "contentWidth": "wide",
-      "galleryId": "G01"
+      "galleryId": "G01",
+      "showPunch": false
     },
     {
       "pattern": "compare",
-      "title": "同じ条件で選択肢を比較する",
+      "title": "改善方針の比較",
       "columns": [
         {
           "label": "選択肢A",
@@ -36,7 +37,9 @@
       "category": "比較・判断",
       "use": "共通の観点で選択肢の特徴や制約を並べる。",
       "contentWidth": "wide",
-      "galleryId": "G02"
+      "galleryId": "G02",
+      "showPunch": true,
+      "punch": "効果だけでなく、実行条件と残る制約を合わせて比較する。"
     },
     {
       "pattern": "evidence",
@@ -75,7 +78,8 @@
       "category": "比較・判断",
       "use": "事実・解釈・判断を区別し、同じ行で対応づける。",
       "contentWidth": "wide",
-      "galleryId": "G03"
+      "galleryId": "G03",
+      "showPunch": false
     },
     {
       "pattern": "focus",
@@ -104,7 +108,8 @@
       "category": "構造・関係",
       "use": "全体のどこを説明しているかを保ちながら掘り下げる。",
       "contentWidth": "wide",
-      "galleryId": "G04"
+      "galleryId": "G04",
+      "showPunch": false
     },
     {
       "pattern": "driver",
@@ -125,7 +130,8 @@
       "category": "構造・関係",
       "use": "数量を構成する因子と、その前提条件を説明する。",
       "contentWidth": "wide",
-      "galleryId": "G05"
+      "galleryId": "G05",
+      "showPunch": false
     },
     {
       "pattern": "funnel",
@@ -162,7 +168,8 @@
       "category": "工程・時間",
       "use": "候補が絞られる過程と、除外基準を示す。",
       "contentWidth": "wide",
-      "galleryId": "G06"
+      "galleryId": "G06",
+      "showPunch": false
     },
     {
       "pattern": "scenario",
@@ -206,7 +213,8 @@
       "category": "データ・チャート",
       "use": "条件による結果の違いを、共通尺度の小さな図で比較する。",
       "contentWidth": "wide",
-      "galleryId": "G07"
+      "galleryId": "G07",
+      "showPunch": false
     },
     {
       "pattern": "evaluation",
@@ -250,7 +258,8 @@
       "category": "比較・判断",
       "use": "評価軸・尺度・未確認事項を明らかにして比較する。",
       "contentWidth": "wide",
-      "galleryId": "G08"
+      "galleryId": "G08",
+      "showPunch": false
     },
     {
       "pattern": "cycle",
@@ -270,7 +279,8 @@
       "category": "構造・関係",
       "use": "一度きりの順序ではなく、反復・フィードバックを示す。",
       "contentWidth": "standard",
-      "galleryId": "G09"
+      "galleryId": "G09",
+      "showPunch": false
     },
     {
       "pattern": "scope",
@@ -309,7 +319,8 @@
       "category": "比較・判断",
       "use": "対応・一部対応・未確認・対象外を混同せず一覧する。",
       "contentWidth": "wide",
-      "galleryId": "G10"
+      "galleryId": "G10",
+      "showPunch": false
     },
     {
       "pattern": "range",
@@ -346,7 +357,8 @@
       "category": "データ・チャート",
       "use": "中心値だけでは見えない観測範囲・ばらつきを示す。",
       "contentWidth": "standard",
-      "galleryId": "G11"
+      "galleryId": "G11",
+      "showPunch": false
     },
     {
       "pattern": "diverging",
@@ -374,7 +386,8 @@
       "category": "データ・チャート",
       "use": "共通の原点からの増加・減少を比較する。",
       "contentWidth": "standard",
-      "galleryId": "G12"
+      "galleryId": "G12",
+      "showPunch": false
     },
     {
       "pattern": "mekko",
@@ -427,7 +440,8 @@
       "category": "データ・チャート",
       "use": "領域の総量と、領域内の構成比を同時に示す。",
       "contentWidth": "wide",
-      "galleryId": "G13"
+      "galleryId": "G13",
+      "showPunch": false
     },
     {
       "pattern": "process",
@@ -461,7 +475,8 @@
       "category": "工程・時間",
       "use": "工程ごとに作業と成果物を対応させる",
       "contentWidth": "wide",
-      "galleryId": "G14"
+      "galleryId": "G14",
+      "showPunch": false
     },
     {
       "pattern": "timeline",
@@ -503,7 +518,8 @@
       "category": "工程・時間",
       "use": "日付と節目を示す。期間の長さにはガントを使う",
       "contentWidth": "wide",
-      "galleryId": "G15"
+      "galleryId": "G15",
+      "showPunch": false
     },
     {
       "pattern": "gantt",
@@ -566,7 +582,8 @@
       "category": "工程・時間",
       "use": "期間と並行実施を示す",
       "contentWidth": "wide",
-      "galleryId": "G16"
+      "galleryId": "G16",
+      "showPunch": false
     },
     {
       "pattern": "swimlane",
@@ -629,7 +646,8 @@
       "category": "工程・時間",
       "use": "工程をまたぐ担当・役割の違いを示す",
       "contentWidth": "wide",
-      "galleryId": "G17"
+      "galleryId": "G17",
+      "showPunch": false
     },
     {
       "pattern": "beforeafter",
@@ -664,11 +682,12 @@
       "category": "比較・判断",
       "use": "共通の観点で変更前後を比べる",
       "contentWidth": "wide",
-      "galleryId": "G18"
+      "galleryId": "G18",
+      "showPunch": false
     },
     {
       "pattern": "issue-tree",
-      "title": "論点を分解し、確認する事項までつなげる",
+      "title": "論点の分解と検証",
       "root": "遅れが生じる\n要因は何か",
       "branches": [
         {
@@ -696,7 +715,9 @@
       "category": "構造・関係",
       "use": "論点を分解して検証項目へつなぐ",
       "contentWidth": "wide",
-      "galleryId": "G19"
+      "galleryId": "G19",
+      "showPunch": true,
+      "punch": "要因を分け、確認できる事実まで具体化する。"
     },
     {
       "pattern": "hierarchy",
@@ -728,7 +749,8 @@
       "category": "構造・関係",
       "use": "全体方針と下位の取り組みを対応させる",
       "contentWidth": "standard",
-      "galleryId": "G20"
+      "galleryId": "G20",
+      "showPunch": false
     },
     {
       "pattern": "hub",
@@ -755,7 +777,8 @@
       "category": "構造・関係",
       "use": "中心と周辺の関係を示す。順序は表さない",
       "contentWidth": "standard",
-      "galleryId": "G21"
+      "galleryId": "G21",
+      "showPunch": false
     },
     {
       "pattern": "layers",
@@ -781,7 +804,8 @@
       "category": "構造・関係",
       "use": "役割の異なる層を整理する",
       "contentWidth": "wide",
-      "galleryId": "G22"
+      "galleryId": "G22",
+      "showPunch": false
     },
     {
       "pattern": "decision",
@@ -808,7 +832,8 @@
       "category": "比較・判断",
       "use": "条件による対応の分岐を示す",
       "contentWidth": "standard",
-      "galleryId": "G23"
+      "galleryId": "G23",
+      "showPunch": false
     },
     {
       "pattern": "quadrant",
@@ -836,7 +861,8 @@
       "category": "比較・判断",
       "use": "二つの独立した軸で方針を整理する",
       "contentWidth": "wide",
-      "galleryId": "G24"
+      "galleryId": "G24",
+      "showPunch": false
     },
     {
       "pattern": "bars",
@@ -868,7 +894,8 @@
       "category": "データ・チャート",
       "use": "共通単位の量を比較する",
       "contentWidth": "standard",
-      "galleryId": "G25"
+      "galleryId": "G25",
+      "showPunch": false
     },
     {
       "pattern": "stacked",
@@ -916,7 +943,8 @@
       "category": "データ・チャート",
       "use": "内訳の割合を比較する。総量は比較できない",
       "contentWidth": "wide",
-      "galleryId": "G26"
+      "galleryId": "G26",
+      "showPunch": false
     },
     {
       "pattern": "line-chart",
@@ -955,7 +983,8 @@
       "category": "データ・チャート",
       "use": "連続する期間の変化を比較する",
       "contentWidth": "wide",
-      "galleryId": "G27"
+      "galleryId": "G27",
+      "showPunch": false
     },
     {
       "pattern": "scatter",
@@ -1000,7 +1029,8 @@
       "category": "データ・チャート",
       "use": "二変数の関係・外れ値を見る",
       "contentWidth": "wide",
-      "galleryId": "G28"
+      "galleryId": "G28",
+      "showPunch": false
     },
     {
       "pattern": "slope",
@@ -1037,7 +1067,8 @@
       "category": "データ・チャート",
       "use": "二時点の変化を追う",
       "contentWidth": "standard",
-      "galleryId": "G29"
+      "galleryId": "G29",
+      "showPunch": false
     },
     {
       "pattern": "waterfall",
@@ -1071,7 +1102,8 @@
       "category": "データ・チャート",
       "use": "増減要因と最終値をつなぐ",
       "contentWidth": "wide",
-      "galleryId": "G30"
+      "galleryId": "G30",
+      "showPunch": false
     },
     {
       "pattern": "pareto",
@@ -1103,7 +1135,8 @@
       "category": "データ・チャート",
       "use": "分類の件数と累積比率を見る",
       "contentWidth": "wide",
-      "galleryId": "G31"
+      "galleryId": "G31",
+      "showPunch": false
     },
     {
       "pattern": "heatmap",
@@ -1156,7 +1189,8 @@
       "category": "データ・チャート",
       "use": "複数対象・複数観点の強弱を見る",
       "contentWidth": "wide",
-      "galleryId": "G32"
+      "galleryId": "G32",
+      "showPunch": false
     },
     {
       "pattern": "strategy-map",
@@ -1186,7 +1220,8 @@
       "galleryId": "G33",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "外部環境や課題が、どの方針・成果につながるかを読む。"
+      "use": "外部環境や課題が、どの方針・成果につながるかを読む。",
+      "showPunch": false
     },
     {
       "pattern": "exchange",
@@ -1209,7 +1244,8 @@
       "galleryId": "G34",
       "category": "複合・分析構成",
       "contentWidth": "standard",
-      "use": "主体間の往路・復路で受け渡すものを区別する。"
+      "use": "主体間の往路・復路で受け渡すものを区別する。",
+      "showPunch": false
     },
     {
       "pattern": "operating-model",
@@ -1249,7 +1285,8 @@
       "galleryId": "G35",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "役割・活動・情報と、それらを支える横断基盤を整理する。"
+      "use": "役割・活動・情報と、それらを支える横断基盤を整理する。",
+      "showPunch": false
     },
     {
       "pattern": "maturity",
@@ -1288,7 +1325,8 @@
       "galleryId": "G36",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "現在と目標の違い、次段階へ移る条件を示す。"
+      "use": "現在と目標の違い、次段階へ移る条件を示す。",
+      "showPunch": false
     },
     {
       "pattern": "pyramid-detail",
@@ -1313,7 +1351,8 @@
       "galleryId": "G37",
       "category": "複合・分析構成",
       "contentWidth": "standard",
-      "use": "目的・仕組み・基盤の包含関係と具体的な意味を対応させる。"
+      "use": "目的・仕組み・基盤の包含関係と具体的な意味を対応させる。",
+      "showPunch": false
     },
     {
       "pattern": "portfolio-bubbles",
@@ -1350,7 +1389,8 @@
       "galleryId": "G38",
       "category": "複合・分析構成",
       "contentWidth": "standard",
-      "use": "二つの評価軸と対象規模を同時に読む。"
+      "use": "二つの評価軸と対象規模を同時に読む。",
+      "showPunch": false
     },
     {
       "pattern": "portfolio-moves",
@@ -1390,7 +1430,8 @@
       "galleryId": "G39",
       "category": "複合・分析構成",
       "contentWidth": "standard",
-      "use": "現在の分布だけでなく、目標へ向かう方向を示す。"
+      "use": "現在の分布だけでなく、目標へ向かう方向を示す。",
+      "showPunch": false
     },
     {
       "pattern": "portfolio-actions",
@@ -1423,7 +1464,8 @@
       "galleryId": "G40",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "二軸の位置づけを、具体的な対応方針に結び付ける。"
+      "use": "二軸の位置づけを、具体的な対応方針に結び付ける。",
+      "showPunch": false
     },
     {
       "pattern": "valuechain",
@@ -1467,7 +1509,8 @@
       "galleryId": "G41",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "工程に沿った対応範囲・欠落・重点を横断的に見る。"
+      "use": "工程に沿った対応範囲・欠落・重点を横断的に見る。",
+      "showPunch": false
     },
     {
       "pattern": "part-whole",
@@ -1503,7 +1546,8 @@
       "galleryId": "G42",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "全体と部分の分母を区別しながら内訳を拡大する。"
+      "use": "全体と部分の分母を区別しながら内訳を拡大する。",
+      "showPunch": false
     },
     {
       "pattern": "small-multiples",
@@ -1554,7 +1598,8 @@
       "galleryId": "G43",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "対象×指標の共通グリッドで推移を比較する。"
+      "use": "対象×指標の共通グリッドで推移を比較する。",
+      "showPunch": false
     },
     {
       "pattern": "scenario-metrics",
@@ -1617,7 +1662,8 @@
       "galleryId": "G44",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "条件が変わると成果と負担がどう変わるかを同時に比較する。"
+      "use": "条件が変わると成果と負担がどう変わるかを同時に比較する。",
+      "showPunch": false
     },
     {
       "pattern": "annotated-trend",
@@ -1660,7 +1706,8 @@
       "galleryId": "G45",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "グラフ上の注目点と解釈を番号で対応させる。"
+      "use": "グラフ上の注目点と解釈を番号で対応させる。",
+      "showPunch": false
     },
     {
       "pattern": "survey-grid",
@@ -1725,7 +1772,8 @@
       "galleryId": "G46",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "同じ属性について複数の質問結果を同じ行で比較する。"
+      "use": "同じ属性について複数の質問結果を同じ行で比較する。",
+      "showPunch": false
     },
     {
       "pattern": "chart-quotes",
@@ -1755,7 +1803,8 @@
       "galleryId": "G47",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "定量的な回答傾向と定性的なコメントを同じ行で示す。"
+      "use": "定量的な回答傾向と定性的なコメントを同じ行で示す。",
+      "showPunch": false
     },
     {
       "pattern": "benchmark-profile",
@@ -1798,7 +1847,8 @@
       "galleryId": "G48",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "評価項目ごとに、対象と比較対象の強弱を追う。"
+      "use": "評価項目ごとに、対象と比較対象の強弱を追う。",
+      "showPunch": false
     },
     {
       "pattern": "paired-dots",
@@ -1842,7 +1892,8 @@
       "galleryId": "G49",
       "category": "複合・分析構成",
       "contentWidth": "standard",
-      "use": "項目ごとの二群の差を原点に依存せず直接読む。"
+      "use": "項目ごとの二群の差を原点に依存せず直接読む。",
+      "showPunch": false
     },
     {
       "pattern": "segment-profiles",
@@ -1891,7 +1942,8 @@
       "galleryId": "G50",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "対象群の特徴・要求・障害から、対応を変える理由を示す。"
+      "use": "対象群の特徴・要求・障害から、対応を変える理由を示す。",
+      "showPunch": false
     },
     {
       "pattern": "workplan-deliverables",
@@ -1933,7 +1985,8 @@
       "galleryId": "G51",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "論点に対する作業・検証・出力を一つの行で完結させる。"
+      "use": "論点に対する作業・検証・出力を一つの行で完結させる。",
+      "showPunch": false
     },
     {
       "pattern": "dependency-map",
@@ -1994,11 +2047,12 @@
       "galleryId": "G52",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "並行する取り組みの間で、何が次の作業へ渡るかを示す。"
+      "use": "並行する取り組みの間で、何が次の作業へ渡るかを示す。",
+      "showPunch": false
     },
     {
       "pattern": "grouped-rows",
-      "title": "個別の課題を束ね、共通する対応を示す",
+      "title": "課題と対応方針の整理",
       "columns": [
         "領域",
         "対象",
@@ -2055,7 +2109,9 @@
       "galleryId": "G53",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "親子の行見出しと複数行にまたがる共通対応。"
+      "use": "親子の行見出しと複数行にまたがる共通対応。",
+      "showPunch": true,
+      "punch": "共通する課題を束ね、重複する対応を減らす。"
     },
     {
       "pattern": "nested-columns",
@@ -2112,7 +2168,8 @@
       "galleryId": "G54",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "二段の列見出しで異なる比較軸を分離。"
+      "use": "二段の列見出しで異なる比較軸を分離。",
+      "showPunch": false
     },
     {
       "pattern": "vertical-process",
@@ -2151,7 +2208,8 @@
       "galleryId": "G55",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "縦工程と作業・成果物を対応。"
+      "use": "縦工程と作業・成果物を対応。",
+      "showPunch": false
     },
     {
       "pattern": "classification-actions",
@@ -2184,7 +2242,8 @@
       "galleryId": "G56",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "段階的な分類と対応方針。件数は例示。"
+      "use": "段階的な分類と対応方針。件数は例示。",
+      "showPunch": false
     },
     {
       "pattern": "numbered-narrative",
@@ -2208,7 +2267,8 @@
       "galleryId": "G57",
       "category": "階層・判断・実行",
       "contentWidth": "standard",
-      "use": "二つの方針と根拠を、無理に箱で囲まず整理。"
+      "use": "二つの方針と根拠を、無理に箱で囲まず整理。",
+      "showPunch": false
     },
     {
       "pattern": "workpackage",
@@ -2251,7 +2311,8 @@
       "galleryId": "G58",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "広い作業欄と、狭い成果物・前提条件欄。"
+      "use": "広い作業欄と、狭い成果物・前提条件欄。",
+      "showPunch": false
     },
     {
       "pattern": "share-explanation",
@@ -2291,11 +2352,12 @@
       "galleryId": "G59",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "構成比の変化と理由を同じ順で説明。数値は例示。"
+      "use": "構成比の変化と理由を同じ順で説明。数値は例示。",
+      "showPunch": false
     },
     {
       "pattern": "stage-gate",
-      "title": "段階ごとに成果物と次へ進む条件を明確にする",
+      "title": "段階ごとの作業・成果物・判断条件",
       "stages": [
         {
           "label": "把握",
@@ -2337,7 +2399,9 @@
       "galleryId": "G60",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "共通の時間軸で作業・成果物・判断条件を整理。"
+      "use": "共通の時間軸で作業・成果物・判断条件を整理。",
+      "showPunch": true,
+      "punch": "成果物と移行条件を揃え、段階ごとに実施を判断する。"
     },
     {
       "pattern": "box-columns",
@@ -2375,7 +2439,8 @@
       "galleryId": "G61",
       "category": "カラム・入れ子",
       "contentWidth": "wide",
-      "use": "箱見出しと共通の行観点で比較するカラム。"
+      "use": "箱見出しと共通の行観点で比較するカラム。",
+      "showPunch": false
     },
     {
       "pattern": "circle-columns",
@@ -2409,7 +2474,8 @@
       "galleryId": "G62",
       "category": "カラム・入れ子",
       "contentWidth": "wide",
-      "use": "円見出し＋要点＋箇条書き。円面積は数値を表さない。"
+      "use": "円見出し＋要点＋箇条書き。円面積は数値を表さない。",
+      "showPunch": false
     },
     {
       "pattern": "nested-box-columns",
@@ -2457,7 +2523,8 @@
       "galleryId": "G63",
       "category": "カラム・入れ子",
       "contentWidth": "wide",
-      "use": "親カラムの中に子項目を持つ二階層構成。"
+      "use": "親カラムの中に子項目を持つ二階層構成。",
+      "showPunch": false
     },
     {
       "pattern": "label-columns",
@@ -2518,7 +2585,8 @@
       "galleryId": "G64",
       "category": "カラム・入れ子",
       "contentWidth": "wide",
-      "use": "短いラベルと本文を対応させるテキスト中心の比較。"
+      "use": "短いラベルと本文を対応させるテキスト中心の比較。",
+      "showPunch": false
     },
     {
       "columns": [
@@ -2564,7 +2632,8 @@
       "use": "濃いグレー地・白文字の列見出し。本文は背景を抑える。",
       "galleryId": "G65",
       "category": "カラム・入れ子",
-      "contentWidth": "wide"
+      "contentWidth": "wide",
+      "showPunch": false
     },
     {
       "columns": [
@@ -2610,7 +2679,8 @@
       "use": "背景なし・太字・左揃え・上下中央の列見出し。",
       "galleryId": "G66",
       "category": "カラム・入れ子",
-      "contentWidth": "wide"
+      "contentWidth": "wide",
+      "showPunch": false
     },
     {
       "pattern": "circle-row-columns",
@@ -2649,7 +2719,8 @@
       "galleryId": "G67",
       "category": "カラム・入れ子",
       "contentWidth": "wide",
-      "use": "楕円の行ラベル＋複数の比較列。対象の同格性を示す。"
+      "use": "楕円の行ラベル＋複数の比較列。対象の同格性を示す。",
+      "showPunch": false
     },
     {
       "pattern": "nested-summary",
@@ -2691,7 +2762,8 @@
       "galleryId": "G68",
       "category": "見出しの包含関係",
       "contentWidth": "wide",
-      "use": "親見出しから伸びる帯で子項目の適用範囲を示す。"
+      "use": "親見出しから伸びる帯で子項目の適用範囲を示す。",
+      "showPunch": false
     },
     {
       "pattern": "nested-classification",
@@ -2733,7 +2805,8 @@
       "galleryId": "G69",
       "category": "見出しの包含関係",
       "contentWidth": "wide",
-      "use": "親子の木構造から行範囲を計算し、浅い葉は残りの分類列を結合。"
+      "use": "親子の木構造から行範囲を計算し、浅い葉は残りの分類列を結合。",
+      "showPunch": false
     }
   ]
 }

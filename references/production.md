@@ -75,3 +75,13 @@ python3 SKILL_DIR/scripts/normalize_pptx.py --input WORK_DIR/raw.pptx --layout W
 ## レイアウト見本
 
 `assets/layout-gallery.html`と`assets/layout-gallery-wide.html`は同じ例示データから作る汎用的な配置例。数値はすべて例示。業務データとして流用しない。見本の形を固定せず、`layouts-and-charts.md`の選定基準に従って内容へ合わせる。
+
+## パンチラインの有無を明示する
+
+各スライドで `showPunch: true` または `false` を指定する。`true` の場合は `punch` に空でない文章を入れる。`false` の場合は表示せず、本文はパンチラインなしの開始位置から配置する。旧データとの互換のため、`showPunch` を省略すると `punch` の有無で判断する。表紙はこの指定の対象外。
+
+```json
+{"pattern":"issue-tree","showPunch":true,"punch":"要因を分け、確認できる事実まで具体化する。"}
+```
+
+これは有無指定の抜粋。本文データを含む完全な例はギャラリーのJSONを参照。タイトルは主題、パンチラインは本文から伝えたい結論・判断の視点を示す。本文やタイトルだけで説明できる場合は `false` を選ぶ。表示時は本文領域の上端が下がるため、両比率で再配置と画像検証を行う。
