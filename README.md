@@ -1,6 +1,8 @@
 # Business Slides Skill
 
-会社別マスタとレイアウトを分離して、HTMLと編集可能なPowerPointを制作するスキルです。69種類の構成見本を収録し、13:9・16:9に対応します。
+**[dom-to-pptx](https://github.com/atharva9167j/dom-to-pptx) を利用し、HTMLで設計したスライドを編集可能なPowerPoint（.pptx）へ変換するスキルです。**
+
+本スキルは構成・デザイン・会社別マスタ・検証手順を提供し、PowerPointへの変換は `dom-to-pptx` が担います。69種類の構成見本を収録し、13:9・16:9に対応します。
 
 [インタラクティブ・ギャラリー](https://shunsukeaihara.github.io/business-slides-skill/)
 
@@ -14,6 +16,17 @@
 - 棒・折れ線・構成比・分布・ポートフォリオ
 
 数値と文面はすべて例示です。実際の業務データではありません。
+
+## 必要なスキルと変換エンジン
+
+PowerPointを作成する場合は、次の両方を利用します。
+
+- **`business-slides`（本スキル）**：情報の構成、マスタ、レイアウト、HTML生成、画像検証、必要に応じた編集構造の補正。
+- **`dom-to-pptx-skill` と `dom-to-pptx` の実行環境**：HTMLから編集可能なPPTXへの変換。別途用意し、同スキルの制作・変換手順に従ってください。
+
+変換エンジンやそのスキルは、このリポジトリには同梱していません。ギャラリーの閲覧とHTML生成だけなら、PowerPoint変換環境は不要です。
+
+制作の流れは **内容の整理 → HTML生成 → 画像確認 → dom-to-pptxで変換 → PPTXの画像・編集構造確認** です。具体的な変換コマンドと補正手順は[制作手順](references/production.md)を参照してください。
 
 ## 使い方
 
