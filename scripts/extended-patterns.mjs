@@ -44,7 +44,7 @@ export function extended(s,Y,a){
  }else if(s.pattern==='decision'){
   const rw=BW*.28,cx=X+(BW-rw)/2;h+=box(s.question,cx,Y,rw,85,{border:true,fill:'transparent'});
   const cs=columns(2);h+=connect(W/2,Y+85,W/2,Y+125)+connect(cs[0].x+cs[0].w/2,Y+125,cs[1].x+cs[1].w/2,Y+125);
-  cs.forEach((c,i)=>{h+=connect(c.x+c.w/2,Y+125,c.x+c.w/2,Y+190)+text(s.branches[i].condition,c.x,Y+135,c.w,40,'note','center')+box(s.branches[i].action,c.x,Y+190,c.w,75)+list(s.branches[i].items,c.x,Y+310,c.w,140);});
+  cs.forEach((c,i)=>{h+=connect(c.x+c.w/2,Y+125,c.x+c.w/2,Y+190)+box(s.branches[i].condition,c.x+c.w*.15,Y+135,c.w*.7,40,{fill:'var(--background)',bold:false,textClass:'note',paddingX:12,paddingY:4})+box(s.branches[i].action,c.x,Y+190,c.w,75)+list(s.branches[i].items,c.x,Y+310,c.w,140);});
  }else if(s.pattern==='quadrant'){
   const px=X+95,py=Y+35,pw=BW-130,ph=390;
   h+=line(px,py+ph,px+pw,py+ph,'var(--rule)')+line(px,py,px,py+ph,'var(--rule)')+line(px+pw/2,py,px+pw/2,py+ph)+line(px,py+ph/2,px+pw,py+ph/2);
