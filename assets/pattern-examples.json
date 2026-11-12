@@ -6,7 +6,7 @@
       "title": "本文レイアウト・チャート集",
       "subtitle": "情報の関係から構成を選ぶ\nマスタと画面比率を切り替えて利用",
       "category": "表紙",
-      "use": "表紙。会社別マスタのロゴ・配置・書体を適用する。",
+      "use": "資料のタイトルと補足情報を、マスタの表紙構成に配置する。",
       "contentWidth": "wide",
       "galleryId": "G01",
       "showPunch": false,
@@ -36,7 +36,7 @@
         }
       ],
       "category": "比較・判断",
-      "use": "共通の観点で選択肢の特徴や制約を並べる。",
+      "use": "二つの対象を左右に並べ、共通の観点で比較する。",
       "contentWidth": "wide",
       "galleryId": "G02",
       "showPunch": true,
@@ -78,7 +78,7 @@
         }
       ],
       "category": "比較・判断",
-      "use": "事実・解釈・判断を区別し、同じ行で対応づける。",
+      "use": "関連する情報を列に分け、同じ行で対応づける。",
       "contentWidth": "wide",
       "galleryId": "G03",
       "showPunch": false,
@@ -109,7 +109,7 @@
         }
       ],
       "category": "構造・関係",
-      "use": "全体のどこを説明しているかを保ちながら掘り下げる。",
+      "use": "全体の一覧を残し、選択した項目の詳細を隣に示す。",
       "contentWidth": "wide",
       "galleryId": "G04",
       "showPunch": false,
@@ -132,7 +132,7 @@
       ],
       "note": "数値は例示。120組 × 5回／組 ＝ 600件。",
       "category": "構造・関係",
-      "use": "数量を構成する因子と、その前提条件を説明する。",
+      "use": "一つの値を構成する要因に分解し、各要因の説明を添える。",
       "contentWidth": "wide",
       "galleryId": "G05",
       "showPunch": false,
@@ -171,7 +171,7 @@
         }
       ],
       "category": "工程・時間",
-      "use": "候補が絞られる過程と、除外基準を示す。",
+      "use": "対象が段階的に絞られる過程と、各段階の情報を示す。",
       "contentWidth": "wide",
       "galleryId": "G06",
       "showPunch": false,
@@ -217,7 +217,7 @@
       ],
       "note": "数量の例示。すべてのグラフは0〜100の共通尺度。",
       "category": "データ・チャート",
-      "use": "条件による結果の違いを、共通尺度の小さな図で比較する。",
+      "use": "異なる条件のデータを、共通の尺度を持つチャートで比較する。",
       "contentWidth": "wide",
       "galleryId": "G07",
       "showPunch": false,
@@ -263,7 +263,7 @@
       ],
       "note": "点数は例示。3＝充足、2＝一部充足、1＝不足。未確認は点数化しない。",
       "category": "比較・判断",
-      "use": "評価軸・尺度・未確認事項を明らかにして比較する。",
+      "use": "複数の対象を共通の評価観点・尺度で比較する。",
       "contentWidth": "wide",
       "galleryId": "G08",
       "showPunch": false,
@@ -285,7 +285,7 @@
         "次の観察へ\n戻す"
       ],
       "category": "構造・関係",
-      "use": "一度きりの順序ではなく、反復・フィードバックを示す。",
+      "use": "要素間の循環や、前の要素へ戻る関係を示す。",
       "contentWidth": "standard",
       "galleryId": "G09",
       "showPunch": false,
@@ -326,7 +326,7 @@
         }
       ],
       "category": "比較・判断",
-      "use": "対応・一部対応・未確認・対象外を混同せず一覧する。",
+      "use": "対象と観点の組み合わせごとに、該当範囲や状態を整理する。",
       "contentWidth": "wide",
       "galleryId": "G10",
       "showPunch": false,
@@ -365,7 +365,7 @@
       ],
       "note": "値は例示。線＝観測範囲、点＝中央値。単位：分。",
       "category": "データ・チャート",
-      "use": "中心値だけでは見えない観測範囲・ばらつきを示す。",
+      "use": "各対象の区間と代表値を、共通の尺度で比較する。",
       "contentWidth": "standard",
       "galleryId": "G11",
       "showPunch": false,
@@ -395,7 +395,7 @@
       ],
       "note": "値は例示。基準時点との差、単位：件。",
       "category": "データ・チャート",
-      "use": "共通の原点からの増加・減少を比較する。",
+      "use": "共通の基準を挟んで、両方向の量や差を比較する。",
       "contentWidth": "standard",
       "galleryId": "G12",
       "showPunch": false,
@@ -450,7 +450,7 @@
       ],
       "note": "値は例示。幅＝各領域の件数、縦の比率＝領域内の構成比。",
       "category": "データ・チャート",
-      "use": "領域の総量と、領域内の構成比を同時に示す。",
+      "use": "カテゴリの総量と、カテゴリ内の構成比を同時に示す。",
       "contentWidth": "wide",
       "galleryId": "G13",
       "showPunch": false,
@@ -486,7 +486,7 @@
         }
       ],
       "category": "工程・時間",
-      "use": "工程ごとに作業と成果物を対応させる",
+      "use": "横に並ぶステップに対し、複数の観点を行で対応させる。",
       "contentWidth": "wide",
       "galleryId": "G14",
       "showPunch": false,
@@ -530,7 +530,7 @@
         }
       ],
       "category": "工程・時間",
-      "use": "日付と節目を示す。期間の長さにはガントを使う",
+      "use": "時間軸上の時点や節目を示す。期間の長さは帯で表す構成と区別する。",
       "contentWidth": "wide",
       "galleryId": "G15",
       "showPunch": false,
@@ -595,7 +595,7 @@
         }
       ],
       "category": "工程・時間",
-      "use": "期間と並行実施を示す",
+      "use": "共通の時間軸に対象ごとの期間を置き、重なりや前後関係を示す。",
       "contentWidth": "wide",
       "galleryId": "G16",
       "showPunch": false,
@@ -660,7 +660,7 @@
         }
       ],
       "category": "工程・時間",
-      "use": "工程をまたぐ担当・役割の違いを示す",
+      "use": "共通の時間軸・段階軸に沿って、複数の区分をレーンで整理する。",
       "contentWidth": "wide",
       "galleryId": "G17",
       "showPunch": false,
@@ -697,7 +697,7 @@
         }
       ],
       "category": "比較・判断",
-      "use": "共通の観点で変更前後を比べる",
+      "use": "共通の観点で前後の内容や状態を比較する。",
       "contentWidth": "wide",
       "galleryId": "G18",
       "showPunch": false,
@@ -731,7 +731,7 @@
         }
       ],
       "category": "構造・関係",
-      "use": "論点を分解して検証項目へつなぐ",
+      "use": "親子関係をツリーで示し、末端項目に対応する説明を並べる。",
       "contentWidth": "wide",
       "galleryId": "G19",
       "showPunch": true,
@@ -766,7 +766,7 @@
         }
       ],
       "category": "構造・関係",
-      "use": "全体方針と下位の取り組みを対応させる",
+      "use": "上位と下位の要素を結び、階層と所属を示す。",
       "contentWidth": "standard",
       "galleryId": "G20",
       "showPunch": false,
@@ -795,7 +795,7 @@
         }
       ],
       "category": "構造・関係",
-      "use": "中心と周辺の関係を示す。順序は表さない",
+      "use": "中心の要素と周辺の要素との関係を示す。順序は表さない。",
       "contentWidth": "standard",
       "galleryId": "G21",
       "showPunch": false,
@@ -823,7 +823,7 @@
         }
       ],
       "category": "構造・関係",
-      "use": "役割の異なる層を整理する",
+      "use": "層を上下に並べ、それぞれの内容を対応させる。",
       "contentWidth": "wide",
       "galleryId": "G22",
       "showPunch": false,
@@ -852,7 +852,7 @@
         }
       ],
       "category": "比較・判断",
-      "use": "条件による対応の分岐を示す",
+      "use": "条件によって分かれる経路と、その先の内容を示す。",
       "contentWidth": "standard",
       "galleryId": "G23",
       "showPunch": false,
@@ -882,7 +882,7 @@
         }
       ],
       "category": "比較・判断",
-      "use": "二つの独立した軸で方針を整理する",
+      "use": "二つの軸を組み合わせ、領域ごとの内容や位置づけを整理する。",
       "contentWidth": "wide",
       "galleryId": "G24",
       "showPunch": false,
@@ -916,7 +916,7 @@
       ],
       "note": "数値は例示。単位：件。棒の原点は0。",
       "category": "データ・チャート",
-      "use": "共通単位の量を比較する",
+      "use": "共通単位の量を、同じ原点から伸びる棒で比較する。",
       "contentWidth": "standard",
       "galleryId": "G25",
       "showPunch": false,
@@ -966,7 +966,7 @@
       ],
       "note": "数値は例示。各行の合計は100%。総量の大小は表さない。",
       "category": "データ・チャート",
-      "use": "内訳の割合を比較する。総量は比較できない",
+      "use": "全体を100%に揃え、対象ごとの内訳を比較する。総量の大小は表さない。",
       "contentWidth": "wide",
       "galleryId": "G26",
       "showPunch": false,
@@ -1007,7 +1007,7 @@
       ],
       "note": "数値は例示。単位：件。同じ期間・同じ集計方法で比較。",
       "category": "データ・チャート",
-      "use": "連続する期間の変化を比較する",
+      "use": "連続する軸に沿った値の変化を、系列ごとに示す。",
       "contentWidth": "wide",
       "galleryId": "G27",
       "showPunch": false,
@@ -1054,7 +1054,7 @@
       ],
       "note": "数値は例示。相関だけで因果関係を判断しない。",
       "category": "データ・チャート",
-      "use": "二変数の関係・外れ値を見る",
+      "use": "二つの数値変数の関係・分布・外れ値を示す。",
       "contentWidth": "wide",
       "galleryId": "G28",
       "showPunch": false,
@@ -1093,7 +1093,7 @@
       ],
       "note": "数値は例示。単位：件。両時点で同じ尺度を使用。",
       "category": "データ・チャート",
-      "use": "二時点の変化を追う",
+      "use": "二時点・二条件の値を結び、各対象の変化や差を比較する。",
       "contentWidth": "standard",
       "galleryId": "G29",
       "showPunch": false,
@@ -1129,7 +1129,7 @@
       ],
       "note": "数値は例示。100 ＋ 35 − 20 ＋ 15 ＝ 130。単位：件。",
       "category": "データ・チャート",
-      "use": "増減要因と最終値をつなぐ",
+      "use": "開始値に対する増減の内訳と、終了値の関係を示す。",
       "contentWidth": "wide",
       "galleryId": "G30",
       "showPunch": false,
@@ -1163,7 +1163,7 @@
       ],
       "note": "数値は例示。棒＝件数、折れ線＝累積比率。",
       "category": "データ・チャート",
-      "use": "分類の件数と累積比率を見る",
+      "use": "項目別の量を降順に並べ、累積比率を重ねて示す。",
       "contentWidth": "wide",
       "galleryId": "G31",
       "showPunch": false,
@@ -1218,7 +1218,7 @@
       ],
       "note": "値は例示。0＝該当なし、1＝低、2＝中、3＝高。濃淡と数値を併記。",
       "category": "データ・チャート",
-      "use": "複数対象・複数観点の強弱を見る",
+      "use": "行と列の組み合わせごとの値を、共通尺度の色の濃淡で示す。",
       "contentWidth": "wide",
       "galleryId": "G32",
       "showPunch": false,
@@ -1252,9 +1252,9 @@
       "galleryId": "G33",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "外部環境や課題が、どの方針・成果につながるかを読む。",
+      "use": "複数列の要素を同じ行で結び、対応やつながりを示す。",
       "showPunch": false,
-      "layoutName": "因果連鎖マトリクス"
+      "layoutName": "列間対応マトリクス"
     },
     {
       "pattern": "exchange",
@@ -1277,7 +1277,7 @@
       "galleryId": "G34",
       "category": "複合・分析構成",
       "contentWidth": "standard",
-      "use": "主体間の往路・復路で受け渡すものを区別する。",
+      "use": "要素間の双方向の関係を、向きとラベルで区別する。",
       "showPunch": false,
       "layoutName": "双方向関係図"
     },
@@ -1319,9 +1319,9 @@
       "galleryId": "G35",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "役割・活動・情報と、それらを支える横断基盤を整理する。",
+      "use": "行・列で項目を整理し、複数の項目に共通する内容を横断する領域にまとめる。",
       "showPunch": false,
-      "layoutName": "機能マトリクス＋共通基盤"
+      "layoutName": "マトリクス＋共通項目"
     },
     {
       "pattern": "maturity",
@@ -1360,9 +1360,9 @@
       "galleryId": "G36",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "現在と目標の違い、次段階へ移る条件を示す。",
+      "use": "段階を列、比較する観点を行に置き、各段階の内容や違いを整理する。",
       "showPunch": false,
-      "layoutName": "段階比較マトリクス"
+      "layoutName": "段階別マトリクス"
     },
     {
       "pattern": "pyramid-detail",
@@ -1387,7 +1387,7 @@
       "galleryId": "G37",
       "category": "複合・分析構成",
       "contentWidth": "standard",
-      "use": "目的・仕組み・基盤の包含関係と具体的な意味を対応させる。",
+      "use": "ピラミッドで階層構造を示し、各階層に対応する説明を並べる。",
       "showPunch": false,
       "layoutName": "ピラミッド＋詳細"
     },
@@ -1426,7 +1426,7 @@
       "galleryId": "G38",
       "category": "複合・分析構成",
       "contentWidth": "standard",
-      "use": "二つの評価軸と対象規模を同時に読む。",
+      "use": "二つの数値変数を位置、第三の量を円の面積で示す。",
       "showPunch": false,
       "layoutName": "バブルチャート"
     },
@@ -1468,7 +1468,7 @@
       "galleryId": "G39",
       "category": "複合・分析構成",
       "contentWidth": "standard",
-      "use": "現在の分布だけでなく、目標へ向かう方向を示す。",
+      "use": "二軸上の位置を結び、対象ごとの位置の違いや変化を示す。",
       "showPunch": false,
       "layoutName": "位置変化チャート"
     },
@@ -1503,7 +1503,7 @@
       "galleryId": "G40",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "二軸の位置づけを、具体的な対応方針に結び付ける。",
+      "use": "二軸上の点や領域に対応する説明を、図の隣に示す。",
       "showPunch": false,
       "layoutName": "2軸配置＋詳細"
     },
@@ -1549,7 +1549,7 @@
       "galleryId": "G41",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "工程に沿った対応範囲・欠落・重点を横断的に見る。",
+      "use": "順序を持つ段階を列、共通の観点を行に置き、各段階の内容を整理する。",
       "showPunch": false,
       "layoutName": "工程マトリクス"
     },
@@ -1587,7 +1587,7 @@
       "galleryId": "G42",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "全体と部分の分母を区別しながら内訳を拡大する。",
+      "use": "全体の一部を選び、その内訳を別の図で詳しく示す。",
       "showPunch": false,
       "layoutName": "全体・内訳チャート"
     },
@@ -1640,7 +1640,7 @@
       "galleryId": "G43",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "対象×指標の共通グリッドで推移を比較する。",
+      "use": "共通の尺度と配置を持つ小さなチャートを並べ、複数対象を比較する。",
       "showPunch": false,
       "layoutName": "スモールマルチプル"
     },
@@ -1705,7 +1705,7 @@
       "galleryId": "G44",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "条件が変わると成果と負担がどう変わるかを同時に比較する。",
+      "use": "条件を列、指標を行に置き、複数のチャートを共通グリッドで比較する。",
       "showPunch": false,
       "layoutName": "条件×指標チャート"
     },
@@ -1750,7 +1750,7 @@
       "galleryId": "G45",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "グラフ上の注目点と解釈を番号で対応させる。",
+      "use": "折れ線上の注目点と、その説明を識別子で対応づける。",
       "showPunch": false,
       "layoutName": "注釈付き折れ線グラフ"
     },
@@ -1817,7 +1817,7 @@
       "galleryId": "G46",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "同じ属性について複数の質問結果を同じ行で比較する。",
+      "use": "複数の構成比チャートを、共通の行・列の観点で並べて比較する。",
       "showPunch": false,
       "layoutName": "並列構成比チャート"
     },
@@ -1849,7 +1849,7 @@
       "galleryId": "G47",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "定量的な回答傾向と定性的なコメントを同じ行で示す。",
+      "use": "項目ごとの構成比と、それに対応する文章を同じ行に示す。",
       "showPunch": false,
       "layoutName": "構成比チャート＋コメント"
     },
@@ -1894,7 +1894,7 @@
       "galleryId": "G48",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "評価項目ごとに、対象と比較対象の強弱を追う。",
+      "use": "共通尺度の複数項目について、系列ごとの値を線で追って比較する。",
       "showPunch": false,
       "layoutName": "横断プロファイル"
     },
@@ -1940,7 +1940,7 @@
       "galleryId": "G49",
       "category": "複合・分析構成",
       "contentWidth": "standard",
-      "use": "項目ごとの二群の差を原点に依存せず直接読む。",
+      "use": "項目ごとに二つの値を点と接続線で示し、差を比較する。",
       "showPunch": false,
       "layoutName": "ペアドットチャート"
     },
@@ -1991,7 +1991,7 @@
       "galleryId": "G50",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "対象群の特徴・要求・障害から、対応を変える理由を示す。",
+      "use": "対象を列、属性を行に置き、共通の観点で特徴を比較する。",
       "showPunch": false,
       "layoutName": "属性比較マトリクス"
     },
@@ -2035,7 +2035,7 @@
       "galleryId": "G51",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "論点に対する作業・検証・出力を一つの行で完結させる。",
+      "use": "一つの項目に関係する複数の情報を、同じ行の各列に対応させる。",
       "showPunch": false,
       "layoutName": "項目別対応マトリクス"
     },
@@ -2098,7 +2098,7 @@
       "galleryId": "G52",
       "category": "複合・分析構成",
       "contentWidth": "wide",
-      "use": "並行する取り組みの間で、何が次の作業へ渡るかを示す。",
+      "use": "共通の段階軸に置いた要素間の依存関係を、接続線で示す。",
       "showPunch": false,
       "layoutName": "工程間依存フロー"
     },
@@ -2161,7 +2161,7 @@
       "galleryId": "G53",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "親子の行見出しと複数行にまたがる共通対応。",
+      "use": "行見出しをグループ化し、複数行に共通する内容を結合領域にまとめる。",
       "showPunch": true,
       "punch": "共通する課題を束ね、重複する対応を減らす。",
       "layoutName": "行グループ＋結合セル"
@@ -2221,7 +2221,7 @@
       "galleryId": "G54",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "二段の列見出しで異なる比較軸を分離。",
+      "use": "親見出しで子列を束ね、列の包含関係を複数段で示す。",
       "showPunch": false,
       "layoutName": "多段列見出し"
     },
@@ -2262,7 +2262,7 @@
       "galleryId": "G55",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "縦に進む工程を、作業・成果物の共通列で整理。横長の説明や工程ごとの比較に。",
+      "use": "縦に並ぶステップに対し、複数の観点を列で対応させる。",
       "showPunch": false,
       "layoutName": "縦型ステップ＋対応列"
     },
@@ -2297,7 +2297,7 @@
       "galleryId": "G56",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "段階的な分類と対応方針。件数は例示。",
+      "use": "対象を階層的に分類し、末端の区分に対応する説明を並べる。",
       "showPunch": false,
       "layoutName": "階層分類＋詳細"
     },
@@ -2323,7 +2323,7 @@
       "galleryId": "G57",
       "category": "階層・判断・実行",
       "contentWidth": "standard",
-      "use": "二つの方針と根拠を、無理に箱で囲まず整理。",
+      "use": "番号・見出し・本文の組を縦に並べ、複数の項目を整理する。",
       "showPunch": false,
       "layoutName": "番号付きテキストブロック"
     },
@@ -2368,7 +2368,7 @@
       "galleryId": "G58",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "広い作業欄と、狭い成果物・前提条件欄。",
+      "use": "主となる情報を広い列に、関連する情報を狭い列に配置する。",
       "showPunch": false,
       "layoutName": "主列＋補助列"
     },
@@ -2410,7 +2410,7 @@
       "galleryId": "G59",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "構成比の変化と理由を同じ順で説明。数値は例示。",
+      "use": "二時点・二条件の構成比を比較し、区分ごとの説明を対応させる。",
       "showPunch": false,
       "layoutName": "構成比変化＋詳細"
     },
@@ -2458,10 +2458,10 @@
       "galleryId": "G60",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "共通の時間軸で作業・成果物・判断条件を整理。",
+      "use": "横に並ぶステップに複数の情報行を対応させ、特定の行を帯で区別する。",
       "showPunch": true,
       "punch": "成果物と移行条件を揃え、段階ごとに実施を判断する。",
-      "layoutName": "横型ステップ＋判定行"
+      "layoutName": "横型ステップ＋強調行"
     },
     {
       "pattern": "box-columns",
@@ -2499,7 +2499,7 @@
       "galleryId": "G61",
       "category": "カラム・入れ子",
       "contentWidth": "wide",
-      "use": "箱見出しと共通の行観点で比較するカラム。",
+      "use": "箱型の列見出しの下に内容を並べ、必要に応じて共通の行観点を設ける。",
       "showPunch": false,
       "layoutName": "ボックスカラム"
     },
@@ -2535,7 +2535,7 @@
       "galleryId": "G62",
       "category": "カラム・入れ子",
       "contentWidth": "wide",
-      "use": "円見出し＋要点＋箇条書き。円面積は数値を表さない。",
+      "use": "円形の見出しの下に説明を並べ、同格の要素を示す。円面積は量を表さない。",
       "showPunch": false,
       "layoutName": "円見出しカラム"
     },
@@ -2585,7 +2585,7 @@
       "galleryId": "G63",
       "category": "カラム・入れ子",
       "contentWidth": "wide",
-      "use": "親カラムの中に子項目を持つ二階層構成。",
+      "use": "親カラムの中に子項目を配置し、所属関係を示す。",
       "showPunch": false,
       "layoutName": "入れ子ボックスカラム"
     },
@@ -2648,7 +2648,7 @@
       "galleryId": "G64",
       "category": "カラム・入れ子",
       "contentWidth": "wide",
-      "use": "短いラベルと本文を対応させるテキスト中心の比較。",
+      "use": "各カラム内で短いラベルと説明を対応させ、同じ位置で読み比べる。",
       "showPunch": false,
       "layoutName": "ラベル付きカラム"
     },
@@ -2693,7 +2693,7 @@
       ],
       "pattern": "table-dark-head",
       "title": "列の役割を明確にして、詳細を読みやすく整理する",
-      "use": "濃いグレー地・白文字の列見出し。本文は背景を抑える。",
+      "use": "帯状の背景で列見出しを区別し、行・列の情報を整理する。",
       "galleryId": "G65",
       "category": "カラム・入れ子",
       "contentWidth": "wide",
@@ -2741,7 +2741,7 @@
       ],
       "pattern": "table-plain-head",
       "title": "見出しと本文を左から自然に読みつなぐ",
-      "use": "背景なし・太字・左揃え・上下中央の列見出し。",
+      "use": "背景を付けない文字見出しと区切り線で、行・列の情報を整理する。",
       "galleryId": "G66",
       "category": "カラム・入れ子",
       "contentWidth": "wide",
@@ -2785,7 +2785,7 @@
       "galleryId": "G67",
       "category": "カラム・入れ子",
       "contentWidth": "wide",
-      "use": "楕円の行ラベル＋複数の比較列。対象の同格性を示す。",
+      "use": "円・楕円形の行見出しに複数の列を対応させる。見出しの面積は量を表さない。",
       "showPunch": false,
       "layoutName": "円見出し行マトリクス"
     },
@@ -2829,7 +2829,7 @@
       "galleryId": "G68",
       "category": "見出しの包含関係",
       "contentWidth": "wide",
-      "use": "親見出しから伸びる帯で子項目の適用範囲を示す。",
+      "use": "親見出しから伸びる帯で子項目の所属範囲を示し、各見出しに本文を対応させる。",
       "showPunch": false,
       "layoutName": "入れ子行見出し"
     },
@@ -2873,7 +2873,7 @@
       "galleryId": "G69",
       "category": "見出しの包含関係",
       "contentWidth": "wide",
-      "use": "親子の木構造から行範囲を計算し、浅い葉は残りの分類列を結合。",
+      "use": "深さの異なる分類階層を並べ、末端の説明位置を揃える。",
       "showPunch": false,
       "layoutName": "不均等階層分類"
     },
@@ -2911,7 +2911,7 @@
       "galleryId": "G70",
       "category": "階層・判断・実行",
       "contentWidth": "standard",
-      "use": "番号と縦の接続線で順序を表す縦型ステップ。2〜4工程の長めの説明をすっきり読ませる。",
+      "use": "番号と縦の接続線でステップの順序を示し、見出しと説明を対応させる。",
       "layoutName": "番号付き縦型ステップ"
     },
     {
@@ -2950,7 +2950,7 @@
       "galleryId": "G71",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "縦型矢羽・3列型。上辺直線・下端三角の形状。",
+      "use": "上辺直線・下端三角の矢羽を縦に並べ、短いラベル・見出し・本文の3列で構成する。",
       "layoutName": "縦型矢羽・3列／上辺直線"
     },
     {
@@ -2989,7 +2989,7 @@
       "galleryId": "G72",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "縦型矢羽・3列型。上辺に切り込みのある矢羽形状。",
+      "use": "上辺に切り込みのある矢羽を縦に並べ、短いラベル・見出し・本文の3列で構成する。",
       "layoutName": "縦型矢羽・3列／切り込み"
     },
     {
@@ -3028,7 +3028,7 @@
       "galleryId": "G73",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "縦型矢羽・2列型。上辺直線・下端三角の形状。",
+      "use": "上辺直線・下端三角の矢羽に見出しを入れ、本文と2列で対応させる。",
       "layoutName": "縦型矢羽・2列／上辺直線"
     },
     {
@@ -3067,7 +3067,7 @@
       "galleryId": "G74",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "縦型矢羽・2列型。上辺に切り込みのある矢羽形状。",
+      "use": "上辺に切り込みのある矢羽に見出しを入れ、本文と2列で対応させる。",
       "layoutName": "縦型矢羽・2列／切り込み"
     }
   ]
