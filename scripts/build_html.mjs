@@ -10,7 +10,7 @@ if(!args.master||!args.data||!args.out)throw Error('Required: --master master.js
 const masterPath=path.resolve(args.master),master=JSON.parse(await fs.readFile(masterPath,'utf8'));
 const deck=JSON.parse(await fs.readFile(args.data,'utf8')),aspect=args.aspect||'13:9',profile=master.profiles[aspect];
 if(!profile)throw Error('Aspect not in selected master');
-const {width:W,height:H}=profile,C=master.colors,T=master.type,L=master.layout;
+const {width:W,height:H}=profile,C={connector:"#000000",connectorMuted:"#C5C8CC",border:"#777777",divider:"#777777",onAccent:"#FFFFFF",headerFill:"#4B4B4B",onHeader:"#FFFFFF",...master.colors},T=master.type,L=master.layout;
 if(![[1040,720],[1280,720]].some(([w,h])=>w===W&&h===H))throw Error('Unsupported canvas dimensions');
 if(!deck.slides?.length)throw Error('No slides');
 const out=path.resolve(args.out);try{await fs.access(out);if(args.overwrite!=='yes')throw Error('Output exists; pass --overwrite yes only if authorized');}catch(e){if(e.code!=='ENOENT')throw e;}
@@ -28,16 +28,18 @@ Object.entries(C).forEach(([k,v])=>Array.isArray(v)?v.forEach(safeColor):safeCol
 const font=[master.fonts.latin,master.fonts.japanese,...master.fonts.fallback].map(s=>'"'+s.replaceAll('"','')+'"').join(',');
 let html='';const HX=profile.marginX??L.marginX,MAXW=W-2*HX,G=L.gap;let X=HX,BW=MAXW;
 function text(s,x,y,w,h,cls='body',align='left',extra=''){return `<p class="${cls}" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;text-align:${align};${extra}">${escape(s).replaceAll('\n','<br>')}</p>`;}
-function box(s,x,y,w,h,{fill='var(--surface)',align='center',bold=true,border=false,color='var(--text)',paddingX=L.boxPaddingX,paddingY=L.boxPaddingY}={}){return `<div class="box" data-slide-native="box" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;padding:${paddingY}px ${paddingX}px;background:${fill};${border?'border:1px solid var(--accent);':''}"><p style="color:${color};text-align:${align};font-weight:${bold?600:400}">${escape(s).replaceAll('\n','<br>')}</p></div>`;}
+function box(s,x,y,w,h,{fill='var(--surface)',align='center',bold=true,border=false,color='var(--text)',paddingX=L.boxPaddingX,paddingY=L.boxPaddingY}={}){return `<div class="box" data-slide-native="box" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;padding:${paddingY}px ${paddingX}px;background:${fill};${border?'border:1px solid var(--border);':''}"><p style="color:${color};text-align:${align};font-weight:${bold?600:400}">${escape(s).replaceAll('\n','<br>')}</p></div>`;}
 function list(items,x,y,w,h){return `<div class="list" data-slide-native="list" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px"><ul>${items.map(s=>`<li>${escape(s)}</li>`).join('')}</ul></div>`;}
-function rect(x,y,w,h,color='var(--accent)'){return `<div class="shape" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;background:${color}"></div>`;}
+function rect(x,y,w,h,color='var(--series-0)'){return `<div class="shape" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;background:${color}"></div>`;}
 function line(x,y,x2,y2,color='var(--line)',thick=1){const len=Math.hypot(x2-x,y2-y),a=Math.atan2(y2-y,x2-x)*180/Math.PI;return `<div class="shape" style="left:${x}px;top:${y}px;width:${len}px;height:${thick}px;background:${color};transform-origin:0 50%;transform:rotate(${a}deg)"></div>`;}
-function dot(x,y,r=5,color='var(--accent)'){return `<div class="shape" style="left:${x-r}px;top:${y-r}px;width:${r*2}px;height:${r*2}px;border-radius:50%;background:${color}"></div>`;}
-function head(s,x,y,w){return text(s,x,y,w,40,'heading','center')+line(x,y+45,x+w,y+45,'var(--accent)');}
+function connector(x,y,x2,y2){return line(x,y,x2,y2,'var(--connector)',1.5);}
+function dot(x,y,r=5,color='var(--series-0)'){return `<div class="shape" style="left:${x-r}px;top:${y-r}px;width:${r*2}px;height:${r*2}px;border-radius:50%;background:${color}"></div>`;}
+function head(s,x,y,w){return text(s,x,y,w,40,'heading','center')+line(x,y+45,x+w,y+45,'var(--divider)');}
 function note(s,y=L.bodyBottom-24){return text(s,X,y,BW,28,'note','right');}
 function columns(n,r=0){const w=(BW-r-(r?G:0)-(n-1)*G)/n;return Array.from({length:n},(_,i)=>({x:X+r+(r?G:0)+i*(w+G),w}));}
-function triangle(x,y,w=24,h=8,up=false){const a=up?y+h:y,b=up?y:y+h;return line(x,a,x+w,a,'var(--accent)',1.5)+line(x,a,x+w/2,b,'var(--accent)',1.5)+line(x+w/2,b,x+w,a,'var(--accent)',1.5);}
-function arrow(x,y,x2,y2){return line(x,y,x2,y2,'var(--accent)',1.5)+text(x2>=x?'›':'‹',x2-8,y2-18,16,36,'heading','center');}
+function polygon(x,y,w,h,points,color='var(--connector)'){return `<div class="shape" data-slide-shape="polygon" data-points='${JSON.stringify(points)}' style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;background:${color};clip-path:polygon(${points.map(([a,b])=>a+'% '+b+'%').join(',')})"></div>`;}
+function triangle(x,y,w=24,h=8,up=false,color='var(--connector)'){return polygon(x,y,w,h,up?[[0,100],[50,0],[100,100]]:[[0,0],[100,0],[50,100]],color);}
+function arrow(x,y,x2,y2){const right=x2>=x,base=x2+(right?-8:8);return line(x,y,base,y2,'var(--connector)',1.5)+polygon(right?base:x2,y2-8,8,16,right?[[0,0],[100,50],[0,100]]:[[100,0],[0,50],[100,100]]);}
 function chevron(s,x,y,w,h){return `<div class="chevron" data-slide-shape="chevron" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px"><p>${escape(s)}</p></div>`;}
 function footer(n){const b=master.brand;return line(X,L.footerY,W-X,L.footerY,'var(--footerLine)')+text(b.confidential,X,L.footerTextY,BW/3,18,'footer')+(logos.footerLogo?`<img alt="" src="${logos.footerLogo}" style="position:absolute;left:${(W-b.footerLogoWidth)/2}px;top:${b.footerLogoY}px;width:${b.footerLogoWidth}px;height:${b.footerLogoHeight}px;object-fit:contain">`:'')+(b.showPageNumber?text(n,W-X-40,L.footerTextY,40,18,'footer','right'):'');}
 function cover(s){const a=master.cover;return (logos.coverLogo?`<img alt="" src="${logos.coverLogo}" style="position:absolute;left:${W-a.logoRight-a.logoWidth}px;top:${a.logoY}px;width:${a.logoWidth}px;height:${a.logoHeight}px;object-fit:contain">`:'')+line(a.dividerLeft,a.dividerY,W-a.dividerRight,a.dividerY,'var(--line)')+text(s.title,a.titleLeft,a.titleY,W-a.titleLeft-a.titleRight,a.titleHeight,'cover')+text(s.subtitle,a.titleLeft,a.subtitleY,W-a.titleLeft-a.titleRight,a.subtitleHeight,'punch','left','color:var(--coverText)');}
@@ -55,8 +57,8 @@ function render(s,Y){
  }else if(s.pattern==='driver'){
   const a=BW*.21,b=BW*.25,bx=X+a+70,rx=bx+b+50,rw=W-X-rx,ys=[Y+65,Y+260],mid=(ys[0]+ys[1]+90)/2;
   h+=box(s.total,X,mid-45,a,90,{border:true,fill:'transparent'});
-  h+=line(X+a,mid,bx-30,mid)+line(bx-30,ys[0]+45,bx-30,ys[1]+45);
-  s.factors.forEach((r,i)=>{h+=line(bx-30,ys[i]+45,bx,ys[i]+45)+box(r.label,bx,ys[i],b,90)+text(r.evidence,rx,ys[i]+10,rw,95,'dense');});
+  h+=connector(X+a,mid,bx-30,mid)+connector(bx-30,ys[0]+45,bx-30,ys[1]+45);
+  s.factors.forEach((r,i)=>{h+=connector(bx-30,ys[i]+45,bx,ys[i]+45)+box(r.label,bx,ys[i],b,90)+text(r.evidence,rx,ys[i]+10,rw,95,'dense');});
   h+=text(s.operator,bx,ys[0]+122,b,40,'heading','center')+note(s.note,Y+405);
  }else if(s.pattern==='funnel'){
   const cols=columns(s.stages.length,104);h+=text('対象数',X,Y+110,104,40,'heading')+text('判断基準',X,Y+205,104,40,'heading')+text('除外理由',X,Y+340,104,40,'heading');
@@ -64,7 +66,7 @@ function render(s,Y){
  }else if(s.pattern==='scenario'){
   const R=130,cols=columns(s.scenarios.length,R);h+=text('前提条件',X,Y+85,R,40,'heading')+text('指標の推移',X,Y+235,R,40,'heading');
   const max=s.max;if(!(max>0))throw Error('Positive scenario max required');
-  cols.forEach((c,i)=>{const v=s.scenarios[i];h+=head(v.label,c.x,Y,c.w)+text(v.assumption,c.x,Y+80,c.w,95,'dense');const by=Y+390,bh=150,pw=c.w-32,bw=pw/v.values.length*.55;h+=line(c.x+16,by,c.x+c.w-16,by);v.values.forEach((val,j)=>{if(val<0||val>max)throw Error('Scenario value out of scale');const xx=c.x+16+j*pw/v.values.length;h+=rect(xx,by-val/max*bh,bw,val/max*bh,i===1?'var(--accent)':'var(--series-2)')+text(val,xx-5,by-val/max*bh-28,bw+10,25,'note','center')+text(s.periods[j],xx-12,by+12,bw+24,28,'note','center');});});h+=note(s.note,Y+455);
+  cols.forEach((c,i)=>{const v=s.scenarios[i];h+=head(v.label,c.x,Y,c.w)+text(v.assumption,c.x,Y+80,c.w,95,'dense');const by=Y+390,bh=150,pw=c.w-32,bw=pw/v.values.length*.55;h+=line(c.x+16,by,c.x+c.w-16,by);v.values.forEach((val,j)=>{if(val<0||val>max)throw Error('Scenario value out of scale');const xx=c.x+16+j*pw/v.values.length;h+=rect(xx,by-val/max*bh,bw,val/max*bh,i===1?'var(--series-0)':'var(--series-2)')+text(val,xx-5,by-val/max*bh-28,bw+10,25,'note','center')+text(s.periods[j],xx-12,by+12,bw+24,28,'note','center');});});h+=note(s.note,Y+455);
  }else if(s.pattern==='evaluation'){
   const R=180,cols=columns(s.columns.length,R),rh=92;cols.forEach((c,i)=>h+=head(s.columns[i],c.x,Y,c.w));
   s.rows.forEach((r,i)=>{const y=Y+75+i*rh;h+=text(r.label,X,y+18,R-15,55,'dense');r.cells.forEach((v,j)=>h+=box(v,cols[j].x,y,cols[j].w,rh-15,{fill:j===0?'var(--surface)':'transparent',bold:false}));});h+=note(s.note);
@@ -72,8 +74,8 @@ function render(s,Y){
   const bw=BW*.34,bh=100,xx=[X+30,W-X-30-bw],yy=[Y+35,Y+295];
   h+=box(s.nodes[0],xx[0],yy[0],bw,bh)+box(s.nodes[1],xx[1],yy[0],bw,bh)+box(s.nodes[2],xx[1],yy[1],bw,bh)+box(s.nodes[3],xx[0],yy[1],bw,bh);
   h+=arrow(xx[0]+bw+10,yy[0]+bh/2,xx[1]-12,yy[0]+bh/2)+arrow(xx[1]-12,yy[1]+bh/2,xx[0]+bw+10,yy[1]+bh/2);
-  h+=line(xx[1]+bw/2,yy[0]+bh+10,xx[1]+bw/2,yy[1]-12,'var(--accent)')+triangle(xx[1]+bw/2-12,yy[1]-18);
-  h+=line(xx[0]+bw/2,yy[1]-10,xx[0]+bw/2,yy[0]+bh+12,'var(--accent)')+triangle(xx[0]+bw/2-12,yy[0]+bh+10,24,8,true);
+  h+=line(xx[1]+bw/2,yy[0]+bh+10,xx[1]+bw/2,yy[1]-12,'var(--connector)')+triangle(xx[1]+bw/2-12,yy[1]-18);
+  h+=line(xx[0]+bw/2,yy[1]-10,xx[0]+bw/2,yy[0]+bh+12,'var(--connector)')+triangle(xx[0]+bw/2-12,yy[0]+bh+10,24,8,true);
   h+=text(s.relations[0],xx[0]+bw+10,yy[0]-8,xx[1]-xx[0]-bw-20,52,'note','center')+text(s.relations[2],xx[0]+bw+10,yy[1]+bh/2+12,xx[1]-xx[0]-bw-20,55,'note','center');
   h+=text(s.relations[1],xx[1]+bw/2+18,Y+195,bw/2,65,'note')+text(s.relations[3],xx[0]+bw/2+18,Y+195,bw/2,65,'note');
  }else if(s.pattern==='range'){
@@ -84,7 +86,7 @@ function render(s,Y){
  }else if(s.pattern==='diverging'){
   const left=X+190,right=W-X-80,cx=(left+right)/2,half=(right-left)/2,top=Y+55,rh=74;
   [-s.limit,0,s.limit].forEach(v=>h+=text(v,cx+v/s.limit*half-35,Y,70,30,'note','center'));h+=line(cx,Y+40,cx,top+s.rows.length*rh-15);
-  s.rows.forEach((r,i)=>{if(Math.abs(r.value)>s.limit)throw Error('Value outside divergence scale');const y=top+i*rh,w=Math.abs(r.value)/s.limit*half;h+=text(r.label,X,y,175,40,'dense')+rect(r.value<0?cx-w:cx,y,w,30,r.value<0?'var(--series-2)':'var(--accent)')+text((r.value>0?'+':'')+r.value,r.value<0?cx-w-55:cx+w+8,y,50,35,'dense',r.value<0?'right':'left');});h+=note(s.note,top+rh*s.rows.length+15);
+  s.rows.forEach((r,i)=>{if(Math.abs(r.value)>s.limit)throw Error('Value outside divergence scale');const y=top+i*rh,w=Math.abs(r.value)/s.limit*half;h+=text(r.label,X,y,175,40,'dense')+rect(r.value<0?cx-w:cx,y,w,30,r.value<0?'var(--series-2)':'var(--series-0)')+text((r.value>0?'+':'')+r.value,r.value<0?cx-w-55:cx+w+8,y,50,35,'dense',r.value<0?'right':'left');});h+=note(s.note,top+rh*s.rows.length+15);
  }else if(s.pattern==='mekko'){
   const total=s.groups.reduce((a,b)=>a+b.total,0),px=X+55,pw=BW-80,py=Y+80,ph=285;let xx=px;
   if(!(total>0))throw Error('Positive total required');

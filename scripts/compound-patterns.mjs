@@ -2,9 +2,10 @@
 export function compound(s,Y,a){
  const {X,BW,W,L,G,text,box,list,line,rect,dot,head,note,columns,triangle,chevron}=a;
  let h='';
- const join=(x,y,x2,y2)=>line(x,y,x2,y2,'var(--accent)',1.5);
- const circle=(x,y,r,color='var(--accent)')=>dot(x,y,r,color);
- const bars=(vals,labels,x,y,w,height,max)=>{let o='';const step=w/vals.length,bw=step*.48;[0,max].forEach(v=>o+=text(v,x-38,y+height-v/max*height-12,30,30,'note','right'));o+=line(x,y+height,x+w,y+height);vals.forEach((v,i)=>{const xx=x+step*(i+.25),yy=y+height-v/max*height;o+=rect(xx,yy,bw,v/max*height,i===vals.length-1?'var(--accent)':'var(--series-2)')+text(v,xx-12,yy-28,bw+24,28,'note','center')+text(labels[i],x+i*step,y+height+8,step,28,'note','center');});return o;};
+ const join=(x,y,x2,y2)=>line(x,y,x2,y2,'var(--connector)',1.5);
+ const dataLine=(x,y,x2,y2)=>line(x,y,x2,y2,'var(--series-0)',1.5);
+ const circle=(x,y,r,color='var(--series-0)')=>dot(x,y,r,color);
+ const bars=(vals,labels,x,y,w,height,max)=>{let o='';const step=w/vals.length,bw=step*.48;[0,max].forEach(v=>o+=text(v,x-38,y+height-v/max*height-12,30,30,'note','right'));o+=line(x,y+height,x+w,y+height);vals.forEach((v,i)=>{const xx=x+step*(i+.25),yy=y+height-v/max*height;o+=rect(xx,yy,bw,v/max*height,i===vals.length-1?'var(--series-0)':'var(--series-2)')+text(v,xx-12,yy-28,bw+24,28,'note','center')+text(labels[i],x+i*step,y+height+8,step,28,'note','center');});return o;};
  if(s.pattern==='strategy-map'){
   const cs=columns(3),rh=130;s.columns.forEach((v,i)=>h+=head(v,cs[i].x,Y,cs[i].w));
   s.rows.forEach((r,i)=>{const yy=Y+80+i*rh;h+=box(r.driver,cs[0].x,yy,cs[0].w,95,{bold:false})+box(r.response,cs[1].x,yy,cs[1].w,95,{fill:'transparent',border:true,bold:false})+box(r.outcome,cs[2].x,yy,cs[2].w,95,{fill:'transparent',bold:false,align:'left'});h+=join(cs[0].x+cs[0].w+4,yy+47,cs[1].x-5,yy+47)+join(cs[1].x+cs[1].w+4,yy+47,cs[2].x-5,yy+47);});
@@ -26,15 +27,15 @@ export function compound(s,Y,a){
   const pw=BW*.43,px=X+pw/2,top=Y+15,bottom=Y+420,left=X,right=X+pw,dx=right+G,dw=W-X-dx;
   h+=join(px,top,left,bottom)+join(left,bottom,right,bottom)+join(right,bottom,px,top);
   s.levels.forEach((v,i)=>{const yy=top+(i+1)*(bottom-top)/3,half=(yy-top)/(bottom-top)*pw/2;
-   if(i<2)h+=line(px-half,yy,px+half,yy,'var(--accent)');
+   if(i<2)h+=line(px-half,yy,px+half,yy,'var(--connector)');
    const cy=top+(i+.65)*(bottom-top)/3;h+=text(v.label,px-pw*.3,cy-20,pw*.6,55,'dense','center')+head(v.heading,dx,top+i*135,dw)+text(v.body,dx,top+i*135+58,dw,65,'dense');});
  }else if(s.pattern==='portfolio-bubbles'||s.pattern==='portfolio-moves'){
   const px=X+85,py=Y+45,pw=BW-140,ph=335;
   h+=line(px,py+ph,px+pw,py+ph,'var(--rule)')+line(px,py,px,py+ph,'var(--rule)')+line(px+pw/2,py,px+pw/2,py+ph)+line(px,py+ph/2,px+pw,py+ph/2);
   h+=text(s.yLabel,X,Y-2,250,35,'note')+text(s.xLabel,px,py+ph+25,pw,35,'dense','center');
   s.points.forEach((v,i)=>{const xx=px+v.x/100*pw,yy=py+ph-v.y/100*ph,r=s.pattern==='portfolio-bubbles'?Math.sqrt(v.size)*2.2:9;
-   if(v.to){const tx=px+v.to[0]/100*pw,ty=py+ph-v.to[1]/100*ph;h+=join(xx,yy,tx,ty)+circle(tx,ty,4)+text('目標'+v.label,tx+10,ty-14,100,35,'note');}
-   h+=circle(xx,yy,r,i===0?'var(--accent)':'var(--series-1)')+text(v.label,xx-30,yy-r-35,60,30,'dense','center');});h+=note(s.note,py+ph+80);
+   if(v.to){const tx=px+v.to[0]/100*pw,ty=py+ph-v.to[1]/100*ph;h+=dataLine(xx,yy,tx,ty)+circle(tx,ty,4)+text('目標'+v.label,tx+10,ty-14,100,35,'note');}
+   h+=circle(xx,yy,r,i===0?'var(--series-0)':'var(--series-1)')+text(v.label,xx-30,yy-r-35,60,30,'dense','center');});h+=note(s.note,py+ph+80);
  }else if(s.pattern==='portfolio-actions'){
   const left=BW*.55,px=X+55,py=Y+65,pw=left-80,ph=330,dx=X+left+G,dw=W-X-dx;
   h+=line(px,py,px,py+ph,'var(--rule)')+line(px,py+ph,px+pw,py+ph,'var(--rule)')+line(px+pw/2,py,px+pw/2,py+ph)+line(px,py+ph/2,px+pw,py+ph/2);
@@ -48,7 +49,7 @@ export function compound(s,Y,a){
   const cs=columns(2),py=Y+95,ph=290;
   h+=head(s.wholeLabel,cs[0].x,Y,cs[0].w)+head(s.partLabel,cs[1].x,Y,cs[1].w);
   let yy=py;const bw=cs[0].w*.45,bx=cs[0].x+cs[0].w*.24;
-  s.whole.forEach((v,i)=>{const hh=v.value/100*ph;h+=box(v.label+' '+v.value+'%',bx,yy,bw,hh,{fill:i===s.selected?'var(--accent)':'var(--surface)',color:i===s.selected?'var(--background)':'var(--text)',bold:false});if(i===s.selected){h+=line(bx+bw,yy,cs[1].x+35,py)+line(bx+bw,yy+hh,cs[1].x+35,py+ph);}yy+=hh;});
+  s.whole.forEach((v,i)=>{const hh=v.value/100*ph;h+=box(v.label+' '+v.value+'%',bx,yy,bw,hh,{fill:i===s.selected?'var(--series-0)':'var(--surface)',color:i===s.selected?'var(--background)':'var(--text)',bold:false});if(i===s.selected){h+=line(bx+bw,yy,cs[1].x+35,py)+line(bx+bw,yy+hh,cs[1].x+35,py+ph);}yy+=hh;});
   yy=py;s.parts.forEach((v,i)=>{const hh=v.value/100*ph;h+=box(v.label+' '+v.value+'%',cs[1].x+35,yy,cs[1].w-70,hh,{fill:`var(--series-${i})`,color:i===0?'var(--background)':'var(--text)',bold:false});yy+=hh;});h+=note(s.note,py+ph+30);
  }else if(s.pattern==='small-multiples'){
   const cs=columns(2,100);s.columns.forEach((v,i)=>h+=head(v,cs[i].x,Y,cs[i].w));
@@ -60,7 +61,7 @@ export function compound(s,Y,a){
  }else if(s.pattern==='annotated-trend'){
   const pw=BW*.59,px=X+48,py=Y+65,ph=300,dx=X+pw+G+35,dw=W-X-dx;
   [0,s.max/2,s.max].forEach(v=>h+=line(px,py+ph-v/s.max*ph,px+pw-50,py+ph-v/s.max*ph)+text(v,X,py+ph-v/s.max*ph-12,35,30,'note','right'));
-  s.values.forEach((v,i)=>{const xx=px+i*(pw-50)/(s.values.length-1),yy=py+ph-v/s.max*ph;if(i)h+=join(px+(i-1)*(pw-50)/(s.values.length-1),py+ph-s.values[i-1]/s.max*ph,xx,yy);h+=dot(xx,yy,4)+text(s.periods[i],xx-25,py+ph+16,50,30,'note','center');});
+  s.values.forEach((v,i)=>{const xx=px+i*(pw-50)/(s.values.length-1),yy=py+ph-v/s.max*ph;if(i)h+=dataLine(px+(i-1)*(pw-50)/(s.values.length-1),py+ph-s.values[i-1]/s.max*ph,xx,yy);h+=dot(xx,yy,4)+text(s.periods[i],xx-25,py+ph+16,50,30,'note','center');});
   s.callouts.forEach((v,i)=>{const xx=px+v.index*(pw-50)/(s.values.length-1),yy=py+ph-s.values[v.index]/s.max*ph;h+=box(i+1,xx-14,yy-46,30,30,{fill:'var(--surface)',bold:true,paddingX:0,paddingY:0})+head((i+1)+'　'+v.label,dx,Y+i*150,dw)+text(v.body,dx,Y+60+i*150,dw,75,'dense');});h+=note(s.note,py+ph+80);
  }else if(s.pattern==='survey-grid'){
   const cs=columns(2,125);s.columns.forEach((v,i)=>h+=head(v,cs[i].x,Y,cs[i].w));
@@ -76,7 +77,7 @@ export function compound(s,Y,a){
  }else if(s.pattern==='paired-dots'){
   const left=X+165,right=W-X-100,pw=right-left;[0,s.max/2,s.max].forEach(v=>h+=text(v,left+v/s.max*pw-25,Y,50,30,'note','center'));
   s.rows.forEach((r,i)=>{const yy=Y+70+i*77,x1=left+r.values[0]/s.max*pw,x2=left+r.values[1]/s.max*pw;h+=text(r.label,X,yy-15,145,35,'dense')+line(x1,yy,x2,yy,'var(--series-2)',4)+dot(x1,yy,6,'var(--series-1)')+dot(x2,yy,6)+text((r.values[1]-r.values[0]>0?'+':'')+(r.values[1]-r.values[0]),right+20,yy-15,75,35,'dense');});
-  s.series.forEach((v,i)=>h+=dot(left+i*240,Y+425,6,i===0?'var(--series-1)':'var(--accent)')+text(v,left+15+i*240,Y+410,215,35,'note'));h+=note(s.note,Y+470);
+  s.series.forEach((v,i)=>h+=dot(left+i*240,Y+425,6,i===0?'var(--series-1)':'var(--series-0)')+text(v,left+15+i*240,Y+410,215,35,'note'));h+=note(s.note,Y+470);
  }else if(s.pattern==='segment-profiles'){
   const cs=columns(s.segments.length,110);cs.forEach((c,i)=>h+=head(s.segments[i].label,c.x,Y,c.w));
   s.fields.forEach((v,i)=>{const yy=Y+80+i*110;h+=box(v.label,X,yy,110,85);cs.forEach((c,j)=>h+=text(s.segments[j][v.key],c.x,yy+10,c.w,75,'dense'));});

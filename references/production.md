@@ -87,3 +87,7 @@ python3 SKILL_DIR/scripts/normalize_pptx.py --input WORK_DIR/raw.pptx --layout W
 ```
 
 これは有無指定の抜粋。本文データを含む完全な例はギャラリーのJSONを参照。タイトルは主題、パンチラインは本文から伝えたい結論・判断の視点を示す。本文やタイトルだけで説明できる場合は `false` を選ぶ。表示時は本文領域の上端が下がるため、両比率で再配置と画像検証を行う。
+
+## 塗りつぶしの鏃
+
+`data-slide-shape="polygon"` と `data-points="[[0,0],[100,0],[50,100]]"` のような百分率座標を指定した塗り図形は、`slide-layout.js`で収集し、`normalize_pptx.py`で編集可能な自由形状へ補正できる。HTMLでは同じ座標の`clip-path:polygon(...)`を使い、変換後も線と同色で塗られた鏃が残ることを画像で確認する。

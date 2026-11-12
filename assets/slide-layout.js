@@ -23,8 +23,8 @@ window.slideCollect = () => {
       });
       boxes.push({geometry:['ellipse','down-chevron','down-pentagon'].includes(el.dataset.slideShape)?el.dataset.slideShape:'rect',tip:number(el.dataset.tip),slide:index+1,x:r.x-sr.x,y:r.y-sr.y,w:r.width,h:r.height,fill:color(cs.backgroundColor),border:number(cs.borderTopWidth)&&cs.borderTopStyle!=='none'?color(cs.borderTopColor):null,borderWidth:number(cs.borderTopWidth),padding:[number(cs.paddingTop),number(cs.paddingRight),number(cs.paddingBottom),el===list?0:number(cs.paddingLeft)],valign:cs.alignItems==='center'?'ctr':cs.alignItems==='flex-end'?'b':'t',bulletIndent:list?number(getComputedStyle(list).paddingLeft)||18:0,paragraphs,latinFont:cs.fontFamily.split(',')[0].replace(/["']/g,'').trim(),eaFont:document.body.dataset.slideJapaneseFont||'Arial'});
     }
-    for(const el of slide.querySelectorAll('[data-slide-shape="chevron"]')) {
-      const r=el.getBoundingClientRect();shapes.push({slide:index+1,type:'chevron',x:r.x-sr.x,y:r.y-sr.y,w:r.width,h:r.height,notch:14});
+    for(const el of slide.querySelectorAll('[data-slide-shape="chevron"], [data-slide-shape="polygon"]')) {
+      const r=el.getBoundingClientRect();shapes.push({slide:index+1,type:el.dataset.slideShape,points:el.dataset.points?JSON.parse(el.dataset.points):null,x:r.x-sr.x,y:r.y-sr.y,w:r.width,h:r.height,notch:14});
     }
     for (const el of slide.querySelectorAll('p,li,[data-slide-native],img,svg')) {
       const r=el.getBoundingClientRect();

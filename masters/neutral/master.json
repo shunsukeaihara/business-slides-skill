@@ -28,7 +28,14 @@
       "#7E8DAF",
       "#BCC3CF",
       "#E4E7ED"
-    ]
+    ],
+    "connector": "#000000",
+    "connectorMuted": "#C5C8CC",
+    "border": "#777777",
+    "divider": "#777777",
+    "onAccent": "#FFFFFF",
+    "headerFill": "#4B4B4B",
+    "onHeader": "#FFFFFF"
   },
   "fonts": {
     "latin": "Arial",

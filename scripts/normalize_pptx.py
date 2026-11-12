@@ -91,14 +91,22 @@ def main():
     assert len(sp.findall('p:txBody/a:p/a:pPr/a:buChar',NS))==sum(p['bullet'] for p in box['paragraphs'])
     changed.append({'slide':box['slide'],'text':expected,'paragraphs':len(box['paragraphs']),'bullets':sum(p['bullet'] for p in box['paragraphs'])})
    for shape in shapes:
-    assert shape['type']=='chevron', 'Unsupported marked geometry'
+    assert shape['type'] in ['chevron','polygon'], 'Unsupported marked geometry'
     expected=[emu(shape[k]) for k in ('x','y','w','h')]
     candidates=[sp for sp in tree.findall('p:sp',NS) if bbox(sp) and all(abs(a-b)<120 for a,b in zip(bbox(sp),expected)) and sp.find('p:spPr/a:solidFill',NS) is not None and not plain(sp)]
-    assert len(candidates)==1, ('Ambiguous chevron background',shape)
+    assert len(candidates)==1, ('Ambiguous shape background',shape)
     pr=candidates[0].find('p:spPr',NS)
     for geom in list(pr):
      if E.QName(geom).localname in ['prstGeom','custGeom']:pr.remove(geom)
-    geom=E.Element('{'+NS['a']+'}prstGeom',prst='chevron');av=sub(geom,'a:avLst');sub(av,'a:gd',name='adj',fmla='val '+str(round(shape['notch']/min(shape['w'],shape['h'])*100000)))
+    if shape['type']=='polygon':
+     geom=E.Element('{'+NS['a']+'}custGeom')
+     for tag in ['avLst','gdLst','ahLst','cxnLst']:sub(geom,'a:'+tag)
+     sub(geom,'a:rect',l='0',t='0',r='r',b='b')
+     path=sub(sub(geom,'a:pathLst'),'a:path',w='100000',h='100000')
+     for i,(x,y) in enumerate(shape['points']):sub(sub(path,'a:moveTo' if i==0 else 'a:lnTo'),'a:pt',x=str(round(x*1000)),y=str(round(y*1000)))
+     sub(path,'a:close')
+    else:
+     geom=E.Element('{'+NS['a']+'}prstGeom',prst='chevron');av=sub(geom,'a:avLst');sub(av,'a:gd',name='adj',fmla='val '+str(round(shape['notch']/min(shape['w'],shape['h'])*100000)))
     pr.insert(1,geom)
    data=E.tostring(root,xml_declaration=True,encoding='UTF-8',standalone=True)
   result.append((entry,data))

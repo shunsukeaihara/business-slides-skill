@@ -1,14 +1,15 @@
 /** Generic layouts: all geometry and visual roles come from the selected master. */
 export function extended(s,Y,a){
  const {X,BW,W,L,G,text,box,list,line,rect,dot,head,note,columns,triangle,chevron}=a;
+ const connect=(x,y,x2,y2)=>line(x,y,x2,y2,'var(--connector)',1.5);
  let h=''; const bottom=L.bodyBottom;
  if(s.pattern==='process'){
   const R=100,cs=columns(s.stages.length,R);
   h+=text('作業',X,Y+120,R,35,'heading')+text('成果物',X,Y+350,R,35,'heading');
   cs.forEach((c,i)=>{const v=s.stages[i];h+=chevron(v.label,c.x,Y,c.w,65)+list(v.items,c.x,Y+115,c.w,155)+triangle(c.x+c.w*.3,Y+300,c.w*.4,14)+box(v.result,c.x,Y+345,c.w,95);});
  }else if(s.pattern==='timeline'){
-  const cs=columns(s.events.length),cy=Y+160;h+=line(X+20,cy,W-X-20,cy,'var(--accent)',2);
-  cs.forEach((c,i)=>{const v=s.events[i],cx=c.x+c.w/2;h+=text(v.date,c.x,Y+70,c.w,40,'heading','center')+dot(cx,cy,7)+text(v.label,c.x,cy+40,c.w,65,'heading','center')+list(v.items,c.x,cy+135,c.w,140);});
+  const cs=columns(s.events.length),cy=Y+160;h+=line(X+20,cy,W-X-20,cy,'var(--connector)',2);
+  cs.forEach((c,i)=>{const v=s.events[i],cx=c.x+c.w/2;h+=text(v.date,c.x,Y+70,c.w,40,'heading','center')+dot(cx,cy,7,'var(--connector)')+text(v.label,c.x,cy+40,c.w,65,'heading','center')+list(v.items,c.x,cy+135,c.w,140);});
  }else if(s.pattern==='gantt'||s.pattern==='swimlane'){
   const R=175,cs=columns(s.periods.length,R),rh=84;
   cs.forEach((c,i)=>h+=head(s.periods[i],c.x,Y,c.w));
@@ -25,25 +26,25 @@ export function extended(s,Y,a){
   const left=X+(BW-dw)/2,rx=left+rw+cg,lx=rx+mw+cg,rh=140;
   const first=Y+65,last=first+(s.branches.length-1)*rh,cy=(first+last)/2;
   h+=box(s.root,left,cy-50,rw,100,{border:true,fill:'transparent'});
-  h+=line(left+rw,cy,rx-cg/2,cy)+line(rx-cg/2,first,rx-cg/2,last);
-  s.branches.forEach((v,i)=>{const yy=Y+15+i*rh;h+=line(rx-cg/2,yy+50,rx,yy+50)+box(v.label,rx,yy,mw,100)+line(rx+mw,yy+50,lx-12,yy+50)+list(v.items,lx,yy+12,lw,100);});
+  h+=connect(left+rw,cy,rx-cg/2,cy)+connect(rx-cg/2,first,rx-cg/2,last);
+  s.branches.forEach((v,i)=>{const yy=Y+15+i*rh;h+=connect(rx-cg/2,yy+50,rx,yy+50)+box(v.label,rx,yy,mw,100)+connect(rx+mw,yy+50,lx-12,yy+50)+list(v.items,lx,yy+12,lw,100);});
  }else if(s.pattern==='hierarchy'){
   const cs=columns(s.groups.length),rw=BW*.34,rx=X+(BW-rw)/2;
-  h+=box(s.root,rx,Y,rw,65,{fill:'transparent',border:true})+line(W/2,Y+65,W/2,Y+105);
-  h+=line(cs[0].x+cs[0].w/2,Y+105,cs.at(-1).x+cs.at(-1).w/2,Y+105);
-  cs.forEach((c,i)=>{h+=line(c.x+c.w/2,Y+105,c.x+c.w/2,Y+145)+box(s.groups[i].label,c.x,Y+145,c.w,65)+list(s.groups[i].items,c.x,Y+245,c.w,160);});
+  h+=box(s.root,rx,Y,rw,65,{fill:'transparent',border:true})+connect(W/2,Y+65,W/2,Y+105);
+  h+=connect(cs[0].x+cs[0].w/2,Y+105,cs.at(-1).x+cs.at(-1).w/2,Y+105);
+  cs.forEach((c,i)=>{h+=connect(c.x+c.w/2,Y+105,c.x+c.w/2,Y+145)+box(s.groups[i].label,c.x,Y+145,c.w,65)+list(s.groups[i].items,c.x,Y+245,c.w,160);});
  }else if(s.pattern==='hub'){
   const cw=BW*.27,ch=90,cx=X+(BW-cw)/2,cy=Y+195,sw=BW*.27;
   const pos=[[X,Y+35],[W-X-sw,Y+35],[X,Y+355],[W-X-sw,Y+355]];
-  pos.forEach(([xx,yy],i)=>{const right=xx>cx;h+=line(right?cx+cw:cx,cy+ch/2,right?xx:xx+sw,yy+40,'var(--accent)',1.5);});
+  pos.forEach(([xx,yy],i)=>{const right=xx>cx;h+=connect(right?cx+cw:cx,cy+ch/2,right?xx:xx+sw,yy+40);});
   h+=box(s.center,cx,cy,cw,ch,{border:true,fill:'transparent'});
   pos.forEach(([xx,yy],i)=>h+=box(s.nodes[i].label,xx,yy,sw,70)+text(s.nodes[i].relation,xx,yy+80,sw,50,'dense','center'));
  }else if(s.pattern==='layers'){
   s.layers.forEach((v,i)=>{const yy=Y+i*105;h+=box(v.label,X,yy,BW*.25,80)+text(v.body,X+BW*.25+G,yy+15,BW*.75-G,65,'dense')+line(X+BW*.25+G,yy+90,W-X,yy+90);});
  }else if(s.pattern==='decision'){
   const rw=BW*.28,cx=X+(BW-rw)/2;h+=box(s.question,cx,Y,rw,85,{border:true,fill:'transparent'});
-  const cs=columns(2);h+=line(W/2,Y+85,W/2,Y+125)+line(cs[0].x+cs[0].w/2,Y+125,cs[1].x+cs[1].w/2,Y+125);
-  cs.forEach((c,i)=>{h+=line(c.x+c.w/2,Y+125,c.x+c.w/2,Y+190)+text(s.branches[i].condition,c.x,Y+135,c.w,40,'note','center')+box(s.branches[i].action,c.x,Y+190,c.w,75)+list(s.branches[i].items,c.x,Y+310,c.w,140);});
+  const cs=columns(2);h+=connect(W/2,Y+85,W/2,Y+125)+connect(cs[0].x+cs[0].w/2,Y+125,cs[1].x+cs[1].w/2,Y+125);
+  cs.forEach((c,i)=>{h+=connect(c.x+c.w/2,Y+125,c.x+c.w/2,Y+190)+text(s.branches[i].condition,c.x,Y+135,c.w,40,'note','center')+box(s.branches[i].action,c.x,Y+190,c.w,75)+list(s.branches[i].items,c.x,Y+310,c.w,140);});
  }else if(s.pattern==='quadrant'){
   const px=X+95,py=Y+35,pw=BW-130,ph=390;
   h+=line(px,py+ph,px+pw,py+ph,'var(--rule)')+line(px,py,px,py+ph,'var(--rule)')+line(px+pw/2,py,px+pw/2,py+ph)+line(px,py+ph/2,px+pw,py+ph/2);
@@ -78,10 +79,10 @@ export function extended(s,Y,a){
     s.points.forEach(v=>{const xx=px+v.x/s.xMax*pw,yy=sy(v.y);h+=dot(xx,yy,7)+text(v.label,xx+11,yy-15,100,35,'dense');});h+=text(s.xLabel,px,base+55,pw,35,'dense','center')+text(s.yLabel,X,py-35,175,30,'note');
    }else if(s.pattern==='waterfall'){
     const bw=pw/s.values.length*.55;let total=0;
-    s.values.forEach((v,i)=>{const prev=total;total=v.total?v.value:total+v.value;const start=v.total?0:prev,xx=px+(i+.2)*pw/s.values.length,top=sy(Math.max(start,total)),hh=Math.abs(total-start)/max*ph;h+=rect(xx,top,bw,hh,v.total?'var(--accent)':'var(--series-2)')+text(v.total?total:(v.value>0?'+':'')+v.value,xx-10,top-30,bw+20,30,'note','center')+text(v.label,xx-20,base+15,bw+40,55,'dense','center');if(i<s.values.length-1)h+=line(xx+bw,sy(total),px+(i+1.2)*pw/s.values.length,sy(total));});
+    s.values.forEach((v,i)=>{const prev=total;total=v.total?v.value:total+v.value;const start=v.total?0:prev,xx=px+(i+.2)*pw/s.values.length,top=sy(Math.max(start,total)),hh=Math.abs(total-start)/max*ph;h+=rect(xx,top,bw,hh,v.total?'var(--series-0)':'var(--series-2)')+text(v.total?total:(v.value>0?'+':'')+v.value,xx-10,top-30,bw+20,30,'note','center')+text(v.label,xx-20,base+15,bw+40,55,'dense','center');if(i<s.values.length-1)h+=line(xx+bw,sy(total),px+(i+1.2)*pw/s.values.length,sy(total));});
    }else if(s.pattern==='pareto'){
     const total=s.rows.reduce((a,b)=>a+b.value,0),step=pw/s.rows.length,bw=step*.55;let cum=0,prev;
-    s.rows.forEach((v,i)=>{const xx=px+(i+.5)*step;h+=rect(xx-bw/2,sy(v.value),bw,v.value/max*ph,'var(--series-2)')+text(v.value,xx-30,sy(v.value)-28,60,30,'note','center')+text(v.label,xx-step/2,base+15,step,35,'dense','center');cum+=v.value;const yy=base-cum/total*ph;if(prev)h+=line(prev.x,prev.y,xx,yy,'var(--accent)',2);h+=dot(xx,yy,5);prev={x:xx,y:yy};});
+    s.rows.forEach((v,i)=>{const xx=px+(i+.5)*step;h+=rect(xx-bw/2,sy(v.value),bw,v.value/max*ph,'var(--series-2)')+text(v.value,xx-30,sy(v.value)-28,60,30,'note','center')+text(v.label,xx-step/2,base+15,step,35,'dense','center');cum+=v.value;const yy=base-cum/total*ph;if(prev)h+=line(prev.x,prev.y,xx,yy,'var(--series-0)',2);h+=dot(xx,yy,5);prev={x:xx,y:yy};});
     [0,50,100].forEach(v=>h+=text(v+'%',px+pw+8,base-v/100*ph-14,60,30,'note'));h+=text('件数',X,py-35,80,30,'note')+text('累積比率',px+pw-90,py-35,160,30,'note','right');
    }
    if(s.note)h+=note(s.note,base+(s.pattern==='line-chart'?100:100));
