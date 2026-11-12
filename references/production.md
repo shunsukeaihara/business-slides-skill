@@ -4,11 +4,13 @@
 
 `dom-to-pptx-skill` を読み、HTMLからPPTXを作る手順を使う。このスキルは独立したデザイン仕様と素材を持つが、変換エンジンを再実装・同梱しない。元テンプレートや参考PDFは不要。
 
+[骨子から構成・表現を設計する](composition-workflow.md)を基本とする。以下の生成スクリプトは見本を再現する補助であり、個別HTMLの制作を制限しない。
+
 通常の依存ライブラリは実行環境に必要。`dom-to-pptx-exporter` とそのブラウザ環境に加え、補助検査CLIはPuppeteer、構造補正はPythonのlxmlを使う。既存の利用可能な依存関係を優先する。インストールが必要なら環境の権限に従い、依存関係があるかのように見せない。
 
 ## HTMLの用意
 
-最初に[会社別マスタ](masters.md)を選ぶ。`scripts/build_html.mjs`にマスタ・比率・データを渡してHTMLを生成する。見本のJSONを編集して使える。手作業で拡張する場合も会社別の色・書体・ロゴはマスタ由来のCSS変数と素材を使う。`assets/slide-base.html`／`slide-base-wide.html`は生成済みの出発点であり、マスタ設定の正本ではない。
+最初に[会社別マスタ](masters.md)を選ぶ。内容に合わせてHTMLを設計する。既存例が適合する場合は、`scripts/build_html.mjs`にマスタ・比率・データを渡してHTML生成を補助できる。見本のJSONを編集して使える。手作業で拡張する場合も会社別の色・書体・ロゴはマスタ由来のCSS変数と素材を使う。`assets/slide-base.html`／`slide-base-wide.html`は生成済みの出発点であり、マスタ設定の正本ではない。
 
 ```sh
 node SKILL_DIR/scripts/build_html.mjs --master SKILL_DIR/masters/neutral/master.json --aspect 16:9 --data WORK_DIR/content.json --out WORK_DIR/deck.html

@@ -9,7 +9,8 @@
       "use": "表紙。会社別マスタのロゴ・配置・書体を適用する。",
       "contentWidth": "wide",
       "galleryId": "G01",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "表紙"
     },
     {
       "pattern": "compare",
@@ -39,7 +40,8 @@
       "contentWidth": "wide",
       "galleryId": "G02",
       "showPunch": true,
-      "punch": "効果だけでなく、実行条件と残る制約を合わせて比較する。"
+      "punch": "効果だけでなく、実行条件と残る制約を合わせて比較する。",
+      "layoutName": "左右比較"
     },
     {
       "pattern": "evidence",
@@ -79,7 +81,8 @@
       "use": "事実・解釈・判断を区別し、同じ行で対応づける。",
       "contentWidth": "wide",
       "galleryId": "G03",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "行対応マトリクス"
     },
     {
       "pattern": "focus",
@@ -109,7 +112,8 @@
       "use": "全体のどこを説明しているかを保ちながら掘り下げる。",
       "contentWidth": "wide",
       "galleryId": "G04",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "一覧＋詳細"
     },
     {
       "pattern": "driver",
@@ -131,7 +135,8 @@
       "use": "数量を構成する因子と、その前提条件を説明する。",
       "contentWidth": "wide",
       "galleryId": "G05",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "要因分解ツリー"
     },
     {
       "pattern": "funnel",
@@ -169,7 +174,8 @@
       "use": "候補が絞られる過程と、除外基準を示す。",
       "contentWidth": "wide",
       "galleryId": "G06",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "段階絞り込み"
     },
     {
       "pattern": "scenario",
@@ -214,7 +220,8 @@
       "use": "条件による結果の違いを、共通尺度の小さな図で比較する。",
       "contentWidth": "wide",
       "galleryId": "G07",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "条件別チャート比較"
     },
     {
       "pattern": "evaluation",
@@ -259,7 +266,8 @@
       "use": "評価軸・尺度・未確認事項を明らかにして比較する。",
       "contentWidth": "wide",
       "galleryId": "G08",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "評価マトリクス"
     },
     {
       "pattern": "cycle",
@@ -280,7 +288,8 @@
       "use": "一度きりの順序ではなく、反復・フィードバックを示す。",
       "contentWidth": "standard",
       "galleryId": "G09",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "循環フロー"
     },
     {
       "pattern": "scope",
@@ -320,7 +329,8 @@
       "use": "対応・一部対応・未確認・対象外を混同せず一覧する。",
       "contentWidth": "wide",
       "galleryId": "G10",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "範囲マトリクス"
     },
     {
       "pattern": "range",
@@ -358,7 +368,8 @@
       "use": "中心値だけでは見えない観測範囲・ばらつきを示す。",
       "contentWidth": "standard",
       "galleryId": "G11",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "レンジチャート"
     },
     {
       "pattern": "diverging",
@@ -387,7 +398,8 @@
       "use": "共通の原点からの増加・減少を比較する。",
       "contentWidth": "standard",
       "galleryId": "G12",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "発散棒グラフ"
     },
     {
       "pattern": "mekko",
@@ -441,7 +453,8 @@
       "use": "領域の総量と、領域内の構成比を同時に示す。",
       "contentWidth": "wide",
       "galleryId": "G13",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "マリメッコチャート"
     },
     {
       "pattern": "process",
@@ -476,7 +489,8 @@
       "use": "工程ごとに作業と成果物を対応させる",
       "contentWidth": "wide",
       "galleryId": "G14",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "横型ステップ＋対応行"
     },
     {
       "pattern": "timeline",
@@ -519,7 +533,8 @@
       "use": "日付と節目を示す。期間の長さにはガントを使う",
       "contentWidth": "wide",
       "galleryId": "G15",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "マイルストーン"
     },
     {
       "pattern": "gantt",
@@ -583,7 +598,8 @@
       "use": "期間と並行実施を示す",
       "contentWidth": "wide",
       "galleryId": "G16",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "ガントチャート"
     },
     {
       "pattern": "swimlane",
@@ -647,7 +663,8 @@
       "use": "工程をまたぐ担当・役割の違いを示す",
       "contentWidth": "wide",
       "galleryId": "G17",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "スイムレーン"
     },
     {
       "pattern": "beforeafter",
@@ -683,7 +700,8 @@
       "use": "共通の観点で変更前後を比べる",
       "contentWidth": "wide",
       "galleryId": "G18",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "前後比較"
     },
     {
       "pattern": "issue-tree",
@@ -717,7 +735,8 @@
       "contentWidth": "wide",
       "galleryId": "G19",
       "showPunch": true,
-      "punch": "要因を分け、確認できる事実まで具体化する。"
+      "punch": "要因を分け、確認できる事実まで具体化する。",
+      "layoutName": "階層ツリー＋詳細"
     },
     {
       "pattern": "hierarchy",
@@ -750,7 +769,8 @@
       "use": "全体方針と下位の取り組みを対応させる",
       "contentWidth": "standard",
       "galleryId": "G20",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "階層構造図"
     },
     {
       "pattern": "hub",
@@ -778,7 +798,8 @@
       "use": "中心と周辺の関係を示す。順序は表さない",
       "contentWidth": "standard",
       "galleryId": "G21",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "ハブ＆スポーク"
     },
     {
       "pattern": "layers",
@@ -805,7 +826,8 @@
       "use": "役割の異なる層を整理する",
       "contentWidth": "wide",
       "galleryId": "G22",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "レイヤー構造"
     },
     {
       "pattern": "decision",
@@ -833,7 +855,8 @@
       "use": "条件による対応の分岐を示す",
       "contentWidth": "standard",
       "galleryId": "G23",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "条件分岐ツリー"
     },
     {
       "pattern": "quadrant",
@@ -862,7 +885,8 @@
       "use": "二つの独立した軸で方針を整理する",
       "contentWidth": "wide",
       "galleryId": "G24",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "2軸マトリクス"
     },
     {
       "pattern": "bars",
@@ -895,7 +919,8 @@
       "use": "共通単位の量を比較する",
       "contentWidth": "standard",
       "galleryId": "G25",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "横棒グラフ"
     },
     {
       "pattern": "stacked",
@@ -944,7 +969,8 @@
       "use": "内訳の割合を比較する。総量は比較できない",
       "contentWidth": "wide",
       "galleryId": "G26",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "100%積み上げ棒グラフ"
     },
     {
       "pattern": "line-chart",
@@ -984,7 +1010,8 @@
       "use": "連続する期間の変化を比較する",
       "contentWidth": "wide",
       "galleryId": "G27",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "折れ線グラフ"
     },
     {
       "pattern": "scatter",
@@ -1030,7 +1057,8 @@
       "use": "二変数の関係・外れ値を見る",
       "contentWidth": "wide",
       "galleryId": "G28",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "散布図"
     },
     {
       "pattern": "slope",
@@ -1068,7 +1096,8 @@
       "use": "二時点の変化を追う",
       "contentWidth": "standard",
       "galleryId": "G29",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "スロープチャート"
     },
     {
       "pattern": "waterfall",
@@ -1103,7 +1132,8 @@
       "use": "増減要因と最終値をつなぐ",
       "contentWidth": "wide",
       "galleryId": "G30",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "ウォーターフォール"
     },
     {
       "pattern": "pareto",
@@ -1136,7 +1166,8 @@
       "use": "分類の件数と累積比率を見る",
       "contentWidth": "wide",
       "galleryId": "G31",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "パレートチャート"
     },
     {
       "pattern": "heatmap",
@@ -1190,7 +1221,8 @@
       "use": "複数対象・複数観点の強弱を見る",
       "contentWidth": "wide",
       "galleryId": "G32",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "ヒートマップ"
     },
     {
       "pattern": "strategy-map",
@@ -1221,7 +1253,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "外部環境や課題が、どの方針・成果につながるかを読む。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "因果連鎖マトリクス"
     },
     {
       "pattern": "exchange",
@@ -1245,7 +1278,8 @@
       "category": "複合・分析構成",
       "contentWidth": "standard",
       "use": "主体間の往路・復路で受け渡すものを区別する。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "双方向関係図"
     },
     {
       "pattern": "operating-model",
@@ -1286,7 +1320,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "役割・活動・情報と、それらを支える横断基盤を整理する。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "機能マトリクス＋共通基盤"
     },
     {
       "pattern": "maturity",
@@ -1326,7 +1361,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "現在と目標の違い、次段階へ移る条件を示す。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "段階比較マトリクス"
     },
     {
       "pattern": "pyramid-detail",
@@ -1352,7 +1388,8 @@
       "category": "複合・分析構成",
       "contentWidth": "standard",
       "use": "目的・仕組み・基盤の包含関係と具体的な意味を対応させる。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "ピラミッド＋詳細"
     },
     {
       "pattern": "portfolio-bubbles",
@@ -1390,7 +1427,8 @@
       "category": "複合・分析構成",
       "contentWidth": "standard",
       "use": "二つの評価軸と対象規模を同時に読む。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "バブルチャート"
     },
     {
       "pattern": "portfolio-moves",
@@ -1431,7 +1469,8 @@
       "category": "複合・分析構成",
       "contentWidth": "standard",
       "use": "現在の分布だけでなく、目標へ向かう方向を示す。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "位置変化チャート"
     },
     {
       "pattern": "portfolio-actions",
@@ -1465,7 +1504,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "二軸の位置づけを、具体的な対応方針に結び付ける。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "2軸配置＋詳細"
     },
     {
       "pattern": "valuechain",
@@ -1510,7 +1550,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "工程に沿った対応範囲・欠落・重点を横断的に見る。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "工程マトリクス"
     },
     {
       "pattern": "part-whole",
@@ -1547,7 +1588,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "全体と部分の分母を区別しながら内訳を拡大する。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "全体・内訳チャート"
     },
     {
       "pattern": "small-multiples",
@@ -1599,7 +1641,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "対象×指標の共通グリッドで推移を比較する。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "スモールマルチプル"
     },
     {
       "pattern": "scenario-metrics",
@@ -1663,7 +1706,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "条件が変わると成果と負担がどう変わるかを同時に比較する。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "条件×指標チャート"
     },
     {
       "pattern": "annotated-trend",
@@ -1707,7 +1751,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "グラフ上の注目点と解釈を番号で対応させる。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "注釈付き折れ線グラフ"
     },
     {
       "pattern": "survey-grid",
@@ -1773,7 +1818,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "同じ属性について複数の質問結果を同じ行で比較する。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "並列構成比チャート"
     },
     {
       "pattern": "chart-quotes",
@@ -1804,7 +1850,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "定量的な回答傾向と定性的なコメントを同じ行で示す。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "構成比チャート＋コメント"
     },
     {
       "pattern": "benchmark-profile",
@@ -1848,7 +1895,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "評価項目ごとに、対象と比較対象の強弱を追う。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "横断プロファイル"
     },
     {
       "pattern": "paired-dots",
@@ -1893,7 +1941,8 @@
       "category": "複合・分析構成",
       "contentWidth": "standard",
       "use": "項目ごとの二群の差を原点に依存せず直接読む。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "ペアドットチャート"
     },
     {
       "pattern": "segment-profiles",
@@ -1943,7 +1992,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "対象群の特徴・要求・障害から、対応を変える理由を示す。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "属性比較マトリクス"
     },
     {
       "pattern": "workplan-deliverables",
@@ -1986,7 +2036,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "論点に対する作業・検証・出力を一つの行で完結させる。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "項目別対応マトリクス"
     },
     {
       "pattern": "dependency-map",
@@ -2048,7 +2099,8 @@
       "category": "複合・分析構成",
       "contentWidth": "wide",
       "use": "並行する取り組みの間で、何が次の作業へ渡るかを示す。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "工程間依存フロー"
     },
     {
       "pattern": "grouped-rows",
@@ -2111,7 +2163,8 @@
       "contentWidth": "wide",
       "use": "親子の行見出しと複数行にまたがる共通対応。",
       "showPunch": true,
-      "punch": "共通する課題を束ね、重複する対応を減らす。"
+      "punch": "共通する課題を束ね、重複する対応を減らす。",
+      "layoutName": "行グループ＋結合セル"
     },
     {
       "pattern": "nested-columns",
@@ -2169,7 +2222,8 @@
       "category": "階層・判断・実行",
       "contentWidth": "wide",
       "use": "二段の列見出しで異なる比較軸を分離。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "多段列見出し"
     },
     {
       "pattern": "vertical-process",
@@ -2209,7 +2263,8 @@
       "category": "階層・判断・実行",
       "contentWidth": "wide",
       "use": "縦に進む工程を、作業・成果物の共通列で整理。横長の説明や工程ごとの比較に。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "縦型ステップ＋対応列"
     },
     {
       "pattern": "classification-actions",
@@ -2243,7 +2298,8 @@
       "category": "階層・判断・実行",
       "contentWidth": "wide",
       "use": "段階的な分類と対応方針。件数は例示。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "階層分類＋詳細"
     },
     {
       "pattern": "numbered-narrative",
@@ -2268,7 +2324,8 @@
       "category": "階層・判断・実行",
       "contentWidth": "standard",
       "use": "二つの方針と根拠を、無理に箱で囲まず整理。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "番号付きテキストブロック"
     },
     {
       "pattern": "workpackage",
@@ -2312,7 +2369,8 @@
       "category": "階層・判断・実行",
       "contentWidth": "wide",
       "use": "広い作業欄と、狭い成果物・前提条件欄。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "主列＋補助列"
     },
     {
       "pattern": "share-explanation",
@@ -2353,7 +2411,8 @@
       "category": "階層・判断・実行",
       "contentWidth": "wide",
       "use": "構成比の変化と理由を同じ順で説明。数値は例示。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "構成比変化＋詳細"
     },
     {
       "pattern": "stage-gate",
@@ -2401,7 +2460,8 @@
       "contentWidth": "wide",
       "use": "共通の時間軸で作業・成果物・判断条件を整理。",
       "showPunch": true,
-      "punch": "成果物と移行条件を揃え、段階ごとに実施を判断する。"
+      "punch": "成果物と移行条件を揃え、段階ごとに実施を判断する。",
+      "layoutName": "横型ステップ＋判定行"
     },
     {
       "pattern": "box-columns",
@@ -2440,7 +2500,8 @@
       "category": "カラム・入れ子",
       "contentWidth": "wide",
       "use": "箱見出しと共通の行観点で比較するカラム。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "ボックスカラム"
     },
     {
       "pattern": "circle-columns",
@@ -2475,7 +2536,8 @@
       "category": "カラム・入れ子",
       "contentWidth": "wide",
       "use": "円見出し＋要点＋箇条書き。円面積は数値を表さない。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "円見出しカラム"
     },
     {
       "pattern": "nested-box-columns",
@@ -2524,7 +2586,8 @@
       "category": "カラム・入れ子",
       "contentWidth": "wide",
       "use": "親カラムの中に子項目を持つ二階層構成。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "入れ子ボックスカラム"
     },
     {
       "pattern": "label-columns",
@@ -2586,7 +2649,8 @@
       "category": "カラム・入れ子",
       "contentWidth": "wide",
       "use": "短いラベルと本文を対応させるテキスト中心の比較。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "ラベル付きカラム"
     },
     {
       "columns": [
@@ -2633,7 +2697,8 @@
       "galleryId": "G65",
       "category": "カラム・入れ子",
       "contentWidth": "wide",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "帯見出しテーブル"
     },
     {
       "columns": [
@@ -2680,7 +2745,8 @@
       "galleryId": "G66",
       "category": "カラム・入れ子",
       "contentWidth": "wide",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "テキスト見出しテーブル"
     },
     {
       "pattern": "circle-row-columns",
@@ -2720,7 +2786,8 @@
       "category": "カラム・入れ子",
       "contentWidth": "wide",
       "use": "楕円の行ラベル＋複数の比較列。対象の同格性を示す。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "円見出し行マトリクス"
     },
     {
       "pattern": "nested-summary",
@@ -2763,7 +2830,8 @@
       "category": "見出しの包含関係",
       "contentWidth": "wide",
       "use": "親見出しから伸びる帯で子項目の適用範囲を示す。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "入れ子行見出し"
     },
     {
       "pattern": "nested-classification",
@@ -2806,7 +2874,8 @@
       "category": "見出しの包含関係",
       "contentWidth": "wide",
       "use": "親子の木構造から行範囲を計算し、浅い葉は残りの分類列を結合。",
-      "showPunch": false
+      "showPunch": false,
+      "layoutName": "不均等階層分類"
     },
     {
       "pattern": "vertical-steps",
@@ -2842,7 +2911,8 @@
       "galleryId": "G70",
       "category": "階層・判断・実行",
       "contentWidth": "standard",
-      "use": "番号と縦の接続線で順序を表す縦型ステップ。2〜4工程の長めの説明をすっきり読ませる。"
+      "use": "番号と縦の接続線で順序を表す縦型ステップ。2〜4工程の長めの説明をすっきり読ませる。",
+      "layoutName": "番号付き縦型ステップ"
     },
     {
       "pattern": "vertical-arrow-steps",
@@ -2880,7 +2950,8 @@
       "galleryId": "G71",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "縦型矢羽・3列型。上辺直線・下端三角の形状。"
+      "use": "縦型矢羽・3列型。上辺直線・下端三角の形状。",
+      "layoutName": "縦型矢羽・3列／上辺直線"
     },
     {
       "pattern": "vertical-arrow-steps",
@@ -2918,7 +2989,8 @@
       "galleryId": "G72",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "縦型矢羽・3列型。上辺に切り込みのある矢羽形状。"
+      "use": "縦型矢羽・3列型。上辺に切り込みのある矢羽形状。",
+      "layoutName": "縦型矢羽・3列／切り込み"
     },
     {
       "pattern": "vertical-arrow-steps",
@@ -2956,7 +3028,8 @@
       "galleryId": "G73",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "縦型矢羽・2列型。上辺直線・下端三角の形状。"
+      "use": "縦型矢羽・2列型。上辺直線・下端三角の形状。",
+      "layoutName": "縦型矢羽・2列／上辺直線"
     },
     {
       "pattern": "vertical-arrow-steps",
@@ -2994,7 +3067,8 @@
       "galleryId": "G74",
       "category": "階層・判断・実行",
       "contentWidth": "wide",
-      "use": "縦型矢羽・2列型。上辺に切り込みのある矢羽形状。"
+      "use": "縦型矢羽・2列型。上辺に切り込みのある矢羽形状。",
+      "layoutName": "縦型矢羽・2列／切り込み"
     }
   ]
 }
