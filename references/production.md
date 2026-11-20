@@ -76,7 +76,7 @@ python3 SKILL_DIR/scripts/normalize_pptx.py --input WORK_DIR/raw.pptx --layout W
 
 ## レイアウト見本
 
-`assets/layout-gallery.html`と`assets/layout-gallery-wide.html`は同じ例示データから作る汎用的な配置例。数値はすべて例示。業務データとして流用しない。見本の形を固定せず、`layouts-and-charts.md`の選定基準に従って内容へ合わせる。
+`assets/layout-gallery.html`と`assets/layout-gallery-wide.html`はJSONから生成する74例と個別HTMLの3例を統合した、同じ77例の配置見本。生成・統合の手順は[ギャラリー](gallery.md)を参照。数値はすべて例示。業務データとして流用しない。見本の形を固定せず、`layouts-and-charts.md`の選定基準に従って内容へ合わせる。
 
 ## パンチラインの有無を明示する
 

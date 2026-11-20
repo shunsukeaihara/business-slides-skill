@@ -14,7 +14,7 @@ html=html.replaceAll('href="gallery-figures.pptx', 'href="assets/gallery-figures
  .replaceAll("'layout-gallery-wide.html'","'assets/layout-gallery-wide.html'")
  .replaceAll("'layout-gallery.html'","'assets/layout-gallery.html'")
  .replaceAll("'gallery-thumbs/","'assets/gallery-thumbs/")
- .replaceAll('../references/gallery.md','references/gallery.md');
+ .replaceAll('href="../references/','href="references/');
 await fs.writeFile(path.join(out,'index.html'),html);
 await fs.writeFile(path.join(out,'.nojekyll'),'');
 console.log('Built public gallery in _site/');

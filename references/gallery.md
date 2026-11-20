@@ -1,6 +1,6 @@
 # ギャラリーの選び方と拡張
 
-[用途別ギャラリー](../assets/gallery.html)には77のHTML見本（13:9／16:9に対応）を収録する。検索・用途別絞り込み・13:9／16:9切り替え・入力JSONの表示が可能。G番号は描画見本の識別子で、構成カタログのL番号とは別。
+[用途別ギャラリー](../assets/gallery.html)には77のHTML見本（13:9／16:9に対応）を収録する。検索・用途別絞り込み・13:9／16:9切り替え・見本データやHTMLソースの参照が可能。G番号は描画見本の識別子で、構成カタログのL番号とは別。
 
 ## 本文幅
 
@@ -89,10 +89,19 @@
 | G72 | 縦型矢羽・3列／切り込み | `vertical-arrow-steps` | 上辺に切り込みのある矢羽を縦に並べ、短いラベル・見出し・本文の3列で構成する。 |
 | G73 | 縦型矢羽・2列／上辺直線 | `vertical-arrow-steps` | 上辺直線・下端三角の矢羽に見出しを入れ、本文と2列で対応させる。 |
 | G74 | 縦型矢羽・2列／切り込み | `vertical-arrow-steps` | 上辺に切り込みのある矢羽に見出しを入れ、本文と2列で対応させる。 |
+| G75 | 図＋下部説明 | 個別HTML | 横に広い図の下にラベルと説明を配置する。 |
+| G76 | 図＋側方説明 | 個別HTML | 図と対応する説明を左右に並べる。 |
+| G77 | 全体図＋部分展開 | 個別HTML | 全体の注目範囲と、その詳細を対応させる。 |
 
 ## 生成・更新
 
-`assets/pattern-examples.json`はギャラリーの見本データの正本であり、実資料の骨子や文面を規定しない。`scripts/build_html.mjs`と`extended-patterns.mjs`・`compound-patterns.mjs`が会社に依存しない配置を定義し、会社の設定は`masters/<id>/master.json`から受け取る。画像を差し替えるだけの見本ではなく、同じJSONから両比率のHTMLを生成できる。
+全77例を `assets/layout-gallery.html`（13:9）と `assets/layout-gallery-wide.html`（16:9）に収録する。`assets/gallery.html` は検索・絞り込み・比率切り替えの入口。別のデモページは設けない。
+
+- G01〜G74：`assets/pattern-examples.json` の例示内容を `build_html.mjs` と各描画モジュールで生成する。
+- G75〜G77：`scripts/gallery-compositions.json` に両比率のHTML構成を保持し、`build_gallery.mjs` が同じスライドHTMLへ統合する。
+- `build_gallery.mjs` は上記2つのスライドHTMLが出力先にある状態で実行する。繰り返し実行しても追加ページは重複しない。
+- 見本の内容・構造は実資料を制約しない。適合するJSON・生成処理を活用し、必要に応じてHTMLや図を組み替える。
+- 画像・SVG素材は `assets/logistics-pictograms.png`、`logistics-process.svg`、`logistics-detail.svg`。`assets/gallery-figures.pptx` はG75〜G77のみの16:9版で、全77枚のPPTXではない。
 
 ```sh
 node SKILL_DIR/scripts/build_html.mjs --master MASTER/master.json --aspect 13:9 --data SKILL_DIR/assets/pattern-examples.json --out OUTPUT/layout-gallery.html
@@ -132,7 +141,7 @@ G61–G66は「カラム・入れ子」。ボックス、円、入れ子、ラ�
 
 ## パンチラインの有無
 
-各カードに「パンチラインあり／なし」を表示し、絞り込みで選べる。表紙は対象外。G02・G19・G53・G60はありの見本。入力JSONでは `showPunch` で有無、`punch` で文面を指定する。本文が十分に説明している場合は無理に追加しない。
+各カードに「パンチラインあり／なし」を表示し、絞り込みで選べる。表紙は対象外。G02・G19・G53・G60はありの見本。JSONを使う見本では `showPunch` で有無、`punch` で文面を指定する。個別HTMLでは `data-punch` と実際の表示を一致させる。本文が十分に説明している場合は無理に追加しない。
 
 ## G70–G74：縦型ステップ
 
@@ -149,7 +158,7 @@ G70は番号と縦の接続線、G71・G72は短いステップ名／見出し�
 
 名称と用途説明は、見本の文面を別の内容に置き換えても成立するか確認する。説明には構造上必要な意味（順序・階層・構成比・共通尺度など）を残し、業務上の解釈は必要なら「使用例」として別に示す。
 
-## 個別HTMLによるビジュアルの参考例
+## G75〜G77：図と文章の構成例
 
 [画像・SVGを使った構成例](../assets/layout-gallery-wide.html#slide-75)は13:9／16:9の各3枚。生成ピクトグラム＋下部説明、SVG図解＋右側解説、全体図＋詳細展開を確認できる。G75〜G77として他の見本と同じ一覧に表示し、検索・絞り込みの対象にする。すべての見本は参考例であり、JSON・既存生成処理は適合するときに活用する。合わないときはHTMLや図を組み替える。レイアウトの説明はギャラリー側、題材の説明はスライド内に分ける。SVG原本と編集可能な本文を含むPPTXを同梱する。
 
