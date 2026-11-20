@@ -13,7 +13,7 @@
 最初に[会社別マスタ](masters.md)を選ぶ。内容に合わせてHTMLを設計する。既存例が適合する場合は、`scripts/build_html.mjs`にマスタ・比率・データを渡してHTML生成を補助できる。見本のJSONを編集して使える。手作業で拡張する場合も会社別の色・書体・ロゴはマスタ由来のCSS変数と素材を使う。`assets/slide-base.html`／`slide-base-wide.html`は生成済みの出発点であり、マスタ設定の正本ではない。
 
 ```sh
-node SKILL_DIR/scripts/build_html.mjs --master SKILL_DIR/masters/neutral/master.json --aspect 16:9 --data WORK_DIR/content.json --out WORK_DIR/deck.html
+node SKILL_DIR/scripts/build_html.mjs --master SKILL_DIR/masters/fc/master.json --aspect 16:9 --data WORK_DIR/content.json --out WORK_DIR/deck.html
 ```
 
 データ形式は`assets/pattern-examples.json`を参照。実装済みパターンは[ギャラリー](gallery.md)を参照。`contentWidth`には`standard`または`wide`を指定する。見本JSONは各パターンの入力例でもある。カタログに記載されていても、見本JSONにない構成は内容に合わせてHTMLで制作する。
@@ -91,3 +91,12 @@ python3 SKILL_DIR/scripts/normalize_pptx.py --input WORK_DIR/raw.pptx --layout W
 ## 塗りつぶしの鏃
 
 `data-slide-shape="polygon"` と `data-points="[[0,0],[100,0],[50,100]]"` のような百分率座標を指定した塗り図形は、`slide-layout.js`で収集し、`normalize_pptx.py`で編集可能な自由形状へ補正できる。HTMLでは同じ座標の`clip-path:polygon(...)`を使い、変換後も線と同色で塗られた鏃が残ることを画像で確認する。
+
+
+## SVG・Mermaid・生成画像を使う場合
+
+会社マスターに合わせて素材を制作し、図だけのページにも、図と文章を組み合わせるページにも使える。MermaidはHTMLにソース文字列を置くだけで済ませず、対応する描画環境で描画してから配置する。ブラウザでフォント・画像・図の描画が完了していることを確認してから変換する。
+
+本文の説明文や箇条書きは、図の画像へ焼き込まず、HTMLのテキストとして配置し、PPTXでも編集できるようにする。SVGやMermaidの図全体が画像オブジェクトとして保持される場合、内部要素まで編集可能とは説明しない。図のソースを成果物と一緒に保存し、要素ごとの編集が必要な図はネイティブ図形・文字で制作する。高解像度の画像への変換は、描画互換性を確保するために必要な場合に限定する。
+
+最終PPTXで図の欠落・線・鏃・日本語フォント・ラベル・縦横比を確認する。HTML上で正しく見えただけで完了としない。素材を外部参照する場合は、納品時にも参照が切れないよう素材を同梱する。
