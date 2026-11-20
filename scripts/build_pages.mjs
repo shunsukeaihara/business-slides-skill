@@ -4,11 +4,11 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const out=path.join(root,'_site');
+await fs.rm(out,{recursive:true,force:true});
 await fs.mkdir(out,{recursive:true});
 for(const name of ['assets','references'])await fs.cp(path.join(root,name),path.join(out,name),{recursive:true});
 let html=await fs.readFile(path.join(root,'assets/gallery.html'),'utf8');
-html=html.replaceAll("'visual-demo/", "'assets/visual-demo/")
- .replaceAll('href="visual-demo/', 'href="assets/visual-demo/')
+html=html.replaceAll('href="gallery-figures.pptx', 'href="assets/gallery-figures.pptx')
  .replaceAll('href="layout-gallery','href="assets/layout-gallery')
  .replaceAll('src="gallery-thumbs/','src="assets/gallery-thumbs/')
  .replaceAll("'layout-gallery-wide.html'","'assets/layout-gallery-wide.html'")
